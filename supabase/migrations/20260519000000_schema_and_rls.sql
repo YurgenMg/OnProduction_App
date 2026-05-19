@@ -1,0 +1,403 @@
+-- =====================================================================================
+-- FASE 3: SCRIPT DE BASE DE DATOS (POSTGRESQL) - SISTEMA DE ALQUILER DE EQUIPOS
+-- =====================================================================================
+
+-- 1. CREACIÓN DE TIPOS ENUMERADOS
+CREATE TYPE tipo_cliente_enum AS ENUM ('B2C', 'B2B');
+CREATE TYPE estado_equipo_enum AS ENUM ('DISPONIBLE', 'EN_MANTENIMIENTO', 'DADO_DE_BAJA', 'ALQUILADO');
+CREATE TYPE estado_evento_enum AS ENUM ('COTIZACION', 'CONFIRMADO_RESERVADO', 'EN_TRANSITO', 'FINALIZADO', 'PAGADO_CERRADO');
+CREATE TYPE tipo_adicional_enum AS ENUM ('TRANSPORTE', 'PERSONAL', 'OTRO');
+CREATE TYPE estado_deposito_enum AS ENUM ('RECIBIDO', 'RETENIDO_PARCIAL', 'RETENIDO_TOTAL', 'DEVUELTO');
+
+-- 2. DDL: DEFINICIÓN DE TABLAS (CON SOFT DELETES EN TODAS)
+
+-- DOMINIO 1: SEGURIDAD Y CONTROL DE ACCESO
+CREATE TABLE roles (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    rol_id INT NOT NULL REFERENCES roles(id),
+    nombre_completo VARCHAR(150) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+-- DOMINIO 2: GESTIÓN DE CLIENTES
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    tipo_cliente tipo_cliente_enum NOT NULL,
+    documento_identidad VARCHAR(50) UNIQUE NOT NULL,
+    nombre_razon_social VARCHAR(150) NOT NULL,
+    nombres_contacto VARCHAR(100),
+    apellidos_contacto VARCHAR(100),
+    email VARCHAR(100) NOT NULL,
+    telefono VARCHAR(50) NOT NULL,
+    direccion TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+-- DOMINIO 3: CATÁLOGO E INVENTARIO
+CREATE TABLE catalogo_equipos (
+    id SERIAL PRIMARY KEY,
+    sku VARCHAR(50) UNIQUE NOT NULL,
+    nombre_equipo VARCHAR(150) NOT NULL,
+    categoria VARCHAR(50) NOT NULL,
+    tarifa_dia_base NUMERIC(12, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+CREATE TABLE inventario_instancias (
+    id SERIAL PRIMARY KEY,
+    catalogo_id INT NOT NULL REFERENCES catalogo_equipos(id),
+    serial_tag VARCHAR(100) UNIQUE NOT NULL,
+    estado_operativo estado_equipo_enum NOT NULL DEFAULT 'DISPONIBLE',
+    notes_condicion TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+-- DOMINIO 4: OPERACIONES Y FINANCIERO
+CREATE TABLE eventos (
+    id SERIAL PRIMARY KEY,
+    cliente_id INT NOT NULL REFERENCES clientes(id),
+    usuario_id INT NOT NULL REFERENCES usuarios(id),
+    estado estado_evento_enum NOT NULL DEFAULT 'COTIZACION',
+    fecha_inicio_evento TIMESTAMP NOT NULL,
+    fecha_fin_evento TIMESTAMP NOT NULL,
+    direccion_evento TEXT NOT NULL,
+    total_equipos NUMERIC(12, 2) DEFAULT 0.00,
+    total_adicionales NUMERIC(12, 2) DEFAULT 0.00,
+    gran_total NUMERIC(12, 2) DEFAULT 0.00,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+CREATE TABLE evento_detalles_equipos (
+    id SERIAL PRIMARY KEY,
+    evento_id INT NOT NULL REFERENCES eventos(id),
+    inventario_id INT NOT NULL REFERENCES inventario_instancias(id),
+    tarifa_dia_congelada NUMERIC(12, 2) NOT NULL,
+    dias_cobrados INT NOT NULL CHECK (dias_cobrados > 0),
+    subtotal NUMERIC(12, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+CREATE TABLE evento_adicionales (
+    id SERIAL PRIMARY KEY,
+    evento_id INT NOT NULL REFERENCES eventos(id),
+    tipo_adicional tipo_adicional_enum NOT NULL,
+    descripcion TEXT NOT NULL,
+    costo_facturado NUMERIC(12, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+CREATE TABLE depositos_garantia (
+    id SERIAL PRIMARY KEY,
+    evento_id INT NOT NULL REFERENCES eventos(id),
+    monto_recibido NUMERIC(12, 2) NOT NULL,
+    estado estado_deposito_enum NOT NULL DEFAULT 'RECIBIDO',
+    monto_retenido NUMERIC(12, 2) DEFAULT 0.00,
+    motivo_retencion TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+CREATE TABLE registro_danos_auditoria (
+    id SERIAL PRIMARY KEY,
+    evento_id INT NOT NULL REFERENCES eventos(id),
+    inventario_id INT NOT NULL REFERENCES inventario_instancias(id),
+    descripcion_dano TEXT NOT NULL,
+    costo_reparacion NUMERIC(12, 2) NOT NULL,
+    descontado_de_deposito BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+-- 3. TRIGGERS: REGLA DE INMUTABILIDAD FUERA DE COTIZACIÓN
+
+CREATE OR REPLACE FUNCTION bloquear_edicion_fuera_de_cotizacion()
+RETURNS TRIGGER AS $$
+DECLARE
+    estado_actual estado_evento_enum;
+BEGIN
+    SELECT estado INTO estado_actual FROM eventos WHERE id = OLD.evento_id;
+    
+    IF estado_actual != 'COTIZACION' THEN
+        RAISE EXCEPTION 'Bloqueo de seguridad: No se pueden modificar ni eliminar detalles. El evento se encuentra en estado % y no en COTIZACION.', estado_actual;
+    END IF;
+    
+    IF TG_OP = 'DELETE' THEN
+        RETURN OLD;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_bloquear_detalles_equipo
+BEFORE UPDATE OR DELETE ON evento_detalles_equipos
+FOR EACH ROW EXECUTE FUNCTION bloquear_edicion_fuera_de_cotizacion();
+
+CREATE TRIGGER trg_bloquear_adicionales
+BEFORE UPDATE OR DELETE ON evento_adicionales
+FOR EACH ROW EXECUTE FUNCTION bloquear_edicion_fuera_de_cotizacion();
+
+-- =====================================================================================
+-- ESTRATEGIA DE SEGURIDAD RLS (TAREA 1)
+-- =====================================================================================
+
+-- Helpers de contexto de seguridad
+CREATE OR REPLACE FUNCTION get_current_user_role()
+RETURNS VARCHAR AS $$
+DECLARE
+    v_rol VARCHAR;
+BEGIN
+    SELECT r.nombre INTO v_rol
+    FROM usuarios u
+    JOIN roles r ON u.rol_id = r.id
+    WHERE u.email = auth.jwt() ->> 'email'
+      AND u.deleted_at IS NULL;
+    RETURN v_rol;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER SET search_path = public;
+
+CREATE OR REPLACE FUNCTION get_current_user_id()
+RETURNS INT AS $$
+DECLARE
+    v_user_id INT;
+BEGIN
+    SELECT id INTO v_user_id
+    FROM usuarios
+    WHERE email = auth.jwt() ->> 'email'
+      AND deleted_at IS NULL;
+    RETURN v_user_id;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER SET search_path = public;
+
+-- Habilitar RLS en tablas transaccionales clave
+ALTER TABLE eventos ENABLE ROW LEVEL SECURITY;
+ALTER TABLE evento_detalles_equipos ENABLE ROW LEVEL SECURITY;
+
+-- Políticas de RLS para eventos
+CREATE POLICY select_eventos ON eventos
+FOR SELECT
+USING (
+    deleted_at IS NULL AND (
+        get_current_user_role() IN ('Administrador', 'Logistica')
+        OR (
+            get_current_user_role() = 'Vendedor' 
+            AND usuario_id = get_current_user_id()
+            AND estado = 'COTIZACION'
+        )
+    )
+);
+
+CREATE POLICY insert_eventos ON eventos
+FOR INSERT
+WITH CHECK (
+    deleted_at IS NULL AND (
+        get_current_user_role() IN ('Administrador', 'Logistica')
+        OR (
+            get_current_user_role() = 'Vendedor' 
+            AND usuario_id = get_current_user_id()
+            AND estado = 'COTIZACION'
+        )
+    )
+);
+
+CREATE POLICY update_eventos ON eventos
+FOR UPDATE
+USING (
+    deleted_at IS NULL AND (
+        get_current_user_role() IN ('Administrador', 'Logistica')
+        OR (
+            get_current_user_role() = 'Vendedor' 
+            AND usuario_id = get_current_user_id()
+            AND estado = 'COTIZACION'
+        )
+    )
+)
+WITH CHECK (
+    deleted_at IS NULL AND (
+        get_current_user_role() IN ('Administrador', 'Logistica')
+        OR (
+            get_current_user_role() = 'Vendedor' 
+            AND usuario_id = get_current_user_id()
+            AND estado = 'COTIZACION'
+        )
+    )
+);
+
+CREATE POLICY delete_eventos ON eventos
+FOR DELETE
+USING (
+    deleted_at IS NULL AND (
+        get_current_user_role() = 'Administrador'
+        OR (
+            get_current_user_role() = 'Vendedor' 
+            AND usuario_id = get_current_user_id()
+            AND estado = 'COTIZACION'
+        )
+    )
+);
+
+-- Políticas de RLS para evento_detalles_equipos
+CREATE POLICY select_detalles ON evento_detalles_equipos
+FOR SELECT
+USING (
+    deleted_at IS NULL AND
+    EXISTS (
+        SELECT 1 FROM eventos 
+        WHERE eventos.id = evento_detalles_equipos.evento_id
+    )
+);
+
+CREATE POLICY insert_detalles ON evento_detalles_equipos
+FOR INSERT
+WITH CHECK (
+    deleted_at IS NULL AND
+    EXISTS (
+        SELECT 1 FROM eventos 
+        WHERE eventos.id = evento_detalles_equipos.evento_id
+          AND (
+              get_current_user_role() IN ('Administrador', 'Logistica')
+              OR (
+                  get_current_user_role() = 'Vendedor' 
+                  AND eventos.usuario_id = get_current_user_id()
+                  AND eventos.estado = 'COTIZACION'
+              )
+          )
+    )
+);
+
+CREATE POLICY update_detalles ON evento_detalles_equipos
+FOR UPDATE
+USING (
+    deleted_at IS NULL AND
+    EXISTS (
+        SELECT 1 FROM eventos 
+        WHERE eventos.id = evento_detalles_equipos.evento_id
+          AND (
+              get_current_user_role() IN ('Administrador', 'Logistica')
+              OR (
+                  get_current_user_role() = 'Vendedor' 
+                  AND eventos.usuario_id = get_current_user_id()
+                  AND eventos.estado = 'COTIZACION'
+              )
+          )
+    )
+)
+WITH CHECK (
+    deleted_at IS NULL AND
+    EXISTS (
+        SELECT 1 FROM eventos 
+        WHERE eventos.id = evento_detalles_equipos.evento_id
+          AND (
+              get_current_user_role() IN ('Administrador', 'Logistica')
+              OR (
+                  get_current_user_role() = 'Vendedor' 
+                  AND eventos.usuario_id = get_current_user_id()
+                  AND eventos.estado = 'COTIZACION'
+              )
+          )
+    )
+);
+
+CREATE POLICY delete_detalles ON evento_detalles_equipos
+FOR DELETE
+USING (
+    deleted_at IS NULL AND
+    EXISTS (
+        SELECT 1 FROM eventos 
+        WHERE eventos.id = evento_detalles_equipos.evento_id
+          AND (
+              get_current_user_role() = 'Administrador'
+              OR (
+                  get_current_user_role() = 'Vendedor' 
+                  AND eventos.usuario_id = get_current_user_id()
+                  AND eventos.estado = 'COTIZACION'
+              )
+          )
+    )
+);
+
+-- =====================================================================================
+-- DATOS DE SEMILLA (MOCK DATA)
+-- =====================================================================================
+
+-- Inserción de Roles y Usuarios
+INSERT INTO roles (nombre) VALUES ('Administrador'), ('Vendedor'), ('Logistica');
+INSERT INTO usuarios (rol_id, nombre_completo, email, password_hash) VALUES 
+(1, 'Carlos Admin', 'admin@eventos.com', 'hash_seguro_123'),
+(2, 'Laura Ventas', 'laura@eventos.com', 'hash_seguro_456');
+
+-- Inserción de Clientes
+INSERT INTO clientes (tipo_cliente, documento_identidad, nombre_razon_social, nombres_contacto, apellidos_contacto, email, telefono, direccion) VALUES 
+('B2B', 'NIT-900123456', 'Productora MegaFest S.A.S', 'Roberto', 'Gomez', 'compras@megafest.com', '3001234567', 'Av Central 123'),
+('B2C', 'CC-1098765432', 'Maria Perez', 'Maria', 'Perez', 'maria.bodas@email.com', '3109876543', 'Calle Falsa 456');
+
+-- Inserción de Catálogo
+INSERT INTO catalogo_equipos (sku, nombre_equipo, categoria, tarifa_dia_base) VALUES 
+('SND-LINE-01', 'Line Array D.A.S Audio Aero 20A', 'Sonido', 450.00),
+('SND-MIC-01', 'Microfono Inalambrico Shure SM58', 'Sonido', 35.00),
+('LUC-MOV-01', 'Cabeza Movil Beam 230W', 'Luces', 80.00);
+
+-- Inserción de Inventario Físico (Instancias)
+INSERT INTO inventario_instancias (catalogo_id, serial_tag, estado_operativo) VALUES 
+(1, 'DAS-AERO-001', 'DISPONIBLE'),
+(1, 'DAS-AERO-002', 'DISPONIBLE'),
+(2, 'SHURE-58-A01', 'DISPONIBLE'),
+(2, 'SHURE-58-A02', 'DISPONIBLE'),
+(3, 'BEAM-230-001', 'DISPONIBLE'),
+(3, 'BEAM-230-002', 'DISPONIBLE');
+
+-- CREACIÓN DE EVENTO 1: COTIZACIÓN (B2C - Editable)
+INSERT INTO eventos (cliente_id, usuario_id, estado, fecha_inicio_evento, fecha_fin_evento, direccion_evento, total_equipos, total_adicionales, gran_total) 
+VALUES (2, 2, 'COTIZACION', '2026-06-15 18:00:00', '2026-06-16 02:00:00', 'Salon Comunal Norte', 115.00, 50.00, 165.00);
+
+INSERT INTO evento_detalles_equipos (evento_id, inventario_id, tarifa_dia_congelada, dias_cobrados, subtotal) VALUES 
+(1, 3, 35.00, 1, 35.00),
+(1, 5, 80.00, 1, 80.00);
+
+INSERT INTO evento_adicionales (evento_id, tipo_adicional, descripcion, costo_facturado) VALUES 
+(1, 'TRANSPORTE', 'Flete ida y vuelta local', 50.00);
+
+-- CREACIÓN DE EVENTO 2: FINALIZADO Y PAGADO (B2B - Con registro de daño)
+INSERT INTO eventos (cliente_id, usuario_id, estado, fecha_inicio_evento, fecha_fin_evento, direccion_evento, total_equipos, total_adicionales, gran_total) 
+VALUES (1, 2, 'PAGADO_CERRADO', '2026-05-10 08:00:00', '2026-05-12 23:59:00', 'Estadio Principal', 2820.00, 300.00, 3120.00);
+
+INSERT INTO evento_detalles_equipos (evento_id, inventario_id, tarifa_dia_congelada, dias_cobrados, subtotal) VALUES 
+(2, 1, 450.00, 3, 1350.00),
+(2, 2, 450.00, 3, 1350.00),
+(2, 4, 40.00, 3, 120.00);
+
+INSERT INTO evento_adicionales (evento_id, tipo_adicional, descripcion, costo_facturado) VALUES 
+(2, 'PERSONAL', '2 Tecnicos de montaje y operacion', 300.00);
+
+INSERT INTO depositos_garantia (evento_id, monto_recibido, estado, monto_retenido, motivo_retencion) VALUES 
+(2, 2000.00, 'RETENIDO_PARCIAL', 150.00, 'Microfono devuelto con golpe en la rejilla');
+
+INSERT INTO registro_danos_auditoria (evento_id, inventario_id, descripcion_dano, costo_reparacion, descontado_de_deposito) VALUES 
+(2, 4, 'Rejilla hundida y raspada por caida fuerte', 150.00, TRUE);
+
+UPDATE inventario_instancias SET estado_operativo = 'EN_MANTENIMIENTO' WHERE id = 4;
