@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.39.8"
+  },
+  "tasks": {
+    "typecheck": "deno check shared/**/*.ts supabase/functions/**/*.ts",
+    "format": "deno fmt shared/ supabase/functions/"
+  }
+}
