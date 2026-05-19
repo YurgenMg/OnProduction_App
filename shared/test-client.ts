@@ -2,22 +2,23 @@ import { createClient } from "@supabase/supabase-js";
 
 // Leer variables de entorno
 const supabaseUrl = Deno.env.get("SUPABASE_URL");
-const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY");
+const anonKey = Deno.env.get("SUPABASE_ANON_KEY");
+const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error("❌ Error: Faltan las variables de entorno SUPABASE_URL o SUPABASE_ANON_KEY en el archivo .env.");
+if (!supabaseUrl || !anonKey || !serviceKey) {
+  console.error("❌ Error: Faltan variables de entorno en el archivo .env (se necesitan URL, anon key y service_role key).");
   Deno.exit(1);
 }
 
-// Inicializar cliente Supabase
-const supabase = createClient(supabaseUrl, supabaseKey);
-
 console.log("📡 Conectando al proyecto de Supabase en la nube...");
-console.log(`🔗 URL: ${supabaseUrl}`);
+console.log(`🔗 URL: ${supabaseUrl}\n`);
+
+// 1. PRUEBA CON CLIENTE ANÓNIMO (Aplica RLS)
+const anonClient = createClient(supabaseUrl, anonKey);
+console.log("🛡️ [Prueba 1] Consultando con clave pública 'anon' (Aplica RLS):");
 
 try {
-  // Consultar eventos de prueba
-  const { data, error } = await supabase
+  const { data, error } = await anonClient
     .from("eventos")
     .select(`
       id,
@@ -28,14 +29,48 @@ try {
       )
     `);
 
-  if (error) {
-    throw error;
+  if (error) throw error;
+  
+  if (data.length === 0) {
+    console.log("🔒 Resultado: 0 filas devueltas (El RLS bloqueó el acceso anónimo con éxito. ¡Seguro!).\n");
+  } else {
+    console.log(`⚠️ Advertencia: Se encontraron ${data.length} filas públicas sin autenticación.`);
+    console.table(data);
+    console.log("");
   }
-
-  console.log("\n✅ ¡Conexión exitosa a la base de datos!");
-  console.log("📊 Datos cargados (Semilla):");
-  console.table(data);
 } catch (err: any) {
-  console.error("\n❌ Error en la consulta a la base de datos:");
+  console.error("❌ Error en la prueba RLS:", err.message);
+}
+
+// 2. PRUEBA CON CLIENTE DE SERVICIO (Bypassea RLS)
+const adminClient = createClient(supabaseUrl, serviceKey);
+console.log("🔑 [Prueba 2] Consultando con clave administrativa 'service_role' (Evade RLS):");
+
+try {
+  const { data, error } = await adminClient
+    .from("eventos")
+    .select(`
+      id,
+      estado,
+      gran_total,
+      clientes (
+        nombre_razon_social
+      )
+    `);
+
+  if (error) throw error;
+
+  console.log(`✅ ¡Conexión exitosa! Se encontraron ${data.length} registros semilla en la base de datos:`);
+  console.table(data.map(item => ({
+    ID: item.id,
+    Estado: item.estado,
+    Total: `$${item.gran_total}`,
+    Cliente: item.clientes?.nombre_razon_social || "N/A"
+  })));
+} catch (err: any) {
+  console.error("\n❌ Error usando service_role_key:");
   console.error(err.message || err);
+  console.log("\n💡 Nota: Si el error es de firma JWT ('invalid jwt signature' / 'JWT expired'),");
+  console.log("   significa que la clave 'SUPABASE_SERVICE_ROLE_KEY' del archivo .env es inválida.");
+  console.log("   Debes reemplazarla por la clave 'service_role' (secret) del dashboard web de Supabase.");
 }
