@@ -1,12 +1,26 @@
 import { createClient } from "@supabase/supabase-js";
 import { runTransactionSafe, TransactionalLockError } from "./transaction-helper.ts";
 
-const supabaseUrl = Deno.env.get("SUPABASE_URL");
-const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+const getEnv = (name: string) => {
+  if (typeof Deno !== "undefined") {
+    return Deno.env.get(name);
+  }
+  return process.env[name];
+};
+
+const exitProcess = (code = 0) => {
+  if (typeof Deno !== "undefined") {
+    Deno.exit(code);
+  }
+  process.exit(code);
+};
+
+const supabaseUrl = getEnv("SUPABASE_URL");
+const serviceKey = getEnv("SUPABASE_SERVICE_ROLE_KEY");
 
 if (!supabaseUrl || !serviceKey) {
   console.error("❌ Faltan credenciales en el archivo .env.");
-  Deno.exit(1);
+  exitProcess(1);
 }
 
 const adminClient = createClient(supabaseUrl, serviceKey);

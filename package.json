@@ -1,0 +1,16 @@
+{
+  "name": "onproduction",
+  "version": "1.0.0",
+  "description": "Sistema transaccional y logístico de nivel empresarial para el control estricto del ciclo de vida de eventos e inventario físico serializado en el alquiler de equipos de sonido y luces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.0"
+  }
+}

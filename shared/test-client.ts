@@ -1,13 +1,28 @@
 import { createClient } from "@supabase/supabase-js";
 
+// Helper para obtener variables de entorno de forma compatible con Deno y Node
+const getEnv = (name: string) => {
+  if (typeof Deno !== "undefined") {
+    return Deno.env.get(name);
+  }
+  return process.env[name];
+};
+
+const exitProcess = (code = 0) => {
+  if (typeof Deno !== "undefined") {
+    Deno.exit(code);
+  }
+  process.exit(code);
+};
+
 // Leer variables de entorno
-const supabaseUrl = Deno.env.get("SUPABASE_URL");
-const anonKey = Deno.env.get("SUPABASE_ANON_KEY");
-const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+const supabaseUrl = getEnv("SUPABASE_URL");
+const anonKey = getEnv("SUPABASE_ANON_KEY");
+const serviceKey = getEnv("SUPABASE_SERVICE_ROLE_KEY");
 
 if (!supabaseUrl || !anonKey || !serviceKey) {
   console.error("❌ Error: Faltan variables de entorno en el archivo .env (se necesitan URL, anon key y service_role key).");
-  Deno.exit(1);
+  exitProcess(1);
 }
 
 console.log("📡 Conectando al proyecto de Supabase en la nube...");

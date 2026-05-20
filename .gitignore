@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+/node_modules
+frontend/node_modules/
+
+# Entornos y Secretos
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+frontend/.env.local
+
+# Compilaciones y Caché
+.next/
+frontend/.next/
+out/
+build/
+dist/
+
+# Logs e IDEs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos temporales de Deno y herramientas
+.gemini/
+deno.lock
