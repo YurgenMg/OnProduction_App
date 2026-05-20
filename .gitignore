@@ -33,3 +33,7 @@ yarn-error.log*
 # Archivos temporales de Deno y herramientas
 .gemini/
 deno.lock
+
+# Package files de la raíz (solo para scripts de prueba locales, no deben ir a Vercel)
+/package.json
+/package-lock.json
