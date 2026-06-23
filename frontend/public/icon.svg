@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="op-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Símbolo de OnProduction (O externa con play interno) -->
+  <g transform="translate(64, 64)" filter="url(#glow)">
+    <rect x="20" y="20" width="344" height="344" rx="90" fill="none" stroke="url(#op-grad)" stroke-width="40" />
+    <path d="M165 130 L265 192 L165 254 Z" fill="url(#op-grad)" />
+  </g>
+</svg>

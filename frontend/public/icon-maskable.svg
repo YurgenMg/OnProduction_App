@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="op-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <!-- Fondo sólido oscuro requerido para iconos maskable -->
+  <rect width="512" height="512" fill="#0b1123" />
+  <!-- Icono centrado escalado al 60% para cumplir con la safe zone de iconos en Android e iOS -->
+  <g transform="translate(102, 102)">
+    <rect x="20" y="20" width="268" height="268" rx="70" fill="none" stroke="url(#op-grad)" stroke-width="32" />
+    <path d="M130 105 L210 154 L130 203 Z" fill="url(#op-grad)" />
+  </g>
+</svg>

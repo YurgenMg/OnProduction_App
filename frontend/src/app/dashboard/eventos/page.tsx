@@ -16,7 +16,8 @@ import {
   AlertCircle,
   TrendingUp,
   Briefcase,
-  Package
+  Package,
+  FileText
 } from 'lucide-react';
 
 interface Cliente {
@@ -109,41 +110,45 @@ export default function EventosPage() {
       setLoading(true);
       setErrorMsg('');
 
-      // 1. Obtener eventos
-      const { data: evData, error: evErr } = await supabase
-        .from('eventos')
-        .select('id, cliente_id, estado, fecha_inicio_evento, fecha_fin_evento, direccion_evento, total_equipos, total_adicionales, gran_total, cliente:clientes(nombre_razon_social)')
-        .is('deleted_at', null)
-        .order('created_at', { ascending: false });
+      // Ejecutar las 3 consultas de forma paralela para evitar waterfalls de red
+      const [evResult, cliResult, eqResult] = await Promise.all([
+        // 1. Obtener eventos
+        supabase
+          .from('eventos')
+          .select('id, cliente_id, estado, fecha_inicio_evento, fecha_fin_evento, direccion_evento, total_equipos, total_adicionales, gran_total, cliente:clientes(nombre_razon_social)')
+          .is('deleted_at', null)
+          .order('created_at', { ascending: false }),
+        // 2. Obtener clientes para dropdown
+        supabase
+          .from('clientes')
+          .select('id, nombre_razon_social')
+          .is('deleted_at', null)
+          .order('nombre_razon_social', { ascending: true }),
+        // 3. Obtener equipos físicos disponibles para dropdown
+        supabase
+          .from('inventario_instancias')
+          .select(`
+            id, 
+            serial_tag,
+            catalogo:catalogo_equipos(
+              nombre_equipo,
+              tarifa_dia_base
+            )
+          `)
+          .eq('estado_operativo', 'DISPONIBLE')
+          .is('deleted_at', null)
+      ]);
+
+      const { data: evData, error: evErr } = evResult;
+      const { data: cliData, error: cliErr } = cliResult;
+      const { data: eqData, error: eqErr } = eqResult;
 
       if (evErr) throw evErr;
-      setEventos(evData as unknown as Evento[]);
-
-      // 2. Obtener clientes para dropdown
-      const { data: cliData, error: cliErr } = await supabase
-        .from('clientes')
-        .select('id, nombre_razon_social')
-        .is('deleted_at', null)
-        .order('nombre_razon_social', { ascending: true });
-
       if (cliErr) throw cliErr;
-      setClientes(cliData);
-
-      // 3. Obtener equipos físicos disponibles para dropdown
-      const { data: eqData, error: eqErr } = await supabase
-        .from('inventario_instancias')
-        .select(`
-          id, 
-          serial_tag,
-          catalogo:catalogo_equipos(
-            nombre_equipo,
-            tarifa_dia_base
-          )
-        `)
-        .eq('estado_operativo', 'DISPONIBLE')
-        .is('deleted_at', null);
-
       if (eqErr) throw eqErr;
+
+      setEventos(evData as unknown as Evento[]);
+      setClientes(cliData);
       setEquipos(eqData as unknown as EquipoDisponible[]);
 
     } catch (err: any) {
@@ -157,41 +162,44 @@ export default function EventosPage() {
     try {
       setErrorMsg('');
       
-      // Obtener detalles de equipos del evento
-      const { data: detData, error: detErr } = await supabase
-        .from('evento_detalles_equipos')
-        .select(`
-          id,
-          inventario_id,
-          tarifa_dia_congelada,
-          dias_cobrados,
-          subtotal,
-          instancia:inventario_instancias(
-            serial_tag,
-            catalogo:catalogo_equipos(nombre_equipo)
-          )
-        `)
-        .eq('evento_id', eventoId)
-        .is('deleted_at', null);
+      // Obtener detalles de equipos, adicionales y totales del evento en paralelo
+      const [detResult, adResult, evResult] = await Promise.all([
+        // Obtener detalles de equipos del evento
+        supabase
+          .from('evento_detalles_equipos')
+          .select(`
+            id,
+            inventario_id,
+            tarifa_dia_congelada,
+            dias_cobrados,
+            subtotal,
+            instancia:inventario_instancias(
+              serial_tag,
+              catalogo:catalogo_equipos(nombre_equipo)
+            )
+          `)
+          .eq('evento_id', eventoId)
+          .is('deleted_at', null),
+        // Obtener adicionales del evento
+        supabase
+          .from('evento_adicionales')
+          .select('id, tipo_adicional, descripcion, costo_facturado')
+          .eq('evento_id', eventoId)
+          .is('deleted_at', null),
+        // Obtener totales actualizados del evento
+        supabase
+          .from('eventos')
+          .select('id, cliente_id, estado, fecha_inicio_evento, fecha_fin_evento, direccion_evento, total_equipos, total_adicionales, gran_total, cliente:clientes(nombre_razon_social)')
+          .eq('id', eventoId)
+          .single()
+      ]);
+
+      const { data: detData, error: detErr } = detResult;
+      const { data: adData, error: adErr } = adResult;
+      const { data: evActualizado, error: evActErr } = evResult;
 
       if (detErr) throw detErr;
-
-      // Obtener adicionales del evento
-      const { data: adData, error: adErr } = await supabase
-        .from('evento_adicionales')
-        .select('id, tipo_adicional, descripcion, costo_facturado')
-        .eq('evento_id', eventoId)
-        .is('deleted_at', null);
-
       if (adErr) throw adErr;
-
-      // Obtener totales actualizados del evento
-      const { data: evActualizado, error: evActErr } = await supabase
-        .from('eventos')
-        .select('id, cliente_id, estado, fecha_inicio_evento, fecha_fin_evento, direccion_evento, total_equipos, total_adicionales, gran_total, cliente:clientes(nombre_razon_social)')
-        .eq('id', eventoId)
-        .single();
-
       if (evActErr) throw evActErr;
 
       const evCompleto: Evento = {
@@ -212,6 +220,7 @@ export default function EventosPage() {
 
   const handleCreateCotizacion = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (actionLoading) return;
     setActionLoading(true);
     setErrorMsg('');
     setSuccessMsg('');
@@ -265,7 +274,7 @@ export default function EventosPage() {
 
   const handleAddEquipo = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedEvento) return;
+    if (!selectedEvento || actionLoading) return;
     setActionLoading(true);
     setErrorMsg('');
     setSuccessMsg('');
@@ -310,7 +319,7 @@ export default function EventosPage() {
   };
 
   const handleRemoveEquipo = async (detalleId: number) => {
-    if (!selectedEvento) return;
+    if (!selectedEvento || actionLoading) return;
     setActionLoading(true);
     setErrorMsg('');
     setSuccessMsg('');
@@ -337,7 +346,7 @@ export default function EventosPage() {
 
   const handleAddAdicional = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedEvento) return;
+    if (!selectedEvento || actionLoading) return;
     setActionLoading(true);
     setErrorMsg('');
     setSuccessMsg('');
@@ -374,7 +383,7 @@ export default function EventosPage() {
   };
 
   const handleRemoveAdicional = async (adicionalId: number) => {
-    if (!selectedEvento) return;
+    if (!selectedEvento || actionLoading) return;
     setActionLoading(true);
     setErrorMsg('');
     setSuccessMsg('');
@@ -399,7 +408,7 @@ export default function EventosPage() {
   };
 
   const handleCambiarEstado = async (nuevoEstado: string) => {
-    if (!selectedEvento) return;
+    if (!selectedEvento || actionLoading) return;
     setActionLoading(true);
     setErrorMsg('');
     setSuccessMsg('');
@@ -424,6 +433,12 @@ export default function EventosPage() {
     } finally {
       setActionLoading(false);
     }
+  };
+
+  const handleDescargarFactura = async (eventoId: number) => {
+    const { data: { session } } = await supabase.auth.getSession();
+    const token = session?.access_token || '';
+    window.open(`/api/eventos/pdf?id=${eventoId}&token=${token}`, '_blank');
   };
 
   const formatCurrency = (val: number) => {
@@ -619,7 +634,32 @@ export default function EventosPage() {
                     <span style={styles.detailsClientLabel}>Evento #{selectedEvento.id}</span>
                     <h2 style={styles.detailsClient}>{selectedEvento.cliente?.nombre_razon_social}</h2>
                   </div>
-                  {getBadgeEstado(selectedEvento.estado)}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    {getBadgeEstado(selectedEvento.estado)}
+                    <button 
+                      onClick={() => handleDescargarFactura(selectedEvento.id)}
+                      className="btn"
+                      style={{
+                        background: 'rgba(6, 182, 212, 0.08)',
+                        border: '1px solid rgba(6, 182, 212, 0.2)',
+                        color: 'var(--accent-secondary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '8px 14px',
+                        borderRadius: '8px',
+                        cursor: 'pointer',
+                        fontSize: '13px',
+                        fontWeight: 600,
+                        transition: 'var(--transition-smooth)'
+                      }}
+                      title="Descargar Factura PDF"
+                      disabled={actionLoading}
+                    >
+                      <FileText size={16} />
+                      <span>Factura PDF</span>
+                    </button>
+                  </div>
                 </div>
 
                 {/* Acciones de Flujo de Trabajo */}

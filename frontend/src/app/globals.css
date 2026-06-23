@@ -315,3 +315,63 @@ html, body {
   to { transform: rotate(360deg); }
 }
 
+/* Mobile-first Safe Area & Touch Optimizations */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+html, body {
+  -webkit-overflow-scrolling: touch;
+  /* Aplicar safe area insets para evitar solapamientos con el notch y barra de inicio */
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+}
+
+/* Deshabilitar gestos y retraso táctil por defecto en elementos interactivos */
+.btn, .form-input, .form-select, .form-textarea, a {
+  touch-action: manipulation;
+}
+
+/* Prevenir selección de texto accidental al interactuar de forma táctil en menús */
+.no-select-touch {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Utilidades explícitas de Safe Area para elementos posicionado de forma fija/flotante */
+.pt-safe { padding-top: var(--safe-top); }
+.pb-safe { padding-bottom: var(--safe-bottom); }
+.pl-safe { padding-left: var(--safe-left); }
+.pr-safe { padding-right: var(--safe-right); }
+.mt-safe { margin-top: var(--safe-top); }
+.mb-safe { margin-bottom: var(--safe-bottom); }
+
+/* Sidebar Menu Hover Effects (Instant/Minimum Latency) */
+.sidebar-link {
+  border: 1px solid transparent !important;
+  transition: all 0.05s ease-in-out !important; /* Latencia al mínimo (50ms) */
+}
+
+.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.035) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-glow) !important;
+}
+
+.sidebar-link:hover svg {
+  color: var(--accent-secondary) !important;
+}
+
+.sidebar-link-active:hover {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+
+

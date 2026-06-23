@@ -60,16 +60,77 @@ export default function DashboardPage() {
       try {
         setLoading(true);
 
-        // 1. Obtener estadísticas de eventos
-        const { data: evData, error: evErr } = await supabase
-          .from('eventos')
-          .select('estado')
-          .is('deleted_at', null);
+        // Ejecutar las 5 consultas de forma paralela para evitar waterfalls de red
+        const [
+          evResult,
+          mantResult,
+          depResult,
+          evRecientesResult,
+          danRecientesResult
+        ] = await Promise.all([
+          // 1. Estadísticas de eventos
+          supabase
+            .from('eventos')
+            .select('estado')
+            .is('deleted_at', null),
+          // 2. Mantenimiento de inventario
+          supabase
+            .from('inventario_instancias')
+            .select('*', { count: 'exact', head: true })
+            .eq('estado_operativo', 'EN_MANTENIMIENTO')
+            .is('deleted_at', null),
+          // 3. Retenciones de garantías
+          supabase
+            .from('depositos_garantia')
+            .select('monto_retenido')
+            .is('deleted_at', null),
+          // 4. Próximos eventos
+          supabase
+            .from('eventos')
+            .select('id, fecha_inicio_evento, estado, gran_total, cliente:clientes(nombre_razon_social)')
+            .is('deleted_at', null)
+            .order('fecha_inicio_evento', { ascending: true })
+            .limit(5),
+          // 5. Daños recientes
+          supabase
+            .from('registro_danos_auditoria')
+            .select(`
+              id, 
+              costo_reparacion, 
+              descripcion_dano, 
+              created_at,
+              instancia:inventario_instancias(
+                serial_tag,
+                catalogo:catalogo_equipos(nombre_equipo)
+              )
+            `)
+            .is('deleted_at', null)
+            .order('created_at', { ascending: false })
+            .limit(3)
+        ]);
+
+        const { data: evData, error: evErr } = evResult;
+        const { count: mantCount, error: mantErr } = mantResult;
+        const { data: depData, error: depErr } = depResult;
+        const { data: evRecientes, error: evRecErr } = evRecientesResult;
+        const { data: danRecientes, error: danRecErr } = danRecientesResult;
+
+        if (evErr) console.error("Error en evResult:", evErr.message, "Code:", evErr.code, "Details:", evErr.details);
+        if (mantErr) console.error("Error en mantResult:", mantErr.message, "Code:", mantErr.code, "Details:", mantErr.details);
+        if (depErr) console.error("Error en depResult:", depErr.message, "Code:", depErr.code, "Details:", depErr.details);
+        if (evRecErr) console.error("Error en evRecientesResult:", evRecErr.message, "Code:", evRecErr.code, "Details:", evRecErr.details);
+        if (danRecErr) console.error("Error en danRecientesResult:", danRecErr.message, "Code:", danRecErr.code, "Details:", danRecErr.details);
+
+        if (evErr) throw evErr;
+        if (mantErr) throw mantErr;
+        if (depErr) throw depErr;
+        if (evRecErr) throw evRecErr;
+        if (danRecErr) throw danRecErr;
 
         let activos = 0;
         let cotizaciones = 0;
 
-        if (!evErr && evData) {
+        if (evData) {
           evData.forEach(ev => {
             if (ev.estado === 'CONFIRMADO_RESERVADO' || ev.estado === 'EN_TRANSITO') {
               activos++;
@@ -79,66 +140,28 @@ export default function DashboardPage() {
           });
         }
 
-        // 2. Obtener estadísticas de mantenimiento de inventario
-        const { count: mantCount, error: mantErr } = await supabase
-          .from('inventario_instancias')
-          .select('*', { count: 'exact', head: true })
-          .eq('estado_operativo', 'EN_MANTENIMIENTO')
-          .is('deleted_at', null);
-
-        // 3. Obtener sumatoria de retenciones de garantías
-        const { data: depData, error: depErr } = await supabase
-          .from('depositos_garantia')
-          .select('monto_retenido')
-          .is('deleted_at', null);
-
         let totalRetenido = 0;
-        if (!depErr && depData) {
+        if (depData) {
           totalRetenido = depData.reduce((sum, dep) => sum + Number(dep.monto_retenido || 0), 0);
         }
 
         setStats({
           eventosActivos: activos,
           cotizacionesPendientes: cotizaciones,
-          equiposMantenimiento: mantErr ? 0 : (mantCount || 0),
+          equiposMantenimiento: mantCount || 0,
           garantiasRetenidas: totalRetenido
         });
 
-        // 4. Obtener próximos eventos
-        const { data: evRecientes, error: evRecErr } = await supabase
-          .from('eventos')
-          .select('id, fecha_inicio_evento, estado, gran_total, cliente:clientes(nombre_razon_social)')
-          .is('deleted_at', null)
-          .order('fecha_inicio_evento', { ascending: true })
-          .limit(5);
-
-        if (!evRecErr && evRecientes) {
+        if (evRecientes) {
           setEventos(evRecientes as unknown as EventoReciente[]);
         }
 
-        // 5. Obtener daños recientes
-        const { data: danRecientes, error: danRecErr } = await supabase
-          .from('registro_danos_auditoria')
-          .select(`
-            id, 
-            costo_reparacion, 
-            descripcion_dano, 
-            created_at,
-            instancia:inventario_instancias(
-              serial_tag,
-              catalogo:catalogo_equipos(nombre_equipo)
-            )
-          `)
-          .is('deleted_at', null)
-          .order('created_at', { ascending: false })
-          .limit(3);
-
-        if (!danRecErr && danRecientes) {
+        if (danRecientes) {
           setDanos(danRecientes as unknown as DanoReciente[]);
         }
 
-      } catch (err) {
-        console.error("Error cargando información de dashboard:", err);
+      } catch (err: any) {
+        console.error("Error cargando información de dashboard:", err.message || err);
       } finally {
         setLoading(false);
       }
