@@ -49,7 +49,7 @@ export interface InventarioInstancia extends BaseEntity {
   catalogo_id: number;
   serial_tag: string;
   estado_operativo: EstadoEquipo;
-  notes_condicion: string | null;
+  notas_condicion: string | null;
 }
 
 export interface Evento extends BaseEntity {

@@ -11,7 +11,8 @@ import {
   LogOut, 
   User,
   Menu,
-  X
+  X,
+  Settings
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -54,14 +55,14 @@ export default function DashboardLayout({
           .single();
 
         if (error || !userData) {
-          console.warn("No se pudo obtener el perfil del usuario de la base de datos:", error);
-          // Si no está registrado en la tabla local de usuarios pero tiene auth, ponemos valores por defecto
-          setProfile({
-            id: 0,
-            nombre_completo: session.user.email?.split('@')[0] || 'Usuario',
-            email: session.user.email || '',
-            rol: { nombre: 'Vendedor' } // Rol por defecto seguro
-          });
+          console.warn("Acceso denegado: El usuario no existe en la tabla local de usuarios o está inactivo.", error);
+          
+          // Cerrar la sesión de Supabase Auth inmediatamente
+          await supabase.auth.signOut();
+          
+          // Redirigir al login con parámetro de error
+          router.push('/login?error=unauthorized');
+          return;
         } else {
           setProfile(userData as unknown as UserProfile);
         }
@@ -90,12 +91,20 @@ export default function DashboardLayout({
     );
   }
 
-  const menuItems = [
+  const baseMenuItems = [
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
     { name: 'Eventos & Cotizaciones', path: '/dashboard/eventos', icon: CalendarRange },
     { name: 'Inventario', path: '/dashboard/inventario', icon: Package },
     { name: 'Garantías & Daños', path: '/dashboard/garantias', icon: ShieldAlert },
   ];
+
+  const menuItems = profile?.rol.nombre === 'Administrador'
+    ? [
+        ...baseMenuItems, 
+        { name: 'Usuarios & Roles', path: '/dashboard/usuarios', icon: User },
+        { name: 'Mi Empresa', path: '/dashboard/configuracion', icon: Settings }
+      ]
+    : baseMenuItems;
 
   return (
     <div style={styles.layoutContainer}>
@@ -114,6 +123,7 @@ export default function DashboardLayout({
               <Link 
                 key={item.path} 
                 href={item.path}
+                className={`sidebar-link ${isActive ? 'sidebar-link-active' : ''}`}
                 style={{
                   ...styles.navLink,
                   ...(isActive ? styles.navLinkActive : {})
@@ -178,6 +188,7 @@ export default function DashboardLayout({
                   key={item.path} 
                   href={item.path}
                   onClick={() => setMobileMenuOpen(false)}
+                  className={`sidebar-link ${isActive ? 'sidebar-link-active' : ''}`}
                   style={{
                     ...styles.navLink,
                     ...(isActive ? styles.navLinkActive : {})
@@ -291,6 +302,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     textDecoration: 'none',
     fontSize: '15px',
     fontWeight: 500,
+    border: '1px solid transparent',
     transition: 'var(--transition-smooth)',
   },
   navLinkActive: {
