@@ -1,15 +1,16 @@
-# Graph Report - .  (2026-06-23)
+# Graph Report - OnProduction  (2026-06-23)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 82 files · ~49,995 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 314 nodes · 438 edges · 36 communities (25 shown, 11 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.81)
+- 465 nodes · 580 edges · 52 communities (39 shown, 13 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `28df0055`
+- Built from commit: `5889a512`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -37,12 +38,24 @@
 - [[_COMMUNITY_Database Transaction Helpers|Database Transaction Helpers]]
 - [[_COMMUNITY_Next.js PWA Configuration|Next.js PWA Configuration]]
 - [[_COMMUNITY_CORS and Server Entry|CORS and Server Entry]]
-- [[_COMMUNITY_PostCSS Configuration|PostCSS Configuration]]
+- [[_COMMUNITY_Global Error Handling|Global Error Handling]]
 - [[_COMMUNITY_Migrations Documentation|Migrations Documentation]]
 - [[_COMMUNITY_Database Initialization Script|Database Initialization Script]]
 - [[_COMMUNITY_Inventory Instance Table|Inventory Instance Table]]
 - [[_COMMUNITY_Functional Diagrams|Functional Diagrams]]
 - [[_COMMUNITY_Requirements Documentation|Requirements Documentation]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `a` - 18 edges
@@ -50,70 +63,72 @@
 3. `get()` - 15 edges
 4. `v` - 14 edges
 5. `z()` - 14 edges
-6. `BaseEntity` - 11 edges
-7. `supabase` - 10 edges
-8. `T()` - 8 edges
-9. `r` - 7 edges
-10. `U()` - 7 edges
+6. `Tasks: [FEATURE NAME]` - 13 edges
+7. `BaseEntity` - 11 edges
+8. `supabase` - 10 edges
+9. `T()` - 8 edges
+10. `Table: eventos` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Diagrama de Secuencia` --calls--> `Edge Function: generar-contrato`  [EXTRACTED]
+  diagramas/diagrama_secuencia.md → supabase/functions/generar-contrato/index.ts
+- `Requerimientos Leídos` --conceptually_related_to--> `Table: eventos`  [INFERRED]
+  documento_requerimiento/requerimientos_leidos.txt → base_datos_onP.txt
 - `Diagrama de Secuencia` --references--> `Table: eventos`  [EXTRACTED]
   diagramas/diagrama_secuencia.md → base_datos_onP.txt
-- `Flujos de Secuencia Críticos` --references--> `Trigger: bloquear_edicion_fuera_de_cotizacion`  [EXTRACTED]
-  diagramas/flujos_secuencia_criticos.md → base_datos_onP.txt
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Rental Lifecycle Flow** — db_eventos, db_inventario_instancias, db_bloquear_edicion_trigger, supabase_edge_functions [EXTRACTED 1.00]
-- **Technology Stack & Deployment** — frontend_nextjs, supabase_edge_functions, guia_despliegue_dominios_md, gemini_md [EXTRACTED 0.95]
+- **Rental Lifecycle Flow** — db_eventos, db_evento_detalles_equipos, db_evento_adicionales, db_depositos_garantia, db_registro_danos_auditoria [EXTRACTED 1.00]
+- **Deployment Stack** — guia_despliegue_dominios_md, gemini_md, readme_md [INFERRED 0.90]
 
-## Communities (36 total, 11 thin omitted)
+## Communities (52 total, 13 thin omitted)
 
 ### Community 0 - "Dashboard and UI Layouts"
 Cohesion: 0.05
 Nodes (29): styles, EmpresaConfig, styles, styles, UserProfile, DanoReciente, EventoReciente, Stats (+21 more)
 
 ### Community 1 - "Service Worker Routing"
-Cohesion: 0.08
-Nodes (14): b(), constructor(), deleteCacheAndMetadata(), et, F, G, get(), h() (+6 more)
-
-### Community 2 - "API Route Utilities"
 Cohesion: 0.16
 Nodes (10): GET(), getClientForToken(), loadFonts(), m(), s, st(), T(), U() (+2 more)
+
+### Community 2 - "API Route Utilities"
+Cohesion: 0.29
+Nodes (3): adminClient, serviceKey, supabaseUrl
 
 ### Community 3 - "Project Dependencies"
 Cohesion: 0.08
 Nodes (25): dependencies, @ducanh2912/next-pwa, lucide-react, next, pdfkit, react, react-dom, @supabase/supabase-js (+17 more)
 
 ### Community 4 - "Cache and Request Handling"
-Cohesion: 0.12
-Nodes (3): a, q(), r
+Cohesion: 0.06
+Nodes (17): a, b(), constructor(), deleteCacheAndMetadata(), et, F, G, get() (+9 more)
 
 ### Community 5 - "TypeScript Configuration"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 6 - "Database Entity Types"
+Cohesion: 0.07
+Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only) (+18 more)
+
+### Community 7 - "System Documentation and Triggers"
 Cohesion: 0.19
 Nodes (16): BaseEntity, CatalogoEquipo, Cliente, DepositoGarantia, EstadoDeposito, EstadoEquipo, EstadoEvento, Evento (+8 more)
 
-### Community 7 - "System Documentation and Triggers"
-Cohesion: 0.25
-Nodes (8): Trigger: bloquear_edicion_fuera_de_cotizacion, Table: clientes, Table: eventos, Diagrama de Secuencia, Flujos de Secuencia Críticos, Frontend Next.js, Guia de Despliegue, Dominios Gratuitos y Seguridad, Supabase Edge Functions
-
 ### Community 8 - "Supabase Client Configuration"
-Cohesion: 0.25
-Nodes (5): adminClient, anonClient, anonKey, serviceKey, supabaseUrl
+Cohesion: 0.16
+Nodes (14): Trigger: bloquear_edicion_fuera_de_cotizacion, Table: catalogo_equipos, Table: clientes, Table: depositos_garantia, Table: evento_adicionales, Table: evento_detalles_equipos, Table: eventos, Table: inventario_instancias (+6 more)
 
 ### Community 9 - "Backend Logic Testing"
-Cohesion: 0.29
-Nodes (3): adminClient, serviceKey, supabaseUrl
+Cohesion: 0.09
+Nodes (20): Assumptions, Clarificaciones, Edge Cases, Feature Specification: Sistema de Gestión de Eventos, Inventario y Finanzas, Functional Requirements, Key Entities, Measurable Outcomes, Requirements *(mandatory)* (+12 more)
 
 ### Community 10 - "Database Trigger Testing"
-Cohesion: 0.29
-Nodes (4): adminClient, query, serviceKey, supabaseUrl
+Cohesion: 0.25
+Nodes (5): adminClient, anonClient, anonKey, serviceKey, supabaseUrl
 
 ### Community 11 - "Admin API Routes"
 Cohesion: 0.62
@@ -139,29 +154,69 @@ Nodes (5): GET(), getAdminClient(), getClientForToken(), POST(), verificarAdmini
 Cohesion: 0.40
 Nodes (4): compat, __dirname, eslintConfig, __filename
 
-### Community 19 - "Test User Creation"
+### Community 17 - "Root Layout Metadata"
+Cohesion: 0.22
+Nodes (10): Find-SpecifyRoot(), Format-SpecKitCommand(), Get-CurrentBranch(), Get-FeaturePathsEnv(), Get-InvokeSeparator(), Get-Python3Command(), Get-RepoRoot(), Resolve-SpecifyInitDir() (+2 more)
+
+### Community 20 - "Database Transaction Helpers"
 Cohesion: 0.67
 Nodes (3): getEnv(), main(), supabase
 
+### Community 35 - "Requirements Documentation"
+Cohesion: 0.15
+Nodes (12): Assumptions, Edge Cases, Feature Specification: [FEATURE NAME], Functional Requirements, Key Entities *(include if feature involves data)*, Measurable Outcomes, Requirements *(mandatory)*, Success Criteria *(mandatory)* (+4 more)
+
+### Community 36 - "Community 36"
+Cohesion: 0.18
+Nodes (10): Core Principles, Development & Migration Workflow, Governance, I. DB-Centric Transactional Logic, II. Strict Soft Deletes, III. Isolated Row Level Security (RLS), IV. Autonomous Edge Functions, OnProduction Project Constitution (+2 more)
+
+### Community 37 - "Community 37"
+Cohesion: 0.18
+Nodes (10): Core Principles, Governance, [PRINCIPLE_1_NAME], [PRINCIPLE_2_NAME], [PRINCIPLE_3_NAME], [PRINCIPLE_4_NAME], [PRINCIPLE_5_NAME], [PROJECT_NAME] Constitution (+2 more)
+
+### Community 38 - "Community 38"
+Cohesion: 0.22
+Nodes (8): Complexity Tracking, Constitution Check, Documentation (this feature), Implementation Plan: [FEATURE], Project Structure, Source Code (repository root), Summary, Technical Context
+
+### Community 39 - "Community 39"
+Cohesion: 0.25
+Nodes (7): Coding Agent Context Extension, Commands, Configuration, Disable, Requirements, Why an extension?, Guia Despliegue Dominios
+
+### Community 40 - "Community 40"
+Cohesion: 0.29
+Nodes (6): Arquitectura, Comandos Frecuentes, Convenciones del Proyecto, GEMINI.md — Contrato del Agente para OnProduction, Restricciones del Agente, Stack Tecnológico
+
+### Community 41 - "Community 41"
+Cohesion: 0.29
+Nodes (4): adminClient, query, serviceKey, supabaseUrl
+
+### Community 43 - "Community 43"
+Cohesion: 0.40
+Nodes (4): [Category 1], [Category 2], [CHECKLIST TYPE] Checklist: [FEATURE NAME], Notes
+
+### Community 44 - "Community 44"
+Cohesion: 0.50
+Nodes (3): Behavior, Execution, Update Coding Agent Context
+
 ## Knowledge Gaps
-- **104 isolated node(s):** `@supabase/supabase-js`, `typecheck`, `format`, `__filename`, `__dirname` (+99 more)
+- **189 isolated node(s):** `graphify`, `Workflow: graphify`, `Why an extension?`, `Commands`, `Configuration` (+184 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Transaction Helper` connect `Dashboard and UI Layouts` to `Backend Logic Testing`, `Database Trigger Testing`, `System Documentation and Triggers`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `a` connect `Cache and Request Handling` to `Service Worker Routing`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **What connects `@supabase/supabase-js`, `typecheck`, `format` to the rest of the system?**
-  _104 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Transaction Helper` connect `Dashboard and UI Layouts` to `Community 41`, `API Route Utilities`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **What connects `graphify`, `Workflow: graphify`, `Why an extension?` to the rest of the system?**
+  _189 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dashboard and UI Layouts` be split into smaller, more focused modules?**
   _Cohesion score 0.051418439716312055 - nodes in this community are weakly interconnected._
-- **Should `Service Worker Routing` be split into smaller, more focused modules?**
-  _Cohesion score 0.08232118758434548 - nodes in this community are weakly interconnected._
 - **Should `Project Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `Cache and Request Handling` be split into smaller, more focused modules?**
-  _Cohesion score 0.12333333333333334 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.056051587301587304 - nodes in this community are weakly interconnected._
+- **Should `TypeScript Configuration` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Database Entity Types` be split into smaller, more focused modules?**
+  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
