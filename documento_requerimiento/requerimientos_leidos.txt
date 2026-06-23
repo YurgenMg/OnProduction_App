@@ -1,0 +1,68 @@
+=== ESTRUCTURA COMPLETA DEL DOCUMENTO ===
+
+P: Contexto:
+Esta es una aplicación para un usuario que se dedica a eventos musicales, presta el servicio por tiempo o fecha, el cliente tiene equipos de sonidos, luces, instrumentos musicales, presta el servicio de conciertos, serenatas y demás.
+P: Requerimiento: 
+P: El usuario solicita llevar el control de su inventario, el estado del mismo.
+El usuario necesita tener base de datos de sus clientes.
+El usuario Solicita realizar registros de cada alquiler para cada evento.
+El usuario solicita poder agregar sus item a cada registro de evento verificando el estado y la disponibilidad de cada item.
+El usuario quiere un sistema de estados para sus registros de eventos, pasando por cotizaciones, evento en proceso, y evento finalizado.
+El usuario necesita llevar flujo de caja por cada registro de evento, si se pagó y cómo se pagó
+El usuario requiere la creación de archivos profesionales .pdf como cotizaciones y cuentas de cobro.
+
+
+
+P: Antecedentes y Ajuste Estratégico
+P: Alcance
+P: Requisitos de Alto Nivel
+
+--- TABLA ---
+Título | Prioridad | Observaciones
+-------------
+
+P: Reglas de Negocio
+
+--- TABLA ---
+Código | Regla
+RN001 | 
+RN002 | 
+-------------
+
+P: Diagrama Funcional
+P: Diagrama de Secuencia
+P: Casos Funcionales y Vista de Usuario
+
+--- TABLA ---
+Caso Funcional CF_XXX_NOMBRE
+Prerrequisitos y Dependencias
+Resumen
+Excepciones
+Postcondición
+Consideraciones Técnicas
+Criterios de Aceptación
+Comentarios
+-------------
+
+P: Escenarios de Prueba Mínimos
+
+--- TABLA ---
+Id Caso Prueba | Escenario | Datos de Prueba | Resultado Esperado
+CP001 | 
+CP002 | 
+-------------
+
+P: Vista
+P: Campos
+
+--- TABLA ---
+Nombre | Tipo | Requerido | Descripción
+-------------
+
+P: Requisitos No Funcionales
+P: Seguridad
+P: Rendimiento
+P: Auditoría
+P: Usabilidad
+P: Esquema de Base de Datos
+P: Anexos
