@@ -35,3 +35,8 @@ Este documento define el stack, convenciones, arquitectura y restricciones que e
 - ❌ No realizar bypass de RLS en Edge Functions a menos que sea estrictamente necesario (ej. subida de contratos finalizados con `service_role`).
 - ✅ Filtrar siempre `deleted_at IS NULL` en cualquier política RLS y función que interactúe con el catálogo o eventos.
 - ✅ Mantener una cobertura de tipado estricto en TypeScript (`noImplicitAny = true`).
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->

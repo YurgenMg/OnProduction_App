@@ -1,0 +1,1 @@
+{"nodes": [{"id": "supabase_generar_contrato", "label": "Edge Function: generar-contrato", "file_type": "code", "source_file": "supabase/functions/generar-contrato/index.ts"}], "edges": [], "hyperedges": []}
