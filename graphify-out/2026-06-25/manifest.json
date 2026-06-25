@@ -80,14 +80,14 @@
     "semantic_hash": "cae137c0f108e3334d9425c87c7d5aa0"
   },
   "frontend/src/app/dashboard/inventario/page.tsx": {
-    "mtime": 1782417497.538694,
-    "ast_hash": "cb2cd130758639ccc815db7b4534f5e9",
-    "semantic_hash": ""
+    "mtime": 1781125764.4162757,
+    "ast_hash": "21ee4fafc802078fcdd688ec93fa51f4",
+    "semantic_hash": "21ee4fafc802078fcdd688ec93fa51f4"
   },
   "frontend/src/app/dashboard/layout.tsx": {
-    "mtime": 1782417130.5737672,
-    "ast_hash": "cf7314404dd48a64657403ce2c5f75ae",
-    "semantic_hash": ""
+    "mtime": 1781125125.9048488,
+    "ast_hash": "c7bfa4b715d48d702a238e7da107f2fb",
+    "semantic_hash": "c7bfa4b715d48d702a238e7da107f2fb"
   },
   "frontend/src/app/dashboard/page.tsx": {
     "mtime": 1781296667.0148015,
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1782417547.9697962,
-    "ast_hash": "7d0ad2fc2a1b36d230ca766d030ccbcd",
+    "mtime": 1779230796.6304085,
+    "ast_hash": "e0f868d12a931d4d5c4c38df1465369f",
     "semantic_hash": ""
   },
   "base_datos_onP.txt": {
@@ -572,26 +572,6 @@
   "supabase/migrations/20260623000002_operarios_y_disponibilidad_rpc.sql": {
     "mtime": 1782257233.9184213,
     "ast_hash": "b10d515a371742089c8541bd838c27ab",
-    "semantic_hash": ""
-  },
-  "frontend/src/app/dashboard/caja/page.tsx": {
-    "mtime": 1782417309.0004106,
-    "ast_hash": "12cee5d0c52f838d3a34495efa541477",
-    "semantic_hash": ""
-  },
-  "frontend/src/app/dashboard/clientes/page.tsx": {
-    "mtime": 1782417215.829357,
-    "ast_hash": "c664f55e897add677143997754a9428d",
-    "semantic_hash": ""
-  },
-  "QUICKSTART.md": {
-    "mtime": 1782417592.0143988,
-    "ast_hash": "3be6b8ab6fbdea0e3f7b1cbead68c693",
-    "semantic_hash": ""
-  },
-  "specs/002-modulos-especializados-sistema/checklists/implementation.md": {
-    "mtime": 1782258199.3160293,
-    "ast_hash": "09de5147887177777ce26fe6a29e64c3",
     "semantic_hash": ""
   }
 }

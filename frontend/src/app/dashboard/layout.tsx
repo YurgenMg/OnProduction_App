@@ -12,7 +12,9 @@ import {
   User,
   Menu,
   X,
-  Settings
+  Settings,
+  Users,
+  Wallet
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -94,7 +96,9 @@ export default function DashboardLayout({
   const baseMenuItems = [
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
     { name: 'Eventos & Cotizaciones', path: '/dashboard/eventos', icon: CalendarRange },
+    { name: 'Clientes', path: '/dashboard/clientes', icon: Users },
     { name: 'Inventario', path: '/dashboard/inventario', icon: Package },
+    { name: 'Caja & Cartera', path: '/dashboard/caja', icon: Wallet },
     { name: 'Garantías & Daños', path: '/dashboard/garantias', icon: ShieldAlert },
   ];
 

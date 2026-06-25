@@ -1,0 +1,521 @@
+{
+  "communities": {
+    "0": [
+      "app_page",
+      "app_page_rootpage",
+      "app_page_styles",
+      "configuracion_page",
+      "configuracion_page_configuracionempresapage",
+      "configuracion_page_empresaconfig",
+      "configuracion_page_styles",
+      "dashboard_layout",
+      "dashboard_layout_dashboardlayout",
+      "dashboard_layout_styles",
+      "dashboard_layout_userprofile",
+      "dashboard_page",
+      "dashboard_page_danoreciente",
+      "dashboard_page_dashboardpage",
+      "dashboard_page_eventoreciente",
+      "dashboard_page_stats",
+      "dashboard_page_styles",
+      "garantias_page",
+      "garantias_page_depositogarantia",
+      "garantias_page_eventoactivoconequipos",
+      "garantias_page_garantiaspage",
+      "garantias_page_styles",
+      "inventario_page",
+      "inventario_page_bajaitem",
+      "inventario_page_catalogoitem",
+      "inventario_page_compraitem",
+      "inventario_page_instanciaitem",
+      "inventario_page_inventariopage",
+      "inventario_page_styles",
+      "login_page",
+      "login_page_loginpage",
+      "login_page_styles",
+      "services_supabase_client",
+      "services_supabase_client_supabase",
+      "usuarios_page",
+      "usuarios_page_role",
+      "usuarios_page_styles",
+      "usuarios_page_userprofile",
+      "usuarios_page_usuariospage"
+    ],
+    "1": [
+      "public_workbox_f1770938",
+      "public_workbox_f1770938_b",
+      "public_workbox_f1770938_et",
+      "public_workbox_f1770938_et_constructor",
+      "public_workbox_f1770938_g",
+      "public_workbox_f1770938_g_constructor",
+      "public_workbox_f1770938_i",
+      "public_workbox_f1770938_i_constructor",
+      "public_workbox_f1770938_m",
+      "public_workbox_f1770938_o",
+      "public_workbox_f1770938_r_q",
+      "public_workbox_f1770938_s",
+      "public_workbox_f1770938_s_constructor",
+      "public_workbox_f1770938_st",
+      "public_workbox_f1770938_t",
+      "public_workbox_f1770938_u",
+      "public_workbox_f1770938_v",
+      "public_workbox_f1770938_v_cachematch",
+      "public_workbox_f1770938_v_cacheput",
+      "public_workbox_f1770938_v_constructor",
+      "public_workbox_f1770938_v_fetch",
+      "public_workbox_f1770938_v_fetchandcacheput",
+      "public_workbox_f1770938_v_getcachekey",
+      "public_workbox_f1770938_v_hascallback",
+      "public_workbox_f1770938_v_iteratecallbacks",
+      "public_workbox_f1770938_v_r",
+      "public_workbox_f1770938_v_runcallbacks",
+      "public_workbox_f1770938_v_waituntil",
+      "public_workbox_f1770938_x",
+      "public_workbox_f1770938_y",
+      "public_workbox_f1770938_y_a",
+      "public_workbox_f1770938_y_constructor",
+      "public_workbox_f1770938_y_k",
+      "public_workbox_f1770938_y_s",
+      "public_workbox_f1770938_y_u"
+    ],
+    "2": [
+      "eventos_page",
+      "eventos_page_adicional",
+      "eventos_page_cliente",
+      "eventos_page_detalleequipo",
+      "eventos_page_equipodisponible",
+      "eventos_page_evento",
+      "eventos_page_eventospage",
+      "eventos_page_styles",
+      "gemini_md",
+      "guia_despliegue_dominios_md",
+      "readme_md",
+      "shared_test_backend_logic",
+      "shared_test_backend_logic_adminclient",
+      "shared_test_backend_logic_exitprocess",
+      "shared_test_backend_logic_getenv",
+      "shared_test_backend_logic_servicekey",
+      "shared_test_backend_logic_supabaseurl",
+      "shared_test_backend_logic_testbackend",
+      "shared_test_trigger",
+      "shared_test_trigger_adminclient",
+      "shared_test_trigger_exitprocess",
+      "shared_test_trigger_getenv",
+      "shared_test_trigger_query",
+      "shared_test_trigger_servicekey",
+      "shared_test_trigger_supabaseurl",
+      "shared_transaction_helper"
+    ],
+    "3": [
+      "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_ducanh2912_next_pwa",
+      "frontend_package_dependencies_lucide_react",
+      "frontend_package_dependencies_next",
+      "frontend_package_dependencies_pdfkit",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_supabase_supabase_js",
+      "frontend_package_dependencies_types_pdfkit",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_eslint",
+      "frontend_package_devdependencies_eslint_config_next",
+      "frontend_package_devdependencies_tailwindcss_postcss",
+      "frontend_package_devdependencies_types_node",
+      "frontend_package_devdependencies_types_react",
+      "frontend_package_devdependencies_types_react_dom",
+      "frontend_package_devdependencies_typescript",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_lint",
+      "frontend_package_scripts_start",
+      "frontend_package_version"
+    ],
+    "4": [
+      "public_workbox_f1770938_a",
+      "public_workbox_f1770938_a_addcachelistener",
+      "public_workbox_f1770938_a_addfetchlistener",
+      "public_workbox_f1770938_a_c",
+      "public_workbox_f1770938_a_constructor",
+      "public_workbox_f1770938_a_expireentries",
+      "public_workbox_f1770938_a_findmatchingroute",
+      "public_workbox_f1770938_a_getdb",
+      "public_workbox_f1770938_a_gettimestamp",
+      "public_workbox_f1770938_a_handlerequest",
+      "public_workbox_f1770938_a_i",
+      "public_workbox_f1770938_a_n",
+      "public_workbox_f1770938_a_routes",
+      "public_workbox_f1770938_a_setcatchhandler",
+      "public_workbox_f1770938_a_setdefaulthandler",
+      "public_workbox_f1770938_a_settimestamp",
+      "public_workbox_f1770938_deletecacheandmetadata",
+      "public_workbox_f1770938_f",
+      "public_workbox_f1770938_f_constructor",
+      "public_workbox_f1770938_f_delete",
+      "public_workbox_f1770938_f_expireentries",
+      "public_workbox_f1770938_f_isurlexpired",
+      "public_workbox_f1770938_f_updatetimestamp",
+      "public_workbox_f1770938_k",
+      "public_workbox_f1770938_p"
+    ],
+    "5": [
+      "frontend_tsconfig",
+      "frontend_tsconfig_compileroptions",
+      "frontend_tsconfig_compileroptions_allowjs",
+      "frontend_tsconfig_compileroptions_esmoduleinterop",
+      "frontend_tsconfig_compileroptions_incremental",
+      "frontend_tsconfig_compileroptions_isolatedmodules",
+      "frontend_tsconfig_compileroptions_jsx",
+      "frontend_tsconfig_compileroptions_lib",
+      "frontend_tsconfig_compileroptions_module",
+      "frontend_tsconfig_compileroptions_moduleresolution",
+      "frontend_tsconfig_compileroptions_noemit",
+      "frontend_tsconfig_compileroptions_paths",
+      "frontend_tsconfig_compileroptions_plugins",
+      "frontend_tsconfig_compileroptions_resolvejsonmodule",
+      "frontend_tsconfig_compileroptions_skiplibcheck",
+      "frontend_tsconfig_compileroptions_strict",
+      "frontend_tsconfig_compileroptions_target",
+      "frontend_tsconfig_exclude",
+      "frontend_tsconfig_include",
+      "frontend_tsconfig_paths"
+    ],
+    "6": [
+      "public_workbox_f1770938_a_registerroute",
+      "public_workbox_f1770938_a_unregisterroute",
+      "public_workbox_f1770938_constructor",
+      "public_workbox_f1770938_constructor_cachedresponsewillbeused",
+      "public_workbox_f1770938_get",
+      "public_workbox_f1770938_h",
+      "public_workbox_f1770938_z",
+      "public_workbox_f1770938_z_activate",
+      "public_workbox_f1770938_z_addtocachelist",
+      "public_workbox_f1770938_z_constructor",
+      "public_workbox_f1770938_z_createhandlerboundtourl",
+      "public_workbox_f1770938_z_getcachedurls",
+      "public_workbox_f1770938_z_getcachekeyforurl",
+      "public_workbox_f1770938_z_getintegrityforcachekey",
+      "public_workbox_f1770938_z_geturlstocachekeys",
+      "public_workbox_f1770938_z_install",
+      "public_workbox_f1770938_z_matchprecache",
+      "public_workbox_f1770938_z_precache",
+      "public_workbox_f1770938_z_strategy"
+    ],
+    "7": [
+      "shared_types",
+      "shared_types_baseentity",
+      "shared_types_catalogoequipo",
+      "shared_types_cliente",
+      "shared_types_depositogarantia",
+      "shared_types_estadodeposito",
+      "shared_types_estadoequipo",
+      "shared_types_estadoevento",
+      "shared_types_evento",
+      "shared_types_eventoadicional",
+      "shared_types_eventodetalleequipo",
+      "shared_types_inventarioinstancia",
+      "shared_types_registrodanoauditoria",
+      "shared_types_rol",
+      "shared_types_tipoadicional",
+      "shared_types_tipocliente",
+      "shared_types_usuario"
+    ],
+    "8": [
+      "db_bloquear_edicion_trigger",
+      "db_catalogo_equipos",
+      "db_clientes",
+      "db_depositos_garantia",
+      "db_evento_adicionales",
+      "db_evento_detalles_equipos",
+      "db_eventos",
+      "db_inventario_instancias",
+      "db_registro_danos_auditoria",
+      "db_roles",
+      "db_usuarios",
+      "diagrama_secuencia_md",
+      "requerimientos_leidos_txt",
+      "supabase_generar_contrato"
+    ],
+    "9": [
+      "public_workbox_f1770938_j",
+      "public_workbox_f1770938_q",
+      "public_workbox_f1770938_r",
+      "public_workbox_f1770938_r_constructor",
+      "public_workbox_f1770938_r_d",
+      "public_workbox_f1770938_r_handle",
+      "public_workbox_f1770938_r_handleall",
+      "public_workbox_f1770938_r_setcatchhandler",
+      "public_workbox_f1770938_v_destroy",
+      "public_workbox_f1770938_v_donewaiting"
+    ],
+    "10": [
+      "shared_test_client",
+      "shared_test_client_adminclient",
+      "shared_test_client_anonclient",
+      "shared_test_client_anonkey",
+      "shared_test_client_exitprocess",
+      "shared_test_client_getenv",
+      "shared_test_client_servicekey",
+      "shared_test_client_supabaseurl"
+    ],
+    "11": [
+      "usuarios_route",
+      "usuarios_route_delete",
+      "usuarios_route_get",
+      "usuarios_route_getadminclient",
+      "usuarios_route_getclientfortoken",
+      "usuarios_route_post",
+      "usuarios_route_verificaradministrador"
+    ],
+    "12": [
+      "bajas_route",
+      "bajas_route_get",
+      "bajas_route_getadminclient",
+      "bajas_route_getclientfortoken",
+      "bajas_route_post",
+      "bajas_route_verificaradministrador"
+    ],
+    "13": [
+      "compras_route",
+      "compras_route_get",
+      "compras_route_getadminclient",
+      "compras_route_getclientfortoken",
+      "compras_route_post",
+      "compras_route_verificaradministrador"
+    ],
+    "14": [
+      "deno",
+      "deno_imports",
+      "deno_imports_supabase_supabase_js",
+      "deno_tasks",
+      "deno_tasks_format",
+      "deno_tasks_typecheck"
+    ],
+    "15": [
+      "empresa_route",
+      "empresa_route_get",
+      "empresa_route_getadminclient",
+      "empresa_route_getclientfortoken",
+      "empresa_route_post",
+      "empresa_route_verificaradministrador"
+    ],
+    "16": [
+      "frontend_eslint_config",
+      "frontend_eslint_config_compat",
+      "frontend_eslint_config_dirname",
+      "frontend_eslint_config_eslintconfig",
+      "frontend_eslint_config_filename"
+    ],
+    "17": [
+      "pdf_route",
+      "pdf_route_formatcop",
+      "pdf_route_get",
+      "pdf_route_getclientfortoken",
+      "pdf_route_loadfonts"
+    ],
+    "18": [
+      "app_layout",
+      "app_layout_metadata",
+      "app_layout_rootlayout",
+      "app_layout_viewport"
+    ],
+    "19": [
+      "frontend_src_shared_transaction_helper_ts_shared_transaction_helper",
+      "frontend_src_shared_transaction_helper_ts_shared_transaction_helper_runtransactionsafe",
+      "frontend_src_shared_transaction_helper_ts_shared_transaction_helper_transactionallockerror",
+      "frontend_src_shared_transaction_helper_ts_shared_transaction_helper_transactionallockerror_constructor"
+    ],
+    "20": [
+      "shared_create_test_user",
+      "shared_create_test_user_getenv",
+      "shared_create_test_user_main",
+      "shared_create_test_user_supabase"
+    ],
+    "21": [
+      "shared_transaction_helper_ts_shared_transaction_helper",
+      "shared_transaction_helper_ts_shared_transaction_helper_runtransactionsafe",
+      "shared_transaction_helper_ts_shared_transaction_helper_transactionallockerror",
+      "shared_transaction_helper_ts_shared_transaction_helper_transactionallockerror_constructor"
+    ],
+    "22": [
+      "frontend_next_config",
+      "frontend_next_config_nextconfig",
+      "frontend_next_config_withpwa"
+    ],
+    "23": [
+      "generar_contrato_index",
+      "generar_contrato_index_corsheaders",
+      "generar_contrato_index_start"
+    ],
+    "24": [
+      "app_global_error",
+      "app_global_error_globalerror"
+    ],
+    "25": [
+      "app_manifest",
+      "app_manifest_manifest"
+    ],
+    "26": [
+      "frontend_postcss_config",
+      "frontend_postcss_config_config"
+    ],
+    "27": [
+      "shared_debug_docx",
+      "shared_debug_docx_debug_docx_runs"
+    ],
+    "28": [
+      "shared_leer_docx",
+      "shared_leer_docx_main"
+    ],
+    "29": [
+      "shared_leer_docx_completo",
+      "shared_leer_docx_completo_read_full_docx"
+    ],
+    "30": [
+      "base_datos_onp_txt"
+    ],
+    "31": [
+      "diagrama_funcional_md"
+    ],
+    "32": [
+      "flujos_secuencia_criticos_md"
+    ],
+    "33": [
+      "frontend_next_env_d"
+    ],
+    "34": [
+      "public_sw"
+    ]
+  },
+  "cohesion": {
+    "0": 0.0620782726045884,
+    "1": 0.14285714285714285,
+    "2": 0.07692307692307693,
+    "3": 0.07692307692307693,
+    "4": 0.12333333333333334,
+    "5": 0.1,
+    "6": 0.14619883040935672,
+    "7": 0.19117647058823528,
+    "8": 0.16483516483516483,
+    "9": 0.26666666666666666,
+    "10": 0.25,
+    "11": 0.6190476190476191,
+    "12": 0.6666666666666666,
+    "13": 0.6666666666666666,
+    "14": 0.3333333333333333,
+    "15": 0.6,
+    "16": 0.4,
+    "17": 0.6,
+    "18": 0.5,
+    "19": 0.5,
+    "20": 0.6666666666666666,
+    "21": 0.5,
+    "22": 0.6666666666666666,
+    "23": 0.6666666666666666,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0
+  },
+  "gods": [
+    {
+      "id": "public_workbox_f1770938_a",
+      "label": "a",
+      "degree": 18
+    },
+    {
+      "id": "frontend_tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "public_workbox_f1770938_get",
+      "label": "get()",
+      "degree": 15
+    },
+    {
+      "id": "public_workbox_f1770938_v",
+      "label": "v",
+      "degree": 14
+    },
+    {
+      "id": "public_workbox_f1770938_z",
+      "label": "z()",
+      "degree": 14
+    },
+    {
+      "id": "shared_types_baseentity",
+      "label": "BaseEntity",
+      "degree": 11
+    },
+    {
+      "id": "services_supabase_client_supabase",
+      "label": "supabase",
+      "degree": 10
+    },
+    {
+      "id": "public_workbox_f1770938_t",
+      "label": "T()",
+      "degree": 8
+    },
+    {
+      "id": "db_eventos",
+      "label": "Table: eventos",
+      "degree": 8
+    },
+    {
+      "id": "public_workbox_f1770938_r",
+      "label": "r",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Diagrama de Secuencia",
+      "target": "Edge Function: generar-contrato",
+      "source_files": [
+        "diagramas/diagrama_secuencia.md",
+        "supabase/functions/generar-contrato/index.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "crosses file types (doc \u2194 code); connects across different repos/directories"
+    },
+    {
+      "source": "Requerimientos Le\u00eddos",
+      "target": "Table: eventos",
+      "source_files": [
+        "documento_requerimiento/requerimientos_leidos.txt",
+        "base_datos_onP.txt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Requerimientos Le\u00eddos` unexpectedly reaches hub `Table: eventos`"
+    },
+    {
+      "source": "Diagrama de Secuencia",
+      "target": "Table: eventos",
+      "source_files": [
+        "diagramas/diagrama_secuencia.md",
+        "base_datos_onP.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Diagrama de Secuencia` unexpectedly reaches hub `Table: eventos`"
+    }
+  ],
+  "tokens": {
+    "input": 18673,
+    "output": 1683
+  }
+}

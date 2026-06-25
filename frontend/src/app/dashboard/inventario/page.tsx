@@ -29,11 +29,19 @@ interface CatalogoItem {
   sku: string;
   nombre_equipo: string;
   categoria: string;
+  categoria_id?: number | null;
   tarifa_dia_base: number;
   _count_instancias?: number;
   _count_disponibles?: number;
   _count_alquilados?: number;
   _count_mantenimiento?: number;
+}
+
+interface CategoriaArbol {
+  id: number;
+  nombre: string;
+  nivel: number;
+  subcategorias: Array<{ id: number; nombre: string; nivel: number }>;
 }
 
 interface InstanciaItem {
@@ -98,11 +106,14 @@ export default function InventarioPage() {
   const [categoriaFilter, setCategoriaFilter] = useState('TODAS');
   const [estadoFilter, setEstadoFilter] = useState('TODOS');
 
+  // Categorías desde el API
+  const [categoriasArbol, setCategoriasArbol] = useState<CategoriaArbol[]>([]);
+
   // Agregar nuevo item al catálogo form
   const [showAddCatalogoForm, setShowAddCatalogoForm] = useState(false);
   const [newSku, setNewSku] = useState('');
   const [newNombre, setNewNombre] = useState('');
-  const [newCategoria, setNewCategoria] = useState('');
+  const [newCategoriaId, setNewCategoriaId] = useState<number | ''>('');
   const [newTarifaBase, setNewTarifaBase] = useState('');
 
   // Agregar nueva instancia física form (manual)
@@ -126,6 +137,11 @@ export default function InventarioPage() {
 
   useEffect(() => {
     fetchAllData();
+    // Cargar árbol de categorías desde el API
+    fetch('/api/inventario/categorias')
+      .then((r) => r.ok ? r.json() : [])
+      .then((data: CategoriaArbol[]) => setCategoriasArbol(data))
+      .catch(() => {});
   }, []);
 
   const fetchAllData = async () => {
@@ -238,26 +254,32 @@ export default function InventarioPage() {
 
     try {
       const tarifa = Number(newTarifaBase);
-      if (!newSku || !newNombre || !newCategoria || !tarifa) {
+      if (!newSku || !newNombre || !newCategoriaId || !tarifa) {
         throw new Error('Todos los campos son obligatorios para crear un equipo en catálogo.');
       }
 
-      const { error } = await supabase
-        .from('catalogo_equipos')
-        .insert({
-          sku: newSku.toUpperCase().trim(),
-          nombre_equipo: newNombre.trim(),
-          categoria: newCategoria,
-          tarifa_dia_base: tarifa
-        });
+      // Obtener nombre de categoría para el campo legacy
+      const todasLasCat = categoriasArbol.flatMap((c) => [c, ...c.subcategorias]);
+      const catSeleccionada = todasLasCat.find((c) => c.id === Number(newCategoriaId));
 
-      if (error) throw error;
+      const res = await fetch('/api/inventario/items', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sku: newSku,
+          nombre_equipo: newNombre,
+          categoria_id: Number(newCategoriaId),
+          tarifa_dia_base: tarifa,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? 'Error al agregar al catálogo.');
 
       setSuccessMsg('Modelo agregado al catálogo con éxito.');
       setShowAddCatalogoForm(false);
       setNewSku('');
       setNewNombre('');
-      setNewCategoria('');
+      setNewCategoriaId('');
       setNewTarifaBase('');
 
       await fetchInventarioData();
@@ -485,7 +507,11 @@ export default function InventarioPage() {
     }
   };
 
-  const categorias = ['Luces', 'Sonido', 'Estructuras', 'Video', 'Otros'];
+  // Todas las subcategorías planas para el filtro
+  const todasSubcats = categoriasArbol.flatMap((c) => [
+    { id: c.id, nombre: c.nombre },
+    ...c.subcategorias.map((s) => ({ id: s.id, nombre: s.nombre })),
+  ]);
 
   // Calcular KPIs del Inventario
   const totalUnidadesActivas = inventario.filter(i => i.estado_operativo !== 'DADO_DE_BAJA').length;
@@ -683,13 +709,20 @@ export default function InventarioPage() {
                         <select 
                           id="categoria"
                           className="form-select"
-                          value={newCategoria}
-                          onChange={(e) => setNewCategoria(e.target.value)}
+                          value={newCategoriaId}
+                          onChange={(e) => setNewCategoriaId(Number(e.target.value) || '')}
                           required
                         >
-                          <option value="">Selecciona...</option>
-                          {categorias.map(cat => (
-                            <option key={cat} value={cat}>{cat}</option>
+                          <option value="">Selecciona categoría...</option>
+                          {categoriasArbol.map((cat) => (
+                            <optgroup key={cat.id} label={cat.nombre}>
+                              {cat.subcategorias.length > 0
+                                ? cat.subcategorias.map((sub) => (
+                                    <option key={sub.id} value={sub.id}>{sub.nombre}</option>
+                                  ))
+                                : <option value={cat.id}>{cat.nombre}</option>
+                              }
+                            </optgroup>
                           ))}
                         </select>
                       </div>
@@ -862,8 +895,8 @@ export default function InventarioPage() {
                     style={styles.filterSelect}
                   >
                     <option value="TODAS">Categoría: Todas</option>
-                    {categorias.map(cat => (
-                      <option key={cat} value={cat}>{cat}</option>
+                    {todasSubcats.map((cat) => (
+                      <option key={cat.id} value={cat.nombre}>{cat.nombre}</option>
                     ))}
                   </select>
 
