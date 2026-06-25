@@ -35,14 +35,724 @@
   },
   "nodes": [
     {
+      "label": "QUICKSTART.md",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "quickstart",
+      "community": 72,
+      "norm_label": "quickstart.md"
+    },
+    {
+      "label": "Quickstart \u2014 OnProduction",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "quickstart_quickstart_onproduction",
+      "community": 72,
+      "norm_label": "quickstart \u2014 onproduction"
+    },
+    {
+      "label": "Prerequisitos",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "quickstart_prerequisitos",
+      "community": 72,
+      "norm_label": "prerequisitos"
+    },
+    {
+      "label": "1. Primer Login como Administrador",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "quickstart_1_primer_login_como_administrador",
+      "community": 72,
+      "norm_label": "1. primer login como administrador"
+    },
+    {
+      "label": "2. Configurar la Empresa",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "quickstart_2_configurar_la_empresa",
+      "community": 72,
+      "norm_label": "2. configurar la empresa"
+    },
+    {
+      "label": "3. Crear un Cliente",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "quickstart_3_crear_un_cliente",
+      "community": 72,
+      "norm_label": "3. crear un cliente"
+    },
+    {
+      "label": "Validar unicidad de documento",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "quickstart_validar_unicidad_de_documento",
+      "community": 72,
+      "norm_label": "validar unicidad de documento"
+    },
+    {
+      "label": "4. Agregar Inventario",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "quickstart_4_agregar_inventario",
+      "community": 72,
+      "norm_label": "4. agregar inventario"
+    },
+    {
+      "label": "4a. Crear categor\u00edas (si no existen semillas)",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "quickstart_4a_crear_categor\u00edas_si_no_existen_semillas",
+      "community": 72,
+      "norm_label": "4a. crear categorias (si no existen semillas)"
+    },
+    {
+      "label": "4b. Agregar equipo al cat\u00e1logo",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "quickstart_4b_agregar_equipo_al_cat\u00e1logo",
+      "community": 72,
+      "norm_label": "4b. agregar equipo al catalogo"
+    },
+    {
+      "label": "4c. Agregar instancia f\u00edsica",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "quickstart_4c_agregar_instancia_f\u00edsica",
+      "community": 72,
+      "norm_label": "4c. agregar instancia fisica"
+    },
+    {
+      "label": "5. Crear un Evento (Wizard)",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "quickstart_5_crear_un_evento_wizard",
+      "community": 72,
+      "norm_label": "5. crear un evento (wizard)"
+    },
+    {
+      "label": "Probar navegaci\u00f3n bidireccional",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "quickstart_probar_navegaci\u00f3n_bidireccional",
+      "community": 72,
+      "norm_label": "probar navegacion bidireccional"
+    },
+    {
+      "label": "6. Avanzar el Estado del Evento",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "quickstart_6_avanzar_el_estado_del_evento",
+      "community": 72,
+      "norm_label": "6. avanzar el estado del evento"
+    },
+    {
+      "label": "7. Registrar un Pago en Caja",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "quickstart_7_registrar_un_pago_en_caja",
+      "community": 72,
+      "norm_label": "7. registrar un pago en caja"
+    },
+    {
+      "label": "Validar inmutabilidad",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L145",
+      "_origin": "ast",
+      "id": "quickstart_validar_inmutabilidad",
+      "community": 72,
+      "norm_label": "validar inmutabilidad"
+    },
+    {
+      "label": "8. Verificar KPIs",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "quickstart_8_verificar_kpis",
+      "community": 72,
+      "norm_label": "8. verificar kpis"
+    },
+    {
+      "label": "Comandos de diagn\u00f3stico",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "quickstart_comandos_de_diagn\u00f3stico",
+      "community": 72,
+      "norm_label": "comandos de diagnostico"
+    },
+    {
+      "label": "Errores comunes",
+      "file_type": "document",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L180",
+      "_origin": "ast",
+      "id": "quickstart_errores_comunes",
+      "community": 72,
+      "norm_label": "errores comunes"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 55,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "OnProduction \u2014 Sistema de Gesti\u00f3n de Eventos y Alquiler de Equipos",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "community": 55,
+      "norm_label": "onproduction \u2014 sistema de gestion de eventos y alquiler de equipos"
+    },
+    {
+      "label": "M\u00f3dulos disponibles",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "readme_m\u00f3dulos_disponibles",
+      "community": 55,
+      "norm_label": "modulos disponibles"
+    },
+    {
+      "label": "Stack Tecnol\u00f3gico",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "readme_stack_tecnol\u00f3gico",
+      "community": 55,
+      "norm_label": "stack tecnologico"
+    },
+    {
+      "label": "Prerrequisitos",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "readme_prerrequisitos",
+      "community": 55,
+      "norm_label": "prerrequisitos"
+    },
+    {
+      "label": "Instalaci\u00f3n r\u00e1pida",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "readme_instalaci\u00f3n_r\u00e1pida",
+      "community": 55,
+      "norm_label": "instalacion rapida"
+    },
+    {
+      "label": "Variables de entorno",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "readme_variables_de_entorno",
+      "community": 55,
+      "norm_label": "variables de entorno"
+    },
+    {
+      "label": "Estructura del Proyecto",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "readme_estructura_del_proyecto",
+      "community": 55,
+      "norm_label": "estructura del proyecto"
+    },
+    {
+      "label": "Comandos principales",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "readme_comandos_principales",
+      "community": 55,
+      "norm_label": "comandos principales"
+    },
+    {
+      "label": "Arquitectura de Datos \u2014 Invariantes Cr\u00edticas",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "readme_arquitectura_de_datos_invariantes_cr\u00edticas",
+      "community": 55,
+      "norm_label": "arquitectura de datos \u2014 invariantes criticas"
+    },
+    {
+      "label": "Flujo de un Evento",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "readme_flujo_de_un_evento",
+      "community": 55,
+      "norm_label": "flujo de un evento"
+    },
+    {
+      "label": "Contribuir",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L189",
+      "_origin": "ast",
+      "id": "readme_contribuir",
+      "community": 55,
+      "norm_label": "contribuir"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "caja_page",
+      "community": 77,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "formatCOP()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "caja_page_formatcop",
+      "community": 77,
+      "norm_label": "formatcop()"
+    },
+    {
+      "label": "formatFecha()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "caja_page_formatfecha",
+      "community": 77,
+      "norm_label": "formatfecha()"
+    },
+    {
+      "label": "TIPO_CONFIG",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "caja_page_tipo_config",
+      "community": 77,
+      "norm_label": "tipo_config"
+    },
+    {
+      "label": "TIPOS_INGRESO",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "caja_page_tipos_ingreso",
+      "community": 77,
+      "norm_label": "tipos_ingreso"
+    },
+    {
+      "label": "TIPOS_EGRESO",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "caja_page_tipos_egreso",
+      "community": 77,
+      "norm_label": "tipos_egreso"
+    },
+    {
+      "label": "TransaccionEnriquecida",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "caja_page_transaccionenriquecida",
+      "community": 77,
+      "norm_label": "transaccionenriquecida"
+    },
+    {
+      "label": "FormNuevaTransaccion",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "caja_page_formnuevatransaccion",
+      "community": 77,
+      "norm_label": "formnuevatransaccion"
+    },
+    {
+      "label": "FORM_VACIO",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "caja_page_form_vacio",
+      "community": 77,
+      "norm_label": "form_vacio"
+    },
+    {
+      "label": "CajaPage()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "caja_page_cajapage",
+      "community": 77,
+      "norm_label": "cajapage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "clientes_page",
+      "community": 76,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "formatCOP()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "clientes_page_formatcop",
+      "community": 76,
+      "norm_label": "formatcop()"
+    },
+    {
+      "label": "tipoLabel",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "clientes_page_tipolabel",
+      "community": 76,
+      "norm_label": "tipolabel"
+    },
+    {
+      "label": "ClienteConHistorial",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "clientes_page_clienteconhistorial",
+      "community": 76,
+      "norm_label": "clienteconhistorial"
+    },
+    {
+      "label": "NuevoClienteForm",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "clientes_page_nuevoclienteform",
+      "community": 76,
+      "norm_label": "nuevoclienteform"
+    },
+    {
+      "label": "FORM_VACIO",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "clientes_page_form_vacio",
+      "community": 76,
+      "norm_label": "form_vacio"
+    },
+    {
+      "label": "ESTADO_COLOR",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "clientes_page_estado_color",
+      "community": 76,
+      "norm_label": "estado_color"
+    },
+    {
+      "label": "ESTADO_LABEL",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "clientes_page_estado_label",
+      "community": 76,
+      "norm_label": "estado_label"
+    },
+    {
+      "label": "ClientesPage()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "clientes_page_clientespage",
+      "community": 76,
+      "norm_label": "clientespage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "inventario_page",
+      "community": 64,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "CatalogoItem",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "inventario_page_catalogoitem",
+      "community": 64,
+      "norm_label": "catalogoitem"
+    },
+    {
+      "label": "CategoriaArbol",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "inventario_page_categoriaarbol",
+      "community": 64,
+      "norm_label": "categoriaarbol"
+    },
+    {
+      "label": "InstanciaItem",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "inventario_page_instanciaitem",
+      "community": 64,
+      "norm_label": "instanciaitem"
+    },
+    {
+      "label": "CompraItem",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "inventario_page_compraitem",
+      "community": 64,
+      "norm_label": "compraitem"
+    },
+    {
+      "label": "BajaItem",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "inventario_page_bajaitem",
+      "community": 64,
+      "norm_label": "bajaitem"
+    },
+    {
+      "label": "InventarioPage()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "inventario_page_inventariopage",
+      "community": 64,
+      "norm_label": "inventariopage()"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L1276",
+      "_origin": "ast",
+      "id": "inventario_page_styles",
+      "community": 64,
+      "norm_label": "styles"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dashboard_layout",
+      "community": 0,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "UserProfile",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "dashboard_layout_userprofile",
+      "community": 0,
+      "norm_label": "userprofile"
+    },
+    {
+      "label": "DashboardLayout()",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "dashboard_layout_dashboardlayout",
+      "community": 0,
+      "norm_label": "dashboardlayout()"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L247",
+      "_origin": "ast",
+      "id": "dashboard_layout_styles",
+      "community": 0,
+      "norm_label": "styles"
+    },
+    {
+      "label": "implementation.md",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "checklists_implementation",
+      "community": 82,
+      "norm_label": "implementation.md"
+    },
+    {
+      "label": "Implementation Quality Checklist: M\u00f3dulos Especializados (OnProduction)",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "community": 82,
+      "norm_label": "implementation quality checklist: modulos especializados (onproduction)"
+    },
+    {
+      "label": "Database Layer (Capa de Base de Datos)",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "checklists_implementation_database_layer_capa_de_base_de_datos",
+      "community": 82,
+      "norm_label": "database layer (capa de base de datos)"
+    },
+    {
+      "label": "API Layer (Capa de API)",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "checklists_implementation_api_layer_capa_de_api",
+      "community": 82,
+      "norm_label": "api layer (capa de api)"
+    },
+    {
+      "label": "TypeScript Types (Tipado Estricto)",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "checklists_implementation_typescript_types_tipado_estricto",
+      "community": 82,
+      "norm_label": "typescript types (tipado estricto)"
+    },
+    {
+      "label": "UI/UX \u2014 Wizard de Eventos (US5)",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "checklists_implementation_ui_ux_wizard_de_eventos_us5",
+      "community": 82,
+      "norm_label": "ui/ux \u2014 wizard de eventos (us5)"
+    },
+    {
+      "label": "Security & Constitution Compliance",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "checklists_implementation_security_constitution_compliance",
+      "community": 82,
+      "norm_label": "security & constitution compliance"
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "checklists_implementation_summary",
+      "community": 82,
+      "norm_label": "summary"
+    },
+    {
+      "label": "Deuda T\u00e9cnica V2",
+      "file_type": "document",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "checklists_implementation_deuda_t\u00e9cnica_v2",
+      "community": 82,
+      "norm_label": "deuda tecnica v2"
+    },
+    {
       "label": "constitution.md",
       "file_type": "document",
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "memory_constitution",
       "community": 36,
-      "norm_label": "constitution.md"
+      "norm_label": "constitution.md",
+      "id": "memory_constitution"
     },
     {
       "label": "OnProduction Project Constitution",
@@ -50,9 +760,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "memory_constitution_onproduction_project_constitution",
       "community": 36,
-      "norm_label": "onproduction project constitution"
+      "norm_label": "onproduction project constitution",
+      "id": "memory_constitution_onproduction_project_constitution"
     },
     {
       "label": "Core Principles",
@@ -60,9 +770,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "memory_constitution_core_principles",
       "community": 36,
-      "norm_label": "core principles"
+      "norm_label": "core principles",
+      "id": "memory_constitution_core_principles"
     },
     {
       "label": "I. DB-Centric Transactional Logic",
@@ -70,9 +780,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "memory_constitution_i_db_centric_transactional_logic",
       "community": 36,
-      "norm_label": "i. db-centric transactional logic"
+      "norm_label": "i. db-centric transactional logic",
+      "id": "memory_constitution_i_db_centric_transactional_logic"
     },
     {
       "label": "II. Strict Soft Deletes",
@@ -80,9 +790,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L27",
       "_origin": "ast",
-      "id": "memory_constitution_ii_strict_soft_deletes",
       "community": 36,
-      "norm_label": "ii. strict soft deletes"
+      "norm_label": "ii. strict soft deletes",
+      "id": "memory_constitution_ii_strict_soft_deletes"
     },
     {
       "label": "III. Isolated Row Level Security (RLS)",
@@ -90,9 +800,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "memory_constitution_iii_isolated_row_level_security_rls",
       "community": 36,
-      "norm_label": "iii. isolated row level security (rls)"
+      "norm_label": "iii. isolated row level security (rls)",
+      "id": "memory_constitution_iii_isolated_row_level_security_rls"
     },
     {
       "label": "IV. Autonomous Edge Functions",
@@ -100,9 +810,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "memory_constitution_iv_autonomous_edge_functions",
       "community": 36,
-      "norm_label": "iv. autonomous edge functions"
+      "norm_label": "iv. autonomous edge functions",
+      "id": "memory_constitution_iv_autonomous_edge_functions"
     },
     {
       "label": "V. Strict TypeScript Typing",
@@ -110,9 +820,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "memory_constitution_v_strict_typescript_typing",
       "community": 36,
-      "norm_label": "v. strict typescript typing"
+      "norm_label": "v. strict typescript typing",
+      "id": "memory_constitution_v_strict_typescript_typing"
     },
     {
       "label": "VI. Graphify-First Code Navigation",
@@ -120,9 +830,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "memory_constitution_vi_graphify_first_code_navigation",
       "community": 36,
-      "norm_label": "vi. graphify-first code navigation"
+      "norm_label": "vi. graphify-first code navigation",
+      "id": "memory_constitution_vi_graphify_first_code_navigation"
     },
     {
       "label": "VII. Data Engineering & Architecture Best Practices",
@@ -130,9 +840,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L42",
       "_origin": "ast",
-      "id": "memory_constitution_vii_data_engineering_architecture_best_practices",
       "community": 36,
-      "norm_label": "vii. data engineering & architecture best practices"
+      "norm_label": "vii. data engineering & architecture best practices",
+      "id": "memory_constitution_vii_data_engineering_architecture_best_practices"
     },
     {
       "label": "VIII. User-Centric PDF Generation",
@@ -140,9 +850,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "memory_constitution_viii_user_centric_pdf_generation",
       "community": 36,
-      "norm_label": "viii. user-centric pdf generation"
+      "norm_label": "viii. user-centric pdf generation",
+      "id": "memory_constitution_viii_user_centric_pdf_generation"
     },
     {
       "label": "Technology Stack & Constraints",
@@ -150,9 +860,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L55",
       "_origin": "ast",
-      "id": "memory_constitution_technology_stack_constraints",
       "community": 36,
-      "norm_label": "technology stack & constraints"
+      "norm_label": "technology stack & constraints",
+      "id": "memory_constitution_technology_stack_constraints"
     },
     {
       "label": "Development & Migration Workflow",
@@ -160,9 +870,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L64",
       "_origin": "ast",
-      "id": "memory_constitution_development_migration_workflow",
       "community": 36,
-      "norm_label": "development & migration workflow"
+      "norm_label": "development & migration workflow",
+      "id": "memory_constitution_development_migration_workflow"
     },
     {
       "label": "Governance",
@@ -170,9 +880,9 @@
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L70",
       "_origin": "ast",
-      "id": "memory_constitution_governance",
       "community": 36,
-      "norm_label": "governance"
+      "norm_label": "governance",
+      "id": "memory_constitution_governance"
     },
     {
       "label": "route.ts",
@@ -180,9 +890,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "metodos_pago_route",
       "community": 80,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "metodos_pago_route"
     },
     {
       "label": "supabase",
@@ -190,9 +900,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "metodos_pago_route_supabase",
       "community": 80,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "metodos_pago_route_supabase"
     },
     {
       "label": "GET()",
@@ -200,9 +910,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "metodos_pago_route_get",
       "community": 80,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "metodos_pago_route_get"
     },
     {
       "label": "route.ts",
@@ -210,9 +920,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "transacciones_route",
       "community": 77,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "transacciones_route"
     },
     {
       "label": "supabase",
@@ -220,9 +930,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "transacciones_route_supabase",
       "community": 77,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "transacciones_route_supabase"
     },
     {
       "label": "GET()",
@@ -230,9 +940,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "transacciones_route_get",
       "community": 77,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "transacciones_route_get"
     },
     {
       "label": "POST()",
@@ -240,9 +950,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "transacciones_route_post",
       "community": 77,
-      "norm_label": "post()"
+      "norm_label": "post()",
+      "id": "transacciones_route_post"
     },
     {
       "label": "route.ts",
@@ -250,9 +960,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "clientes_route",
       "community": 74,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "clientes_route"
     },
     {
       "label": "supabase",
@@ -260,9 +970,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "clientes_route_supabase",
       "community": 74,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "clientes_route_supabase"
     },
     {
       "label": "GET()",
@@ -270,9 +980,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "clientes_route_get",
       "community": 74,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "clientes_route_get"
     },
     {
       "label": "POST()",
@@ -280,9 +990,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "clientes_route_post",
       "community": 74,
-      "norm_label": "post()"
+      "norm_label": "post()",
+      "id": "clientes_route_post"
     },
     {
       "label": "route.ts",
@@ -290,9 +1000,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "id_route",
       "community": 75,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "id_route"
     },
     {
       "label": "supabase",
@@ -300,9 +1010,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "id_route_supabase",
       "community": 75,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "id_route_supabase"
     },
     {
       "label": "TRANSICIONES_VALIDAS",
@@ -310,9 +1020,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "id_route_transiciones_validas",
       "community": 75,
-      "norm_label": "transiciones_validas"
+      "norm_label": "transiciones_validas",
+      "id": "id_route_transiciones_validas"
     },
     {
       "label": "GET()",
@@ -320,9 +1030,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "id_route_get",
       "community": 75,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "id_route_get"
     },
     {
       "label": "PATCH()",
@@ -330,9 +1040,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "id_route_patch",
       "community": 75,
-      "norm_label": "patch()"
+      "norm_label": "patch()",
+      "id": "id_route_patch"
     },
     {
       "label": "DELETE()",
@@ -340,9 +1050,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L132",
       "_origin": "ast",
-      "id": "id_route_delete",
       "community": 75,
-      "norm_label": "delete()"
+      "norm_label": "delete()",
+      "id": "id_route_delete"
     },
     {
       "label": "route.ts",
@@ -350,9 +1060,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "eventos_route",
-      "community": 76,
-      "norm_label": "route.ts"
+      "community": 74,
+      "norm_label": "route.ts",
+      "id": "eventos_route"
     },
     {
       "label": "supabase",
@@ -360,9 +1070,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "eventos_route_supabase",
-      "community": 76,
-      "norm_label": "supabase"
+      "community": 74,
+      "norm_label": "supabase",
+      "id": "eventos_route_supabase"
     },
     {
       "label": "GET()",
@@ -370,9 +1080,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "eventos_route_get",
-      "community": 76,
-      "norm_label": "get()"
+      "community": 74,
+      "norm_label": "get()",
+      "id": "eventos_route_get"
     },
     {
       "label": "POST()",
@@ -380,9 +1090,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L57",
       "_origin": "ast",
-      "id": "eventos_route_post",
-      "community": 76,
-      "norm_label": "post()"
+      "community": 74,
+      "norm_label": "post()",
+      "id": "eventos_route_post"
     },
     {
       "label": "route.ts",
@@ -390,9 +1100,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "categorias_route",
       "community": 78,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "categorias_route"
     },
     {
       "label": "supabase",
@@ -400,9 +1110,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "categorias_route_supabase",
       "community": 78,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "categorias_route_supabase"
     },
     {
       "label": "GET()",
@@ -410,9 +1120,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "categorias_route_get",
       "community": 78,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "categorias_route_get"
     },
     {
       "label": "route.ts",
@@ -420,9 +1130,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "disponibilidad_route",
       "community": 73,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "disponibilidad_route"
     },
     {
       "label": "supabase",
@@ -430,9 +1140,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "disponibilidad_route_supabase",
       "community": 73,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "disponibilidad_route_supabase"
     },
     {
       "label": "GET()",
@@ -440,9 +1150,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "disponibilidad_route_get",
       "community": 73,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "disponibilidad_route_get"
     },
     {
       "label": "route.ts",
@@ -450,9 +1160,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "items_route",
       "community": 79,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "items_route"
     },
     {
       "label": "supabase",
@@ -460,9 +1170,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "items_route_supabase",
       "community": 79,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "items_route_supabase"
     },
     {
       "label": "GET()",
@@ -470,9 +1180,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "items_route_get",
       "community": 79,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "items_route_get"
     },
     {
       "label": "POST()",
@@ -480,9 +1190,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L61",
       "_origin": "ast",
-      "id": "items_route_post",
       "community": 79,
-      "norm_label": "post()"
+      "norm_label": "post()",
+      "id": "items_route_post"
     },
     {
       "label": "route.ts",
@@ -490,9 +1200,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "operarios_route",
       "community": 81,
-      "norm_label": "route.ts"
+      "norm_label": "route.ts",
+      "id": "operarios_route"
     },
     {
       "label": "supabase",
@@ -500,9 +1210,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "operarios_route_supabase",
       "community": 81,
-      "norm_label": "supabase"
+      "norm_label": "supabase",
+      "id": "operarios_route_supabase"
     },
     {
       "label": "GET()",
@@ -510,9 +1220,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "operarios_route_get",
       "community": 81,
-      "norm_label": "get()"
+      "norm_label": "get()",
+      "id": "operarios_route_get"
     },
     {
       "label": "page.tsx",
@@ -520,9 +1230,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "crear_page",
       "community": 73,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "crear_page"
     },
     {
       "label": "DatosEvento",
@@ -530,9 +1240,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "crear_page_datosevento",
       "community": 73,
-      "norm_label": "datosevento"
+      "norm_label": "datosevento",
+      "id": "crear_page_datosevento"
     },
     {
       "label": "ItemSeleccionado",
@@ -540,9 +1250,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "crear_page_itemseleccionado",
       "community": 73,
-      "norm_label": "itemseleccionado"
+      "norm_label": "itemseleccionado",
+      "id": "crear_page_itemseleccionado"
     },
     {
       "label": "Adicional",
@@ -550,9 +1260,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "crear_page_adicional",
       "community": 73,
-      "norm_label": "adicional"
+      "norm_label": "adicional",
+      "id": "crear_page_adicional"
     },
     {
       "label": "OperarioAsignado",
@@ -560,9 +1270,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L43",
       "_origin": "ast",
-      "id": "crear_page_operarioasignado",
       "community": 73,
-      "norm_label": "operarioasignado"
+      "norm_label": "operarioasignado",
+      "id": "crear_page_operarioasignado"
     },
     {
       "label": "calcularDias()",
@@ -570,9 +1280,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L56",
       "_origin": "ast",
-      "id": "crear_page_calculardias",
       "community": 73,
-      "norm_label": "calculardias()"
+      "norm_label": "calculardias()",
+      "id": "crear_page_calculardias"
     },
     {
       "label": "formatCOP()",
@@ -580,9 +1290,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "crear_page_formatcop",
       "community": 73,
-      "norm_label": "formatcop()"
+      "norm_label": "formatcop()",
+      "id": "crear_page_formatcop"
     },
     {
       "label": "PASOS",
@@ -590,9 +1300,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L65",
       "_origin": "ast",
-      "id": "crear_page_pasos",
       "community": 73,
-      "norm_label": "pasos"
+      "norm_label": "pasos",
+      "id": "crear_page_pasos"
     },
     {
       "label": "CrearEventoPage()",
@@ -600,9 +1310,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L71",
       "_origin": "ast",
-      "id": "crear_page_creareventopage",
       "community": 73,
-      "norm_label": "creareventopage()"
+      "norm_label": "creareventopage()",
+      "id": "crear_page_creareventopage"
     },
     {
       "label": "types.ts",
@@ -610,9 +1320,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "shared_types",
       "community": 7,
-      "norm_label": "types.ts"
+      "norm_label": "types.ts",
+      "id": "shared_types"
     },
     {
       "label": "TipoCliente",
@@ -620,9 +1330,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "shared_types_tipocliente",
-      "community": 7,
-      "norm_label": "tipocliente"
+      "community": 76,
+      "norm_label": "tipocliente",
+      "id": "shared_types_tipocliente"
     },
     {
       "label": "EstadoEquipo",
@@ -630,9 +1340,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "shared_types_estadoequipo",
       "community": 7,
-      "norm_label": "estadoequipo"
+      "norm_label": "estadoequipo",
+      "id": "shared_types_estadoequipo"
     },
     {
       "label": "EstadoEvento",
@@ -640,9 +1350,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "shared_types_estadoevento",
       "community": 7,
-      "norm_label": "estadoevento"
+      "norm_label": "estadoevento",
+      "id": "shared_types_estadoevento"
     },
     {
       "label": "TipoAdicional",
@@ -650,9 +1360,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "shared_types_tipoadicional",
       "community": 73,
-      "norm_label": "tipoadicional"
+      "norm_label": "tipoadicional",
+      "id": "shared_types_tipoadicional"
     },
     {
       "label": "EstadoDeposito",
@@ -660,9 +1370,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "shared_types_estadodeposito",
       "community": 7,
-      "norm_label": "estadodeposito"
+      "norm_label": "estadodeposito",
+      "id": "shared_types_estadodeposito"
     },
     {
       "label": "TipoTransaccion",
@@ -670,9 +1380,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "shared_types_tipotransaccion",
-      "community": 7,
-      "norm_label": "tipotransaccion"
+      "community": 77,
+      "norm_label": "tipotransaccion",
+      "id": "shared_types_tipotransaccion"
     },
     {
       "label": "BaseEntity",
@@ -680,9 +1390,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "shared_types_baseentity",
       "community": 7,
-      "norm_label": "baseentity"
+      "norm_label": "baseentity",
+      "id": "shared_types_baseentity"
     },
     {
       "label": "Rol",
@@ -690,9 +1400,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "shared_types_rol",
       "community": 7,
-      "norm_label": "rol"
+      "norm_label": "rol",
+      "id": "shared_types_rol"
     },
     {
       "label": "Usuario",
@@ -700,9 +1410,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "shared_types_usuario",
       "community": 7,
-      "norm_label": "usuario"
+      "norm_label": "usuario",
+      "id": "shared_types_usuario"
     },
     {
       "label": "UsuarioConRol",
@@ -710,9 +1420,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "shared_types_usuarioconrol",
       "community": 7,
-      "norm_label": "usuarioconrol"
+      "norm_label": "usuarioconrol",
+      "id": "shared_types_usuarioconrol"
     },
     {
       "label": "ConfiguracionEmpresa",
@@ -720,9 +1430,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "shared_types_configuracionempresa",
       "community": 7,
-      "norm_label": "configuracionempresa"
+      "norm_label": "configuracionempresa",
+      "id": "shared_types_configuracionempresa"
     },
     {
       "label": "CategoriaInventario",
@@ -730,9 +1440,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L66",
       "_origin": "ast",
-      "id": "shared_types_categoriainventario",
       "community": 78,
-      "norm_label": "categoriainventario"
+      "norm_label": "categoriainventario",
+      "id": "shared_types_categoriainventario"
     },
     {
       "label": "CategoriaConSubcategorias",
@@ -740,9 +1450,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "shared_types_categoriaconsubcategorias",
       "community": 78,
-      "norm_label": "categoriaconsubcategorias"
+      "norm_label": "categoriaconsubcategorias",
+      "id": "shared_types_categoriaconsubcategorias"
     },
     {
       "label": "CatalogoEquipo",
@@ -750,9 +1460,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L79",
       "_origin": "ast",
-      "id": "shared_types_catalogoequipo",
       "community": 7,
-      "norm_label": "catalogoequipo"
+      "norm_label": "catalogoequipo",
+      "id": "shared_types_catalogoequipo"
     },
     {
       "label": "InventarioInstancia",
@@ -760,9 +1470,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L87",
       "_origin": "ast",
-      "id": "shared_types_inventarioinstancia",
       "community": 7,
-      "norm_label": "inventarioinstancia"
+      "norm_label": "inventarioinstancia",
+      "id": "shared_types_inventarioinstancia"
     },
     {
       "label": "ItemDisponible",
@@ -770,9 +1480,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L95",
       "_origin": "ast",
-      "id": "shared_types_itemdisponible",
       "community": 73,
-      "norm_label": "itemdisponible"
+      "norm_label": "itemdisponible",
+      "id": "shared_types_itemdisponible"
     },
     {
       "label": "Cliente",
@@ -780,9 +1490,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L113",
       "_origin": "ast",
-      "id": "shared_types_cliente",
-      "community": 74,
-      "norm_label": "cliente"
+      "community": 76,
+      "norm_label": "cliente",
+      "id": "shared_types_cliente"
     },
     {
       "label": "CarteraCliente",
@@ -790,9 +1500,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L124",
       "_origin": "ast",
-      "id": "shared_types_carteracliente",
       "community": 7,
-      "norm_label": "carteracliente"
+      "norm_label": "carteracliente",
+      "id": "shared_types_carteracliente"
     },
     {
       "label": "ClienteConCartera",
@@ -800,9 +1510,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L131",
       "_origin": "ast",
-      "id": "shared_types_clienteconcartera",
-      "community": 74,
-      "norm_label": "clienteconcartera"
+      "community": 76,
+      "norm_label": "clienteconcartera",
+      "id": "shared_types_clienteconcartera"
     },
     {
       "label": "MetodoPago",
@@ -810,9 +1520,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L139",
       "_origin": "ast",
-      "id": "shared_types_metodopago",
       "community": 80,
-      "norm_label": "metodopago"
+      "norm_label": "metodopago",
+      "id": "shared_types_metodopago"
     },
     {
       "label": "TransaccionCaja",
@@ -820,9 +1530,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L146",
       "_origin": "ast",
-      "id": "shared_types_transaccioncaja",
       "community": 77,
-      "norm_label": "transaccioncaja"
+      "norm_label": "transaccioncaja",
+      "id": "shared_types_transaccioncaja"
     },
     {
       "label": "CarteraProveedor",
@@ -830,9 +1540,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L161",
       "_origin": "ast",
-      "id": "shared_types_carteraproveedor",
       "community": 7,
-      "norm_label": "carteraproveedor"
+      "norm_label": "carteraproveedor",
+      "id": "shared_types_carteraproveedor"
     },
     {
       "label": "Operario",
@@ -840,9 +1550,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L173",
       "_origin": "ast",
-      "id": "shared_types_operario",
       "community": 81,
-      "norm_label": "operario"
+      "norm_label": "operario",
+      "id": "shared_types_operario"
     },
     {
       "label": "EventoOperario",
@@ -850,9 +1560,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L181",
       "_origin": "ast",
-      "id": "shared_types_eventooperario",
       "community": 7,
-      "norm_label": "eventooperario"
+      "norm_label": "eventooperario",
+      "id": "shared_types_eventooperario"
     },
     {
       "label": "Evento",
@@ -860,9 +1570,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L193",
       "_origin": "ast",
-      "id": "shared_types_evento",
-      "community": 76,
-      "norm_label": "evento"
+      "community": 7,
+      "norm_label": "evento",
+      "id": "shared_types_evento"
     },
     {
       "label": "EventoDetalleEquipo",
@@ -870,9 +1580,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L205",
       "_origin": "ast",
-      "id": "shared_types_eventodetalleequipo",
       "community": 7,
-      "norm_label": "eventodetalleequipo"
+      "norm_label": "eventodetalleequipo",
+      "id": "shared_types_eventodetalleequipo"
     },
     {
       "label": "EventoAdicional",
@@ -880,9 +1590,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L213",
       "_origin": "ast",
-      "id": "shared_types_eventoadicional",
       "community": 7,
-      "norm_label": "eventoadicional"
+      "norm_label": "eventoadicional",
+      "id": "shared_types_eventoadicional"
     },
     {
       "label": "DepositoGarantia",
@@ -890,9 +1600,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L220",
       "_origin": "ast",
-      "id": "shared_types_depositogarantia",
       "community": 7,
-      "norm_label": "depositogarantia"
+      "norm_label": "depositogarantia",
+      "id": "shared_types_depositogarantia"
     },
     {
       "label": "RegistroDanoAuditoria",
@@ -900,9 +1610,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L228",
       "_origin": "ast",
-      "id": "shared_types_registrodanoauditoria",
       "community": 7,
-      "norm_label": "registrodanoauditoria"
+      "norm_label": "registrodanoauditoria",
+      "id": "shared_types_registrodanoauditoria"
     },
     {
       "label": "EventoCompleto",
@@ -910,9 +1620,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L237",
       "_origin": "ast",
-      "id": "shared_types_eventocompleto",
-      "community": 76,
-      "norm_label": "eventocompleto"
+      "community": 7,
+      "norm_label": "eventocompleto",
+      "id": "shared_types_eventocompleto"
     },
     {
       "label": "CreateTransaccionDto",
@@ -920,9 +1630,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L248",
       "_origin": "ast",
-      "id": "shared_types_createtransacciondto",
       "community": 77,
-      "norm_label": "createtransacciondto"
+      "norm_label": "createtransacciondto",
+      "id": "shared_types_createtransacciondto"
     },
     {
       "label": "CreateEventoDto",
@@ -930,9 +1640,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L260",
       "_origin": "ast",
-      "id": "shared_types_createeventodto",
       "community": 74,
-      "norm_label": "createeventodto"
+      "norm_label": "createeventodto",
+      "id": "shared_types_createeventodto"
     },
     {
       "label": "UpdateEventoEstadoDto",
@@ -940,9 +1650,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L283",
       "_origin": "ast",
-      "id": "shared_types_updateeventoestadodto",
       "community": 75,
-      "norm_label": "updateeventoestadodto"
+      "norm_label": "updateeventoestadodto",
+      "id": "shared_types_updateeventoestadodto"
     },
     {
       "label": "architecture.md",
@@ -950,9 +1660,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checklists_architecture",
       "community": 52,
-      "norm_label": "architecture.md"
+      "norm_label": "architecture.md",
+      "id": "checklists_architecture"
     },
     {
       "label": "Requirements Quality Checklist: Arquitectura y Datos (OnProduction)",
@@ -960,9 +1670,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checklists_architecture_requirements_quality_checklist_arquitectura_y_datos_onproduction",
       "community": 52,
-      "norm_label": "requirements quality checklist: arquitectura y datos (onproduction)"
+      "norm_label": "requirements quality checklist: arquitectura y datos (onproduction)",
+      "id": "checklists_architecture_requirements_quality_checklist_arquitectura_y_datos_onproduction"
     },
     {
       "label": "Requirement Completeness (Completitud)",
@@ -970,9 +1680,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "checklists_architecture_requirement_completeness_completitud",
       "community": 52,
-      "norm_label": "requirement completeness (completitud)"
+      "norm_label": "requirement completeness (completitud)",
+      "id": "checklists_architecture_requirement_completeness_completitud"
     },
     {
       "label": "Requirement Clarity (Claridad)",
@@ -980,9 +1690,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "checklists_architecture_requirement_clarity_claridad",
       "community": 52,
-      "norm_label": "requirement clarity (claridad)"
+      "norm_label": "requirement clarity (claridad)",
+      "id": "checklists_architecture_requirement_clarity_claridad"
     },
     {
       "label": "Requirement Consistency (Consistencia)",
@@ -990,9 +1700,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "checklists_architecture_requirement_consistency_consistencia",
       "community": 52,
-      "norm_label": "requirement consistency (consistencia)"
+      "norm_label": "requirement consistency (consistencia)",
+      "id": "checklists_architecture_requirement_consistency_consistencia"
     },
     {
       "label": "Acceptance Criteria Quality (Calidad de Criterios de Aceptaci\u00f3n)",
@@ -1000,9 +1710,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L52",
       "_origin": "ast",
-      "id": "checklists_architecture_acceptance_criteria_quality_calidad_de_criterios_de_aceptaci\u00f3n",
       "community": 52,
-      "norm_label": "acceptance criteria quality (calidad de criterios de aceptacion)"
+      "norm_label": "acceptance criteria quality (calidad de criterios de aceptacion)",
+      "id": "checklists_architecture_acceptance_criteria_quality_calidad_de_criterios_de_aceptaci\u00f3n"
     },
     {
       "label": "Scenario Coverage (Cobertura de Escenarios)",
@@ -1010,9 +1720,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "checklists_architecture_scenario_coverage_cobertura_de_escenarios",
       "community": 52,
-      "norm_label": "scenario coverage (cobertura de escenarios)"
+      "norm_label": "scenario coverage (cobertura de escenarios)",
+      "id": "checklists_architecture_scenario_coverage_cobertura_de_escenarios"
     },
     {
       "label": "Non-Functional Requirements (Requisitos No Funcionales - Seguridad & Auditor\u00eda)",
@@ -1020,9 +1730,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "checklists_architecture_non_functional_requirements_requisitos_no_funcionales_seguridad_auditor\u00eda",
       "community": 52,
-      "norm_label": "non-functional requirements (requisitos no funcionales - seguridad & auditoria)"
+      "norm_label": "non-functional requirements (requisitos no funcionales - seguridad & auditoria)",
+      "id": "checklists_architecture_non_functional_requirements_requisitos_no_funcionales_seguridad_auditor\u00eda"
     },
     {
       "label": "Summary",
@@ -1030,9 +1740,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L91",
       "_origin": "ast",
-      "id": "checklists_architecture_summary",
       "community": 52,
-      "norm_label": "summary"
+      "norm_label": "summary",
+      "id": "checklists_architecture_summary"
     },
     {
       "label": "Notes",
@@ -1040,9 +1750,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "checklists_architecture_notes",
       "community": 52,
-      "norm_label": "notes"
+      "norm_label": "notes",
+      "id": "checklists_architecture_notes"
     },
     {
       "label": "requirements.md",
@@ -1050,9 +1760,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/requirements.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checklists_requirements",
       "community": 52,
-      "norm_label": "requirements.md"
+      "norm_label": "requirements.md",
+      "id": "checklists_requirements"
     },
     {
       "label": "Specification Quality Checklist: M\u00f3dulos Especializados del Sistema (OnProduction)",
@@ -1060,9 +1770,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/requirements.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "checklists_requirements_specification_quality_checklist_m\u00f3dulos_especializados_del_sistema_onproduction",
       "community": 52,
-      "norm_label": "specification quality checklist: modulos especializados del sistema (onproduction)"
+      "norm_label": "specification quality checklist: modulos especializados del sistema (onproduction)",
+      "id": "checklists_requirements_specification_quality_checklist_m\u00f3dulos_especializados_del_sistema_onproduction"
     },
     {
       "label": "Content Quality",
@@ -1070,9 +1780,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/requirements.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "checklists_requirements_content_quality",
       "community": 52,
-      "norm_label": "content quality"
+      "norm_label": "content quality",
+      "id": "checklists_requirements_content_quality"
     },
     {
       "label": "Requirement Completeness",
@@ -1080,9 +1790,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/requirements.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "checklists_requirements_requirement_completeness",
       "community": 52,
-      "norm_label": "requirement completeness"
+      "norm_label": "requirement completeness",
+      "id": "checklists_requirements_requirement_completeness"
     },
     {
       "label": "Feature Readiness",
@@ -1090,9 +1800,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/requirements.md",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "checklists_requirements_feature_readiness",
       "community": 52,
-      "norm_label": "feature readiness"
+      "norm_label": "feature readiness",
+      "id": "checklists_requirements_feature_readiness"
     },
     {
       "label": "Notes",
@@ -1100,9 +1810,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/requirements.md",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "checklists_requirements_notes",
       "community": 52,
-      "norm_label": "notes"
+      "norm_label": "notes",
+      "id": "checklists_requirements_notes"
     },
     {
       "label": "api.md",
@@ -1110,9 +1820,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/contracts/api.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "contracts_api",
       "community": 68,
-      "norm_label": "api.md"
+      "norm_label": "api.md",
+      "id": "contracts_api"
     },
     {
       "label": "API Endpoints Contract (Next.js Routes)",
@@ -1120,9 +1830,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/contracts/api.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "contracts_api_api_endpoints_contract_next_js_routes",
       "community": 68,
-      "norm_label": "api endpoints contract (next.js routes)"
+      "norm_label": "api endpoints contract (next.js routes)",
+      "id": "contracts_api_api_endpoints_contract_next_js_routes"
     },
     {
       "label": "1. M\u00f3dulo Administrativo: Configuraci\u00f3n de Empresa",
@@ -1130,9 +1840,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/contracts/api.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "contracts_api_1_m\u00f3dulo_administrativo_configuraci\u00f3n_de_empresa",
       "community": 68,
-      "norm_label": "1. modulo administrativo: configuracion de empresa"
+      "norm_label": "1. modulo administrativo: configuracion de empresa",
+      "id": "contracts_api_1_m\u00f3dulo_administrativo_configuraci\u00f3n_de_empresa"
     },
     {
       "label": "2. M\u00f3dulo de Caja: Registro de Transacciones",
@@ -1140,9 +1850,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/contracts/api.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "contracts_api_2_m\u00f3dulo_de_caja_registro_de_transacciones",
       "community": 68,
-      "norm_label": "2. modulo de caja: registro de transacciones"
+      "norm_label": "2. modulo de caja: registro de transacciones",
+      "id": "contracts_api_2_m\u00f3dulo_de_caja_registro_de_transacciones"
     },
     {
       "label": "3. M\u00f3dulo de Inventario: Crear \u00cdtem",
@@ -1150,9 +1860,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/contracts/api.md",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "contracts_api_3_m\u00f3dulo_de_inventario_crear_\u00edtem",
       "community": 68,
-      "norm_label": "3. modulo de inventario: crear item"
+      "norm_label": "3. modulo de inventario: crear item",
+      "id": "contracts_api_3_m\u00f3dulo_de_inventario_crear_\u00edtem"
     },
     {
       "label": "data-model.md",
@@ -1160,9 +1870,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model",
       "community": 61,
-      "norm_label": "data-model.md"
+      "norm_label": "data-model.md",
+      "id": "002_modulos_especializados_sistema_data_model"
     },
     {
       "label": "Data Model: M\u00f3dulos Especializados del Sistema (OnProduction)",
@@ -1170,9 +1880,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_data_model_m\u00f3dulos_especializados_del_sistema_onproduction",
       "community": 61,
-      "norm_label": "data model: modulos especializados del sistema (onproduction)"
+      "norm_label": "data model: modulos especializados del sistema (onproduction)",
+      "id": "002_modulos_especializados_sistema_data_model_data_model_m\u00f3dulos_especializados_del_sistema_onproduction"
     },
     {
       "label": "Esquema de Tablas",
@@ -1180,9 +1890,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_esquema_de_tablas",
       "community": 61,
-      "norm_label": "esquema de tablas"
+      "norm_label": "esquema de tablas",
+      "id": "002_modulos_especializados_sistema_data_model_esquema_de_tablas"
     },
     {
       "label": "1. roles",
@@ -1190,9 +1900,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_1_roles",
       "community": 61,
-      "norm_label": "1. roles"
+      "norm_label": "1. roles",
+      "id": "002_modulos_especializados_sistema_data_model_1_roles"
     },
     {
       "label": "2. usuarios",
@@ -1200,9 +1910,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_2_usuarios",
       "community": 61,
-      "norm_label": "2. usuarios"
+      "norm_label": "2. usuarios",
+      "id": "002_modulos_especializados_sistema_data_model_2_usuarios"
     },
     {
       "label": "3. empresa_config",
@@ -1210,9 +1920,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_3_empresa_config",
       "community": 61,
-      "norm_label": "3. empresa_config"
+      "norm_label": "3. empresa_config",
+      "id": "002_modulos_especializados_sistema_data_model_3_empresa_config"
     },
     {
       "label": "4. categorias",
@@ -1220,9 +1930,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L52",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_4_categorias",
       "community": 61,
-      "norm_label": "4. categorias"
+      "norm_label": "4. categorias",
+      "id": "002_modulos_especializados_sistema_data_model_4_categorias"
     },
     {
       "label": "5. items_inventario",
@@ -1230,9 +1940,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_5_items_inventario",
       "community": 61,
-      "norm_label": "5. items_inventario"
+      "norm_label": "5. items_inventario",
+      "id": "002_modulos_especializados_sistema_data_model_5_items_inventario"
     },
     {
       "label": "6. clientes",
@@ -1240,9 +1950,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L86",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_6_clientes",
       "community": 61,
-      "norm_label": "6. clientes"
+      "norm_label": "6. clientes",
+      "id": "002_modulos_especializados_sistema_data_model_6_clientes"
     },
     {
       "label": "7. eventos",
@@ -1250,9 +1960,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_7_eventos",
       "community": 61,
-      "norm_label": "7. eventos"
+      "norm_label": "7. eventos",
+      "id": "002_modulos_especializados_sistema_data_model_7_eventos"
     },
     {
       "label": "8. evento_items",
@@ -1260,9 +1970,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L124",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_8_evento_items",
       "community": 61,
-      "norm_label": "8. evento_items"
+      "norm_label": "8. evento_items",
+      "id": "002_modulos_especializados_sistema_data_model_8_evento_items"
     },
     {
       "label": "9. metodos_pago",
@@ -1270,9 +1980,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L136",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_9_metodos_pago",
       "community": 61,
-      "norm_label": "9. metodos_pago"
+      "norm_label": "9. metodos_pago",
+      "id": "002_modulos_especializados_sistema_data_model_9_metodos_pago"
     },
     {
       "label": "10. transacciones_caja",
@@ -1280,9 +1990,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L146",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_10_transacciones_caja",
       "community": 61,
-      "norm_label": "10. transacciones_caja"
+      "norm_label": "10. transacciones_caja",
+      "id": "002_modulos_especializados_sistema_data_model_10_transacciones_caja"
     },
     {
       "label": "Reglas de Negocio en Base de Datos (PL/pgSQL Triggers)",
@@ -1290,9 +2000,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L160",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_reglas_de_negocio_en_base_de_datos_pl_pgsql_triggers",
       "community": 61,
-      "norm_label": "reglas de negocio en base de datos (pl/pgsql triggers)"
+      "norm_label": "reglas de negocio en base de datos (pl/pgsql triggers)",
+      "id": "002_modulos_especializados_sistema_data_model_reglas_de_negocio_en_base_de_datos_pl_pgsql_triggers"
     },
     {
       "label": "Validaci\u00f3n de Reservas Coincidentes (Inventario)",
@@ -1300,9 +2010,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/data-model.md",
       "source_location": "L162",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_data_model_validaci\u00f3n_de_reservas_coincidentes_inventario",
       "community": 61,
-      "norm_label": "validacion de reservas coincidentes (inventario)"
+      "norm_label": "validacion de reservas coincidentes (inventario)",
+      "id": "002_modulos_especializados_sistema_data_model_validaci\u00f3n_de_reservas_coincidentes_inventario"
     },
     {
       "label": "plan.md",
@@ -1310,9 +2020,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan",
       "community": 52,
-      "norm_label": "plan.md"
+      "norm_label": "plan.md",
+      "id": "002_modulos_especializados_sistema_plan"
     },
     {
       "label": "Implementation Plan: M\u00f3dulos Especializados del Sistema (OnProduction)",
@@ -1320,9 +2030,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_implementation_plan_m\u00f3dulos_especializados_del_sistema_onproduction",
       "community": 52,
-      "norm_label": "implementation plan: modulos especializados del sistema (onproduction)"
+      "norm_label": "implementation plan: modulos especializados del sistema (onproduction)",
+      "id": "002_modulos_especializados_sistema_plan_implementation_plan_m\u00f3dulos_especializados_del_sistema_onproduction"
     },
     {
       "label": "Summary",
@@ -1330,9 +2040,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_summary",
       "community": 52,
-      "norm_label": "summary"
+      "norm_label": "summary",
+      "id": "002_modulos_especializados_sistema_plan_summary"
     },
     {
       "label": "Technical Context",
@@ -1340,9 +2050,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_technical_context",
       "community": 52,
-      "norm_label": "technical context"
+      "norm_label": "technical context",
+      "id": "002_modulos_especializados_sistema_plan_technical_context"
     },
     {
       "label": "Constitution Check",
@@ -1350,9 +2060,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_constitution_check",
       "community": 52,
-      "norm_label": "constitution check"
+      "norm_label": "constitution check",
+      "id": "002_modulos_especializados_sistema_plan_constitution_check"
     },
     {
       "label": "Project Structure",
@@ -1360,9 +2070,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L40",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_project_structure",
       "community": 52,
-      "norm_label": "project structure"
+      "norm_label": "project structure",
+      "id": "002_modulos_especializados_sistema_plan_project_structure"
     },
     {
       "label": "Documentation (this feature)",
@@ -1370,9 +2080,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L42",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_documentation_this_feature",
       "community": 52,
-      "norm_label": "documentation (this feature)"
+      "norm_label": "documentation (this feature)",
+      "id": "002_modulos_especializados_sistema_plan_documentation_this_feature"
     },
     {
       "label": "Source Code Layout",
@@ -1380,9 +2090,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L57",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_source_code_layout",
       "community": 52,
-      "norm_label": "source code layout"
+      "norm_label": "source code layout",
+      "id": "002_modulos_especializados_sistema_plan_source_code_layout"
     },
     {
       "label": "Complexity Tracking",
@@ -1390,9 +2100,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/plan.md",
       "source_location": "L81",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_plan_complexity_tracking",
       "community": 52,
-      "norm_label": "complexity tracking"
+      "norm_label": "complexity tracking",
+      "id": "002_modulos_especializados_sistema_plan_complexity_tracking"
     },
     {
       "label": "quickstart.md",
@@ -1400,9 +2110,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/quickstart.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_quickstart",
       "community": 65,
-      "norm_label": "quickstart.md"
+      "norm_label": "quickstart.md",
+      "id": "002_modulos_especializados_sistema_quickstart"
     },
     {
       "label": "Quickstart: Validaci\u00f3n de M\u00f3dulos Especializados (OnProduction)",
@@ -1410,9 +2120,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/quickstart.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_quickstart_quickstart_validaci\u00f3n_de_m\u00f3dulos_especializados_onproduction",
       "community": 65,
-      "norm_label": "quickstart: validacion de modulos especializados (onproduction)"
+      "norm_label": "quickstart: validacion de modulos especializados (onproduction)",
+      "id": "002_modulos_especializados_sistema_quickstart_quickstart_validaci\u00f3n_de_m\u00f3dulos_especializados_onproduction"
     },
     {
       "label": "Preparaci\u00f3n y Semilla",
@@ -1420,9 +2130,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/quickstart.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_quickstart_preparaci\u00f3n_y_semilla",
       "community": 65,
-      "norm_label": "preparacion y semilla"
+      "norm_label": "preparacion y semilla",
+      "id": "002_modulos_especializados_sistema_quickstart_preparaci\u00f3n_y_semilla"
     },
     {
       "label": "Escenarios de Validaci\u00f3n",
@@ -1430,9 +2140,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/quickstart.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_quickstart_escenarios_de_validaci\u00f3n",
       "community": 65,
-      "norm_label": "escenarios de validacion"
+      "norm_label": "escenarios de validacion",
+      "id": "002_modulos_especializados_sistema_quickstart_escenarios_de_validaci\u00f3n"
     },
     {
       "label": "1. Validaci\u00f3n de Bloqueo de Stock Coincidente",
@@ -1440,9 +2150,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/quickstart.md",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_quickstart_1_validaci\u00f3n_de_bloqueo_de_stock_coincidente",
       "community": 65,
-      "norm_label": "1. validacion de bloqueo de stock coincidente"
+      "norm_label": "1. validacion de bloqueo de stock coincidente",
+      "id": "002_modulos_especializados_sistema_quickstart_1_validaci\u00f3n_de_bloqueo_de_stock_coincidente"
     },
     {
       "label": "2. Validaci\u00f3n de Inmutabilidad en Caja",
@@ -1450,9 +2160,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/quickstart.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_quickstart_2_validaci\u00f3n_de_inmutabilidad_en_caja",
       "community": 65,
-      "norm_label": "2. validacion de inmutabilidad en caja"
+      "norm_label": "2. validacion de inmutabilidad en caja",
+      "id": "002_modulos_especializados_sistema_quickstart_2_validaci\u00f3n_de_inmutabilidad_en_caja"
     },
     {
       "label": "research.md",
@@ -1460,9 +2170,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research",
       "community": 63,
-      "norm_label": "research.md"
+      "norm_label": "research.md",
+      "id": "002_modulos_especializados_sistema_research"
     },
     {
       "label": "Research: M\u00f3dulos Especializados del Sistema (OnProduction)",
@@ -1470,9 +2180,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research_research_m\u00f3dulos_especializados_del_sistema_onproduction",
       "community": 63,
-      "norm_label": "research: modulos especializados del sistema (onproduction)"
+      "norm_label": "research: modulos especializados del sistema (onproduction)",
+      "id": "002_modulos_especializados_sistema_research_research_m\u00f3dulos_especializados_del_sistema_onproduction"
     },
     {
       "label": "Decisiones T\u00e9cnicas y Arquitectura",
@@ -1480,9 +2190,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research_decisiones_t\u00e9cnicas_y_arquitectura",
       "community": 63,
-      "norm_label": "decisiones tecnicas y arquitectura"
+      "norm_label": "decisiones tecnicas y arquitectura",
+      "id": "002_modulos_especializados_sistema_research_decisiones_t\u00e9cnicas_y_arquitectura"
     },
     {
       "label": "1. Almacenamiento del Logotipo Empresarial",
@@ -1490,9 +2200,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research_1_almacenamiento_del_logotipo_empresarial",
       "community": 63,
-      "norm_label": "1. almacenamiento del logotipo empresarial"
+      "norm_label": "1. almacenamiento del logotipo empresarial",
+      "id": "002_modulos_especializados_sistema_research_1_almacenamiento_del_logotipo_empresarial"
     },
     {
       "label": "2. Estructura de Categor\u00edas de Inventario (Jer\u00e1rquica/\u00c1rbol)",
@@ -1500,9 +2210,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research_2_estructura_de_categor\u00edas_de_inventario_jer\u00e1rquica_\u00e1rbol",
       "community": 63,
-      "norm_label": "2. estructura de categorias de inventario (jerarquica/arbol)"
+      "norm_label": "2. estructura de categorias de inventario (jerarquica/arbol)",
+      "id": "002_modulos_especializados_sistema_research_2_estructura_de_categor\u00edas_de_inventario_jer\u00e1rquica_\u00e1rbol"
     },
     {
       "label": "3. Soporte de Caja y Divisa Local \u00danica",
@@ -1510,9 +2220,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research_3_soporte_de_caja_y_divisa_local_\u00fanica",
       "community": 63,
-      "norm_label": "3. soporte de caja y divisa local unica"
+      "norm_label": "3. soporte de caja y divisa local unica",
+      "id": "002_modulos_especializados_sistema_research_3_soporte_de_caja_y_divisa_local_\u00fanica"
     },
     {
       "label": "4. Seguridad de Acceso a Nivel de Fila (RLS)",
@@ -1520,9 +2230,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/research.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_research_4_seguridad_de_acceso_a_nivel_de_fila_rls",
       "community": 63,
-      "norm_label": "4. seguridad de acceso a nivel de fila (rls)"
+      "norm_label": "4. seguridad de acceso a nivel de fila (rls)",
+      "id": "002_modulos_especializados_sistema_research_4_seguridad_de_acceso_a_nivel_de_fila_rls"
     },
     {
       "label": "spec.md",
@@ -1530,9 +2240,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec",
       "community": 52,
-      "norm_label": "spec.md"
+      "norm_label": "spec.md",
+      "id": "002_modulos_especializados_sistema_spec"
     },
     {
       "label": "Feature Specification: M\u00f3dulos Especializados del Sistema (OnProduction)",
@@ -1540,9 +2250,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_feature_specification_m\u00f3dulos_especializados_del_sistema_onproduction",
-      "community": 72,
-      "norm_label": "feature specification: modulos especializados del sistema (onproduction)"
+      "community": 52,
+      "norm_label": "feature specification: modulos especializados del sistema (onproduction)",
+      "id": "002_modulos_especializados_sistema_spec_feature_specification_m\u00f3dulos_especializados_del_sistema_onproduction"
     },
     {
       "label": "Clarificaciones",
@@ -1550,9 +2260,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_clarificaciones",
-      "community": 72,
-      "norm_label": "clarificaciones"
+      "community": 52,
+      "norm_label": "clarificaciones",
+      "id": "002_modulos_especializados_sistema_spec_clarificaciones"
     },
     {
       "label": "Session 2026-06-23",
@@ -1560,9 +2270,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_session_2026_06_23",
-      "community": 72,
-      "norm_label": "session 2026-06-23"
+      "community": 52,
+      "norm_label": "session 2026-06-23",
+      "id": "002_modulos_especializados_sistema_spec_session_2026_06_23"
     },
     {
       "label": "User Scenarios & Testing *(mandatory)*",
@@ -1570,9 +2280,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_user_scenarios_testing_mandatory",
-      "community": 72,
-      "norm_label": "user scenarios & testing *(mandatory)*"
+      "community": 52,
+      "norm_label": "user scenarios & testing *(mandatory)*",
+      "id": "002_modulos_especializados_sistema_spec_user_scenarios_testing_mandatory"
     },
     {
       "label": "User Story 1 - M\u00f3dulo Administrativo (Priority: P1)",
@@ -1580,9 +2290,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_user_story_1_m\u00f3dulo_administrativo_priority_p1",
-      "community": 72,
-      "norm_label": "user story 1 - modulo administrativo (priority: p1)"
+      "community": 52,
+      "norm_label": "user story 1 - modulo administrativo (priority: p1)",
+      "id": "002_modulos_especializados_sistema_spec_user_story_1_m\u00f3dulo_administrativo_priority_p1"
     },
     {
       "label": "User Story 2 - Caja, Flujo de Caja y Carteras (Priority: P1)",
@@ -1590,9 +2300,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L44",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_user_story_2_caja_flujo_de_caja_y_carteras_priority_p1",
-      "community": 72,
-      "norm_label": "user story 2 - caja, flujo de caja y carteras (priority: p1)"
+      "community": 52,
+      "norm_label": "user story 2 - caja, flujo de caja y carteras (priority: p1)",
+      "id": "002_modulos_especializados_sistema_spec_user_story_2_caja_flujo_de_caja_y_carteras_priority_p1"
     },
     {
       "label": "User Story 3 - Inventario de \u00cdtems (Priority: P1)",
@@ -1600,9 +2310,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_user_story_3_inventario_de_\u00edtems_priority_p1",
-      "community": 72,
-      "norm_label": "user story 3 - inventario de items (priority: p1)"
+      "community": 52,
+      "norm_label": "user story 3 - inventario de items (priority: p1)",
+      "id": "002_modulos_especializados_sistema_spec_user_story_3_inventario_de_\u00edtems_priority_p1"
     },
     {
       "label": "User Story 4 - Gesti\u00f3n de Clientes (Priority: P2)",
@@ -1610,9 +2320,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L89",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_user_story_4_gesti\u00f3n_de_clientes_priority_p2",
-      "community": 72,
-      "norm_label": "user story 4 - gestion de clientes (priority: p2)"
+      "community": 52,
+      "norm_label": "user story 4 - gestion de clientes (priority: p2)",
+      "id": "002_modulos_especializados_sistema_spec_user_story_4_gesti\u00f3n_de_clientes_priority_p2"
     },
     {
       "label": "User Story 5 - Registro de Eventos (Priority: P1)",
@@ -1620,9 +2330,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L109",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_user_story_5_registro_de_eventos_priority_p1",
-      "community": 72,
-      "norm_label": "user story 5 - registro de eventos (priority: p1)"
+      "community": 52,
+      "norm_label": "user story 5 - registro de eventos (priority: p1)",
+      "id": "002_modulos_especializados_sistema_spec_user_story_5_registro_de_eventos_priority_p1"
     },
     {
       "label": "Edge Cases",
@@ -1630,9 +2340,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L137",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_edge_cases",
-      "community": 72,
-      "norm_label": "edge cases"
+      "community": 52,
+      "norm_label": "edge cases",
+      "id": "002_modulos_especializados_sistema_spec_edge_cases"
     },
     {
       "label": "Requirements *(mandatory)*",
@@ -1640,9 +2350,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L141",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_requirements_mandatory",
-      "community": 72,
-      "norm_label": "requirements *(mandatory)*"
+      "community": 52,
+      "norm_label": "requirements *(mandatory)*",
+      "id": "002_modulos_especializados_sistema_spec_requirements_mandatory"
     },
     {
       "label": "Functional Requirements",
@@ -1650,9 +2360,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L143",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_functional_requirements",
-      "community": 72,
-      "norm_label": "functional requirements"
+      "community": 52,
+      "norm_label": "functional requirements",
+      "id": "002_modulos_especializados_sistema_spec_functional_requirements"
     },
     {
       "label": "Key Entities",
@@ -1660,9 +2370,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L150",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_key_entities",
-      "community": 72,
-      "norm_label": "key entities"
+      "community": 52,
+      "norm_label": "key entities",
+      "id": "002_modulos_especializados_sistema_spec_key_entities"
     },
     {
       "label": "Success Criteria *(mandatory)*",
@@ -1670,9 +2380,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L157",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_success_criteria_mandatory",
-      "community": 72,
-      "norm_label": "success criteria *(mandatory)*"
+      "community": 52,
+      "norm_label": "success criteria *(mandatory)*",
+      "id": "002_modulos_especializados_sistema_spec_success_criteria_mandatory"
     },
     {
       "label": "Measurable Outcomes",
@@ -1680,9 +2390,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L159",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_measurable_outcomes",
-      "community": 72,
-      "norm_label": "measurable outcomes"
+      "community": 52,
+      "norm_label": "measurable outcomes",
+      "id": "002_modulos_especializados_sistema_spec_measurable_outcomes"
     },
     {
       "label": "Assumptions",
@@ -1690,9 +2400,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/spec.md",
       "source_location": "L164",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_spec_assumptions",
-      "community": 72,
-      "norm_label": "assumptions"
+      "community": 52,
+      "norm_label": "assumptions",
+      "id": "002_modulos_especializados_sistema_spec_assumptions"
     },
     {
       "label": "tasks.md",
@@ -1700,9 +2410,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks",
       "community": 71,
-      "norm_label": "tasks.md"
+      "norm_label": "tasks.md",
+      "id": "002_modulos_especializados_sistema_tasks"
     },
     {
       "label": "Tasks: M\u00f3dulos Especializados del Sistema (OnProduction)",
@@ -1710,9 +2420,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_tasks_m\u00f3dulos_especializados_del_sistema_onproduction",
       "community": 71,
-      "norm_label": "tasks: modulos especializados del sistema (onproduction)"
+      "norm_label": "tasks: modulos especializados del sistema (onproduction)",
+      "id": "002_modulos_especializados_sistema_tasks_tasks_m\u00f3dulos_especializados_del_sistema_onproduction"
     },
     {
       "label": "Format: `[ID] [P?] [Story] Description`",
@@ -1720,9 +2430,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_format_id_p_story_description",
       "community": 71,
-      "norm_label": "format: `[id] [p?] [story] description`"
+      "norm_label": "format: `[id] [p?] [story] description`",
+      "id": "002_modulos_especializados_sistema_tasks_format_id_p_story_description"
     },
     {
       "label": "Phase 1: Setup (Shared Infrastructure)",
@@ -1730,9 +2440,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_1_setup_shared_infrastructure",
       "community": 71,
-      "norm_label": "phase 1: setup (shared infrastructure)"
+      "norm_label": "phase 1: setup (shared infrastructure)",
+      "id": "002_modulos_especializados_sistema_tasks_phase_1_setup_shared_infrastructure"
     },
     {
       "label": "Phase 2: Foundational (Blocking Prerequisites)",
@@ -1740,9 +2450,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_2_foundational_blocking_prerequisites",
       "community": 71,
-      "norm_label": "phase 2: foundational (blocking prerequisites)"
+      "norm_label": "phase 2: foundational (blocking prerequisites)",
+      "id": "002_modulos_especializados_sistema_tasks_phase_2_foundational_blocking_prerequisites"
     },
     {
       "label": "Phase 3: User Story 1 - M\u00f3dulo Administrativo (Priority: P1) \ud83c\udfaf MVP",
@@ -1750,9 +2460,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L42",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_3_user_story_1_m\u00f3dulo_administrativo_priority_p1_mvp",
       "community": 71,
-      "norm_label": "phase 3: user story 1 - modulo administrativo (priority: p1) \ud83c\udfaf mvp"
+      "norm_label": "phase 3: user story 1 - modulo administrativo (priority: p1) \ud83c\udfaf mvp",
+      "id": "002_modulos_especializados_sistema_tasks_phase_3_user_story_1_m\u00f3dulo_administrativo_priority_p1_mvp"
     },
     {
       "label": "Implementation for User Story 1",
@@ -1760,9 +2470,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L48",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_1",
       "community": 71,
-      "norm_label": "implementation for user story 1"
+      "norm_label": "implementation for user story 1",
+      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_1"
     },
     {
       "label": "Phase 4: User Story 2 - Caja, Flujo de Caja y Carteras (Priority: P1)",
@@ -1770,9 +2480,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L62",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_4_user_story_2_caja_flujo_de_caja_y_carteras_priority_p1",
       "community": 71,
-      "norm_label": "phase 4: user story 2 - caja, flujo de caja y carteras (priority: p1)"
+      "norm_label": "phase 4: user story 2 - caja, flujo de caja y carteras (priority: p1)",
+      "id": "002_modulos_especializados_sistema_tasks_phase_4_user_story_2_caja_flujo_de_caja_y_carteras_priority_p1"
     },
     {
       "label": "Implementation for User Story 2",
@@ -1780,9 +2490,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L68",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_2",
       "community": 71,
-      "norm_label": "implementation for user story 2"
+      "norm_label": "implementation for user story 2",
+      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_2"
     },
     {
       "label": "Phase 5: User Story 3 - Inventario de \u00cdtems (Priority: P1)",
@@ -1790,9 +2500,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L80",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_5_user_story_3_inventario_de_\u00edtems_priority_p1",
       "community": 71,
-      "norm_label": "phase 5: user story 3 - inventario de items (priority: p1)"
+      "norm_label": "phase 5: user story 3 - inventario de items (priority: p1)",
+      "id": "002_modulos_especializados_sistema_tasks_phase_5_user_story_3_inventario_de_\u00edtems_priority_p1"
     },
     {
       "label": "Implementation for User Story 3",
@@ -1800,9 +2510,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L86",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_3",
       "community": 71,
-      "norm_label": "implementation for user story 3"
+      "norm_label": "implementation for user story 3",
+      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_3"
     },
     {
       "label": "Phase 6: User Story 4 - Gesti\u00f3n de Clientes (Priority: P2)",
@@ -1810,9 +2520,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L98",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_6_user_story_4_gesti\u00f3n_de_clientes_priority_p2",
       "community": 71,
-      "norm_label": "phase 6: user story 4 - gestion de clientes (priority: p2)"
+      "norm_label": "phase 6: user story 4 - gestion de clientes (priority: p2)",
+      "id": "002_modulos_especializados_sistema_tasks_phase_6_user_story_4_gesti\u00f3n_de_clientes_priority_p2"
     },
     {
       "label": "Implementation for User Story 4",
@@ -1820,9 +2530,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L104",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_4",
       "community": 71,
-      "norm_label": "implementation for user story 4"
+      "norm_label": "implementation for user story 4",
+      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_4"
     },
     {
       "label": "Phase 7: User Story 5 - Registro de Eventos (Priority: P1)",
@@ -1830,9 +2540,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L115",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_7_user_story_5_registro_de_eventos_priority_p1",
       "community": 71,
-      "norm_label": "phase 7: user story 5 - registro de eventos (priority: p1)"
+      "norm_label": "phase 7: user story 5 - registro de eventos (priority: p1)",
+      "id": "002_modulos_especializados_sistema_tasks_phase_7_user_story_5_registro_de_eventos_priority_p1"
     },
     {
       "label": "Implementation for User Story 5",
@@ -1840,9 +2550,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L121",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_5",
       "community": 71,
-      "norm_label": "implementation for user story 5"
+      "norm_label": "implementation for user story 5",
+      "id": "002_modulos_especializados_sistema_tasks_implementation_for_user_story_5"
     },
     {
       "label": "Phase 8: Polish & Cross-Cutting Concerns",
@@ -1850,9 +2560,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L133",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_8_polish_cross_cutting_concerns",
       "community": 71,
-      "norm_label": "phase 8: polish & cross-cutting concerns"
+      "norm_label": "phase 8: polish & cross-cutting concerns",
+      "id": "002_modulos_especializados_sistema_tasks_phase_8_polish_cross_cutting_concerns"
     },
     {
       "label": "Dependencies & Execution Order",
@@ -1860,9 +2570,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L143",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_dependencies_execution_order",
       "community": 71,
-      "norm_label": "dependencies & execution order"
+      "norm_label": "dependencies & execution order",
+      "id": "002_modulos_especializados_sistema_tasks_dependencies_execution_order"
     },
     {
       "label": "Phase Dependencies",
@@ -1870,9 +2580,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L145",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_phase_dependencies",
       "community": 71,
-      "norm_label": "phase dependencies"
+      "norm_label": "phase dependencies",
+      "id": "002_modulos_especializados_sistema_tasks_phase_dependencies"
     },
     {
       "label": "Parallel Opportunities",
@@ -1880,9 +2590,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/tasks.md",
       "source_location": "L154",
       "_origin": "ast",
-      "id": "002_modulos_especializados_sistema_tasks_parallel_opportunities",
       "community": 71,
-      "norm_label": "parallel opportunities"
+      "norm_label": "parallel opportunities",
+      "id": "002_modulos_especializados_sistema_tasks_parallel_opportunities"
     },
     {
       "label": "update-agent-context.sh",
@@ -2648,7 +3358,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "r",
       "id": "public_workbox_f1770938_r"
     },
@@ -2658,7 +3368,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".constructor()",
       "id": "public_workbox_f1770938_r_constructor"
     },
@@ -2668,7 +3378,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".setcatchhandler()",
       "id": "public_workbox_f1770938_r_setcatchhandler"
     },
@@ -2678,7 +3388,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 1,
       "norm_label": "i",
       "id": "public_workbox_f1770938_i"
     },
@@ -2688,7 +3398,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 1,
       "norm_label": ".constructor()",
       "id": "public_workbox_f1770938_i_constructor"
     },
@@ -2968,7 +3678,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".donewaiting()",
       "id": "public_workbox_f1770938_v_donewaiting"
     },
@@ -2978,7 +3688,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".destroy()",
       "id": "public_workbox_f1770938_v_destroy"
     },
@@ -2998,7 +3708,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".handle()",
       "id": "public_workbox_f1770938_r_handle"
     },
@@ -3008,7 +3718,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".handleall()",
       "id": "public_workbox_f1770938_r_handleall"
     },
@@ -3028,7 +3738,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": ".d()",
       "id": "public_workbox_f1770938_r_d"
     },
@@ -3048,7 +3758,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "q()",
       "id": "public_workbox_f1770938_q"
     },
@@ -3098,7 +3808,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 4,
       "norm_label": "j()",
       "id": "public_workbox_f1770938_j"
     },
@@ -3438,7 +4148,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 1,
       "norm_label": "et",
       "id": "public_workbox_f1770938_et"
     },
@@ -3448,7 +4158,7 @@
       "source_file": "frontend/public/workbox-f1770938.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 1,
       "norm_label": ".constructor()",
       "id": "public_workbox_f1770938_et_constructor"
     },
@@ -3971,116 +4681,6 @@
       "community": 67,
       "norm_label": "styles",
       "id": "garantias_page_styles"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "page.tsx",
-      "id": "inventario_page"
-    },
-    {
-      "label": "CatalogoItem",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L27",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "catalogoitem",
-      "id": "inventario_page_catalogoitem"
-    },
-    {
-      "label": "InstanciaItem",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "instanciaitem",
-      "id": "inventario_page_instanciaitem"
-    },
-    {
-      "label": "CompraItem",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L52",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "compraitem",
-      "id": "inventario_page_compraitem"
-    },
-    {
-      "label": "BajaItem",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L67",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "bajaitem",
-      "id": "inventario_page_bajaitem"
-    },
-    {
-      "label": "InventarioPage()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L83",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "inventariopage()",
-      "id": "inventario_page_inventariopage"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L1243",
-      "_origin": "ast",
-      "community": 64,
-      "norm_label": "styles",
-      "id": "inventario_page_styles"
-    },
-    {
-      "label": "layout.tsx",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "layout.tsx",
-      "id": "dashboard_layout"
-    },
-    {
-      "label": "UserProfile",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "userprofile",
-      "id": "dashboard_layout_userprofile"
-    },
-    {
-      "label": "DashboardLayout()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "dashboardlayout()",
-      "id": "dashboard_layout_dashboardlayout"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L243",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "styles",
-      "id": "dashboard_layout_styles"
     },
     {
       "label": "page.tsx",
@@ -5933,76 +6533,6 @@
       "id": "guia_despliegue_dominios_paso_5_probar_la_aplicaci\u00f3n_en_el_celular_pwa"
     },
     {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "readme.md",
-      "id": "readme"
-    },
-    {
-      "label": "OnProduction \u2014 Sistema Log\u00edstico y Transaccional de Alquiler",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "onproduction \u2014 sistema logistico y transaccional de alquiler",
-      "id": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler"
-    },
-    {
-      "label": "Prerrequisitos",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "prerrequisitos",
-      "id": "readme_prerrequisitos"
-    },
-    {
-      "label": "Instalaci\u00f3n y Configuraci\u00f3n",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L13",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "instalacion y configuracion",
-      "id": "readme_instalaci\u00f3n_y_configuraci\u00f3n"
-    },
-    {
-      "label": "Estructura del Proyecto",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L42",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "estructura del proyecto",
-      "id": "readme_estructura_del_proyecto"
-    },
-    {
-      "label": "Comandos Principales",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L60",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "comandos principales",
-      "id": "readme_comandos_principales"
-    },
-    {
-      "label": "Contribuir",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L69",
-      "_origin": "ast",
-      "community": 55,
-      "norm_label": "contribuir",
-      "id": "readme_contribuir"
-    },
-    {
       "label": "diagrama_funcional.md",
       "file_type": "document",
       "source_file": "diagramas/diagrama_funcional.md",
@@ -6609,6 +7139,789 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "quickstart",
+      "target": "quickstart_quickstart_onproduction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_1_primer_login_como_administrador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_2_configurar_la_empresa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_3_crear_un_cliente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_4_agregar_inventario",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_5_crear_un_evento_wizard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_6_avanzar_el_estado_del_evento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_7_registrar_un_pago_en_caja",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_8_verificar_kpis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_comandos_de_diagn\u00f3stico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_errores_comunes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "quickstart_quickstart_onproduction",
+      "target": "quickstart_prerequisitos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "quickstart_3_crear_un_cliente",
+      "target": "quickstart_validar_unicidad_de_documento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "quickstart_4_agregar_inventario",
+      "target": "quickstart_4a_crear_categor\u00edas_si_no_existen_semillas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "quickstart_4_agregar_inventario",
+      "target": "quickstart_4b_agregar_equipo_al_cat\u00e1logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "quickstart_4_agregar_inventario",
+      "target": "quickstart_4c_agregar_instancia_f\u00edsica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "quickstart_5_crear_un_evento_wizard",
+      "target": "quickstart_probar_navegaci\u00f3n_bidireccional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICKSTART.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "quickstart_7_registrar_un_pago_en_caja",
+      "target": "quickstart_validar_inmutabilidad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_arquitectura_de_datos_invariantes_cr\u00edticas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_comandos_principales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_contribuir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_estructura_del_proyecto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_flujo_de_un_evento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_instalaci\u00f3n_r\u00e1pida",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_m\u00f3dulos_disponibles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_prerrequisitos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_stack_tecnol\u00f3gico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "readme_onproduction_sistema_de_gesti\u00f3n_de_eventos_y_alquiler_de_equipos",
+      "target": "readme_variables_de_entorno",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_cajapage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_form_vacio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_formatcop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_formatfecha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_formnuevatransaccion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_tipo_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_tipos_egreso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_tipos_ingreso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "caja_page_transaccionenriquecida",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "shared_types_createtransacciondto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "shared_types_metodopago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "shared_types_tipotransaccion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "caja_page",
+      "target": "shared_types_transaccioncaja",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/caja/page.tsx",
+      "source_location": "L405",
+      "weight": 1.0,
+      "source": "caja_page_cajapage",
+      "target": "caja_page_formatcop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_clienteconhistorial",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_clientespage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_estado_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_estado_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_form_vacio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_formatcop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_nuevoclienteform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "clientes_page_tipolabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "shared_types_cliente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "shared_types_clienteconcartera",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/clientes/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "clientes_page",
+      "target": "shared_types_tipocliente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_bajaitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_catalogoitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_categoriaarbol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_compraitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_instanciaitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_inventariopage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L1243",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "inventario_page_styles"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "services_supabase_client"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "services_supabase_client_supabase"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_page",
+      "target": "shared_transaction_helper"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_layout",
+      "target": "dashboard_layout_dashboardlayout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L243",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_layout",
+      "target": "dashboard_layout_styles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_layout",
+      "target": "dashboard_layout_userprofile"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_layout",
+      "target": "services_supabase_client"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/app/dashboard/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_layout",
+      "target": "services_supabase_client_supabase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "checklists_implementation",
+      "target": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_api_layer_capa_de_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_database_layer_capa_de_base_de_datos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_deuda_t\u00e9cnica_v2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_security_constitution_compliance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_typescript_types_tipado_estricto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/002-modulos-especializados-sistema/checklists/implementation.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "checklists_implementation_implementation_quality_checklist_m\u00f3dulos_especializados_onproduction",
+      "target": "checklists_implementation_ui_ux_wizard_de_eventos_us5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".specify/memory/constitution.md",
       "source_location": "L17",
       "weight": 1.0,
@@ -6742,9 +8055,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "metodos_pago_route",
-      "target": "metodos_pago_route_get",
-      "confidence_score": 1.0
+      "target": "metodos_pago_route_get"
     },
     {
       "relation": "contains",
@@ -6752,9 +8065,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "metodos_pago_route",
-      "target": "metodos_pago_route_supabase",
-      "confidence_score": 1.0
+      "target": "metodos_pago_route_supabase"
     },
     {
       "relation": "imports_from",
@@ -6763,9 +8076,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "metodos_pago_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -6774,9 +8087,9 @@
       "source_file": "frontend/src/app/api/caja/metodos-pago/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "metodos_pago_route",
-      "target": "shared_types_metodopago",
-      "confidence_score": 1.0
+      "target": "shared_types_metodopago"
     },
     {
       "relation": "imports_from",
@@ -6785,9 +8098,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "transacciones_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -6796,9 +8109,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "transacciones_route",
-      "target": "shared_types_createtransacciondto",
-      "confidence_score": 1.0
+      "target": "shared_types_createtransacciondto"
     },
     {
       "relation": "imports",
@@ -6807,9 +8120,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "transacciones_route",
-      "target": "shared_types_transaccioncaja",
-      "confidence_score": 1.0
+      "target": "shared_types_transaccioncaja"
     },
     {
       "relation": "contains",
@@ -6817,9 +8130,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "transacciones_route",
-      "target": "transacciones_route_get",
-      "confidence_score": 1.0
+      "target": "transacciones_route_get"
     },
     {
       "relation": "contains",
@@ -6827,9 +8140,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "transacciones_route",
-      "target": "transacciones_route_post",
-      "confidence_score": 1.0
+      "target": "transacciones_route_post"
     },
     {
       "relation": "contains",
@@ -6837,9 +8150,9 @@
       "source_file": "frontend/src/app/api/caja/transacciones/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "transacciones_route",
-      "target": "transacciones_route_supabase",
-      "confidence_score": 1.0
+      "target": "transacciones_route_supabase"
     },
     {
       "relation": "contains",
@@ -6847,9 +8160,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "clientes_route",
-      "target": "clientes_route_get",
-      "confidence_score": 1.0
+      "target": "clientes_route_get"
     },
     {
       "relation": "contains",
@@ -6857,9 +8170,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "clientes_route",
-      "target": "clientes_route_post",
-      "confidence_score": 1.0
+      "target": "clientes_route_post"
     },
     {
       "relation": "contains",
@@ -6867,9 +8180,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "clientes_route",
-      "target": "clientes_route_supabase",
-      "confidence_score": 1.0
+      "target": "clientes_route_supabase"
     },
     {
       "relation": "imports_from",
@@ -6878,9 +8191,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "clientes_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -6889,9 +8202,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "clientes_route",
-      "target": "shared_types_cliente",
-      "confidence_score": 1.0
+      "target": "shared_types_cliente"
     },
     {
       "relation": "imports",
@@ -6900,9 +8213,9 @@
       "source_file": "frontend/src/app/api/clientes/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "clientes_route",
-      "target": "shared_types_createeventodto",
-      "confidence_score": 1.0
+      "target": "shared_types_createeventodto"
     },
     {
       "relation": "contains",
@@ -6910,9 +8223,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "id_route_delete",
-      "confidence_score": 1.0
+      "target": "id_route_delete"
     },
     {
       "relation": "contains",
@@ -6920,9 +8233,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "id_route_get",
-      "confidence_score": 1.0
+      "target": "id_route_get"
     },
     {
       "relation": "contains",
@@ -6930,9 +8243,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "id_route_patch",
-      "confidence_score": 1.0
+      "target": "id_route_patch"
     },
     {
       "relation": "contains",
@@ -6940,9 +8253,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "id_route_supabase",
-      "confidence_score": 1.0
+      "target": "id_route_supabase"
     },
     {
       "relation": "contains",
@@ -6950,9 +8263,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "id_route_transiciones_validas",
-      "confidence_score": 1.0
+      "target": "id_route_transiciones_validas"
     },
     {
       "relation": "imports_from",
@@ -6961,9 +8274,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -6972,9 +8285,9 @@
       "source_file": "frontend/src/app/api/eventos/[id]/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "id_route",
-      "target": "shared_types_updateeventoestadodto",
-      "confidence_score": 1.0
+      "target": "shared_types_updateeventoestadodto"
     },
     {
       "relation": "contains",
@@ -6982,9 +8295,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "eventos_route",
-      "target": "eventos_route_get",
-      "confidence_score": 1.0
+      "target": "eventos_route_get"
     },
     {
       "relation": "contains",
@@ -6992,9 +8305,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "eventos_route",
-      "target": "eventos_route_post",
-      "confidence_score": 1.0
+      "target": "eventos_route_post"
     },
     {
       "relation": "contains",
@@ -7002,9 +8315,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "eventos_route",
-      "target": "eventos_route_supabase",
-      "confidence_score": 1.0
+      "target": "eventos_route_supabase"
     },
     {
       "relation": "imports_from",
@@ -7013,9 +8326,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "eventos_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -7024,9 +8337,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "eventos_route",
-      "target": "shared_types_createeventodto",
-      "confidence_score": 1.0
+      "target": "shared_types_createeventodto"
     },
     {
       "relation": "imports",
@@ -7035,9 +8348,9 @@
       "source_file": "frontend/src/app/api/eventos/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "eventos_route",
-      "target": "shared_types_evento",
-      "confidence_score": 1.0
+      "target": "shared_types_evento"
     },
     {
       "relation": "contains",
@@ -7045,9 +8358,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "categorias_route",
-      "target": "categorias_route_get",
-      "confidence_score": 1.0
+      "target": "categorias_route_get"
     },
     {
       "relation": "contains",
@@ -7055,9 +8368,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "categorias_route",
-      "target": "categorias_route_supabase",
-      "confidence_score": 1.0
+      "target": "categorias_route_supabase"
     },
     {
       "relation": "imports_from",
@@ -7066,9 +8379,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "categorias_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -7077,9 +8390,9 @@
       "source_file": "frontend/src/app/api/inventario/categorias/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "categorias_route",
-      "target": "shared_types_categoriaconsubcategorias",
-      "confidence_score": 1.0
+      "target": "shared_types_categoriaconsubcategorias"
     },
     {
       "relation": "contains",
@@ -7087,9 +8400,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "disponibilidad_route",
-      "target": "disponibilidad_route_get",
-      "confidence_score": 1.0
+      "target": "disponibilidad_route_get"
     },
     {
       "relation": "contains",
@@ -7097,9 +8410,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "disponibilidad_route",
-      "target": "disponibilidad_route_supabase",
-      "confidence_score": 1.0
+      "target": "disponibilidad_route_supabase"
     },
     {
       "relation": "imports_from",
@@ -7108,9 +8421,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "disponibilidad_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -7119,9 +8432,9 @@
       "source_file": "frontend/src/app/api/inventario/disponibilidad/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "disponibilidad_route",
-      "target": "shared_types_itemdisponible",
-      "confidence_score": 1.0
+      "target": "shared_types_itemdisponible"
     },
     {
       "relation": "contains",
@@ -7129,9 +8442,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "items_route",
-      "target": "items_route_get",
-      "confidence_score": 1.0
+      "target": "items_route_get"
     },
     {
       "relation": "contains",
@@ -7139,9 +8452,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "items_route",
-      "target": "items_route_post",
-      "confidence_score": 1.0
+      "target": "items_route_post"
     },
     {
       "relation": "contains",
@@ -7149,9 +8462,9 @@
       "source_file": "frontend/src/app/api/inventario/items/route.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "items_route",
-      "target": "items_route_supabase",
-      "confidence_score": 1.0
+      "target": "items_route_supabase"
     },
     {
       "relation": "contains",
@@ -7159,9 +8472,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "operarios_route",
-      "target": "operarios_route_get",
-      "confidence_score": 1.0
+      "target": "operarios_route_get"
     },
     {
       "relation": "contains",
@@ -7169,9 +8482,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "operarios_route",
-      "target": "operarios_route_supabase",
-      "confidence_score": 1.0
+      "target": "operarios_route_supabase"
     },
     {
       "relation": "imports_from",
@@ -7180,9 +8493,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "operarios_route",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -7191,9 +8504,9 @@
       "source_file": "frontend/src/app/api/operarios/route.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "operarios_route",
-      "target": "shared_types_operario",
-      "confidence_score": 1.0
+      "target": "shared_types_operario"
     },
     {
       "relation": "contains",
@@ -7201,9 +8514,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_adicional",
-      "confidence_score": 1.0
+      "target": "crear_page_adicional"
     },
     {
       "relation": "contains",
@@ -7211,9 +8524,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_calculardias",
-      "confidence_score": 1.0
+      "target": "crear_page_calculardias"
     },
     {
       "relation": "contains",
@@ -7221,9 +8534,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_creareventopage",
-      "confidence_score": 1.0
+      "target": "crear_page_creareventopage"
     },
     {
       "relation": "contains",
@@ -7231,9 +8544,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_datosevento",
-      "confidence_score": 1.0
+      "target": "crear_page_datosevento"
     },
     {
       "relation": "contains",
@@ -7241,9 +8554,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_formatcop",
-      "confidence_score": 1.0
+      "target": "crear_page_formatcop"
     },
     {
       "relation": "contains",
@@ -7251,9 +8564,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_itemseleccionado",
-      "confidence_score": 1.0
+      "target": "crear_page_itemseleccionado"
     },
     {
       "relation": "contains",
@@ -7261,9 +8574,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_operarioasignado",
-      "confidence_score": 1.0
+      "target": "crear_page_operarioasignado"
     },
     {
       "relation": "contains",
@@ -7271,9 +8584,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "crear_page_pasos",
-      "confidence_score": 1.0
+      "target": "crear_page_pasos"
     },
     {
       "relation": "imports_from",
@@ -7282,9 +8595,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "shared_types",
-      "confidence_score": 1.0
+      "target": "shared_types"
     },
     {
       "relation": "imports",
@@ -7293,9 +8606,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "shared_types_cliente",
-      "confidence_score": 1.0
+      "target": "shared_types_cliente"
     },
     {
       "relation": "imports",
@@ -7304,9 +8617,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "shared_types_createeventodto",
-      "confidence_score": 1.0
+      "target": "shared_types_createeventodto"
     },
     {
       "relation": "imports",
@@ -7315,9 +8628,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "shared_types_itemdisponible",
-      "confidence_score": 1.0
+      "target": "shared_types_itemdisponible"
     },
     {
       "relation": "imports",
@@ -7326,9 +8639,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "shared_types_operario",
-      "confidence_score": 1.0
+      "target": "shared_types_operario"
     },
     {
       "relation": "imports",
@@ -7337,9 +8650,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page",
-      "target": "shared_types_tipoadicional",
-      "confidence_score": 1.0
+      "target": "shared_types_tipoadicional"
     },
     {
       "relation": "references",
@@ -7348,9 +8661,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page_adicional",
-      "target": "shared_types_tipoadicional",
-      "confidence_score": 1.0
+      "target": "shared_types_tipoadicional"
     },
     {
       "relation": "calls",
@@ -7359,9 +8672,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L423",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page_creareventopage",
-      "target": "crear_page_calculardias",
-      "confidence_score": 1.0
+      "target": "crear_page_calculardias"
     },
     {
       "relation": "calls",
@@ -7370,9 +8683,9 @@
       "source_file": "frontend/src/app/dashboard/eventos/crear/page.tsx",
       "source_location": "L618",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "crear_page_creareventopage",
-      "target": "crear_page_formatcop",
-      "confidence_score": 1.0
+      "target": "crear_page_formatcop"
     },
     {
       "relation": "contains",
@@ -7390,9 +8703,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_carteracliente",
-      "confidence_score": 1.0
+      "target": "shared_types_carteracliente"
     },
     {
       "relation": "contains",
@@ -7400,9 +8713,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_carteraproveedor",
-      "confidence_score": 1.0
+      "target": "shared_types_carteraproveedor"
     },
     {
       "relation": "contains",
@@ -7420,9 +8733,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_categoriaconsubcategorias",
-      "confidence_score": 1.0
+      "target": "shared_types_categoriaconsubcategorias"
     },
     {
       "relation": "contains",
@@ -7430,9 +8743,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_categoriainventario",
-      "confidence_score": 1.0
+      "target": "shared_types_categoriainventario"
     },
     {
       "relation": "contains",
@@ -7450,9 +8763,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L131",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_clienteconcartera",
-      "confidence_score": 1.0
+      "target": "shared_types_clienteconcartera"
     },
     {
       "relation": "contains",
@@ -7460,9 +8773,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_configuracionempresa",
-      "confidence_score": 1.0
+      "target": "shared_types_configuracionempresa"
     },
     {
       "relation": "contains",
@@ -7470,9 +8783,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L260",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_createeventodto",
-      "confidence_score": 1.0
+      "target": "shared_types_createeventodto"
     },
     {
       "relation": "contains",
@@ -7480,9 +8793,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L248",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_createtransacciondto",
-      "confidence_score": 1.0
+      "target": "shared_types_createtransacciondto"
     },
     {
       "relation": "contains",
@@ -7550,9 +8863,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_eventocompleto",
-      "confidence_score": 1.0
+      "target": "shared_types_eventocompleto"
     },
     {
       "relation": "contains",
@@ -7570,9 +8883,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_eventooperario",
-      "confidence_score": 1.0
+      "target": "shared_types_eventooperario"
     },
     {
       "relation": "contains",
@@ -7590,9 +8903,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_itemdisponible",
-      "confidence_score": 1.0
+      "target": "shared_types_itemdisponible"
     },
     {
       "relation": "contains",
@@ -7600,9 +8913,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_metodopago",
-      "confidence_score": 1.0
+      "target": "shared_types_metodopago"
     },
     {
       "relation": "contains",
@@ -7610,9 +8923,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_operario",
-      "confidence_score": 1.0
+      "target": "shared_types_operario"
     },
     {
       "relation": "contains",
@@ -7660,9 +8973,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_tipotransaccion",
-      "confidence_score": 1.0
+      "target": "shared_types_tipotransaccion"
     },
     {
       "relation": "contains",
@@ -7670,9 +8983,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_transaccioncaja",
-      "confidence_score": 1.0
+      "target": "shared_types_transaccioncaja"
     },
     {
       "relation": "contains",
@@ -7680,9 +8993,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_updateeventoestadodto",
-      "confidence_score": 1.0
+      "target": "shared_types_updateeventoestadodto"
     },
     {
       "relation": "contains",
@@ -7700,9 +9013,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types",
-      "target": "shared_types_usuarioconrol",
-      "confidence_score": 1.0
+      "target": "shared_types_usuarioconrol"
     },
     {
       "relation": "inherits",
@@ -7711,9 +9024,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_carteracliente",
-      "target": "shared_types_baseentity",
-      "confidence_score": 1.0
+      "target": "shared_types_baseentity"
     },
     {
       "relation": "inherits",
@@ -7722,9 +9035,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_carteraproveedor",
-      "target": "shared_types_baseentity",
-      "confidence_score": 1.0
+      "target": "shared_types_baseentity"
     },
     {
       "relation": "inherits",
@@ -7744,9 +9057,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_categoriainventario",
-      "target": "shared_types_baseentity",
-      "confidence_score": 1.0
+      "target": "shared_types_baseentity"
     },
     {
       "relation": "inherits",
@@ -7810,9 +9123,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_eventooperario",
-      "target": "shared_types_baseentity",
-      "confidence_score": 1.0
+      "target": "shared_types_baseentity"
     },
     {
       "relation": "inherits",
@@ -7832,9 +9145,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_metodopago",
-      "target": "shared_types_baseentity",
-      "confidence_score": 1.0
+      "target": "shared_types_baseentity"
     },
     {
       "relation": "inherits",
@@ -7843,9 +9156,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_operario",
-      "target": "shared_types_baseentity",
-      "confidence_score": 1.0
+      "target": "shared_types_baseentity"
     },
     {
       "relation": "inherits",
@@ -7887,9 +9200,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_usuarioconrol",
-      "target": "shared_types_usuario",
-      "confidence_score": 1.0
+      "target": "shared_types_usuario"
     },
     {
       "relation": "inherits",
@@ -7898,9 +9211,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_categoriaconsubcategorias",
-      "target": "shared_types_categoriainventario",
-      "confidence_score": 1.0
+      "target": "shared_types_categoriainventario"
     },
     {
       "relation": "inherits",
@@ -7909,9 +9222,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L131",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_clienteconcartera",
-      "target": "shared_types_cliente",
-      "confidence_score": 1.0
+      "target": "shared_types_cliente"
     },
     {
       "relation": "inherits",
@@ -7920,9 +9233,9 @@
       "source_file": "shared/types.ts",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_types_eventocompleto",
-      "target": "shared_types_evento",
-      "confidence_score": 1.0
+      "target": "shared_types_evento"
     },
     {
       "relation": "references",
@@ -8030,9 +9343,9 @@
       "source_file": "specs/002-modulos-especializados-sistema/checklists/architecture.md",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "checklists_architecture_requirements_quality_checklist_arquitectura_y_datos_onproduction",
-      "target": "checklists_architecture_summary",
-      "confidence_score": 1.0
+      "target": "checklists_architecture_summary"
     },
     {
       "relation": "references",
@@ -12298,151 +13611,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "inventario_page_bajaitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "inventario_page_catalogoitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "inventario_page_compraitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "inventario_page_instanciaitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "inventario_page_inventariopage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L1243",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "inventario_page_styles"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "services_supabase_client"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "services_supabase_client_supabase"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/inventario/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_page",
-      "target": "shared_transaction_helper"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_layout",
-      "target": "dashboard_layout_dashboardlayout"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L243",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_layout",
-      "target": "dashboard_layout_styles"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_layout",
-      "target": "dashboard_layout_userprofile"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_layout",
-      "target": "services_supabase_client"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/dashboard/layout.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_layout",
-      "target": "services_supabase_client_supabase"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "frontend/src/app/dashboard/page.tsx",
       "source_location": "L34",
       "weight": 1.0,
@@ -14122,66 +15290,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme",
-      "target": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L60",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler",
-      "target": "readme_comandos_principales"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L69",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler",
-      "target": "readme_contribuir"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler",
-      "target": "readme_estructura_del_proyecto"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler",
-      "target": "readme_instalaci\u00f3n_y_configuraci\u00f3n"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_onproduction_sistema_log\u00edstico_y_transaccional_de_alquiler",
-      "target": "readme_prerrequisitos"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "diagramas/diagrama_funcional.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -14710,5 +15818,5 @@
       "source_file": "GUIA_DESPLIEGUE_DOMINIOS.md"
     }
   ],
-  "built_at_commit": "7457895f4020a2777f25883cc3ba582a57c20287"
+  "built_at_commit": "c22e9c763113299febea7572cd7c2f32d2fe1c7c"
 }

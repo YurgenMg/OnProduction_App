@@ -20,9 +20,9 @@
     "semantic_hash": "e1813773f38e771aeb2c58ac644e2060"
   },
   "frontend/package.json": {
-    "mtime": 1780009325.8776844,
-    "ast_hash": "dc9851293ef1f5073e40ade80f61d121",
-    "semantic_hash": "dc9851293ef1f5073e40ade80f61d121"
+    "mtime": 1782418894.369095,
+    "ast_hash": "8d435bc131cc02aca9c927f557671ad0",
+    "semantic_hash": ""
   },
   "frontend/postcss.config.mjs": {
     "mtime": 1779311579.4897664,
@@ -70,9 +70,9 @@
     "semantic_hash": "df33b375adfbb43c69b0059af458385f"
   },
   "frontend/src/app/dashboard/eventos/page.tsx": {
-    "mtime": 1780008771.9629762,
-    "ast_hash": "a0a7ae00fda3939e9f9b8441998ef8c3",
-    "semantic_hash": "a0a7ae00fda3939e9f9b8441998ef8c3"
+    "mtime": 1782421233.8084462,
+    "ast_hash": "2eb76c66b25d2f2b304fcb1070e37960",
+    "semantic_hash": ""
   },
   "frontend/src/app/dashboard/garantias/page.tsx": {
     "mtime": 1779311969.1249225,
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "frontend/src/app/dashboard/layout.tsx": {
-    "mtime": 1782417130.5737672,
-    "ast_hash": "cf7314404dd48a64657403ce2c5f75ae",
+    "mtime": 1782419557.2711942,
+    "ast_hash": "e1312a09598b90ada64731c7e64fea04",
     "semantic_hash": ""
   },
   "frontend/src/app/dashboard/page.tsx": {
@@ -575,13 +575,13 @@
     "semantic_hash": ""
   },
   "frontend/src/app/dashboard/caja/page.tsx": {
-    "mtime": 1782417309.0004106,
-    "ast_hash": "12cee5d0c52f838d3a34495efa541477",
+    "mtime": 1782419768.3027515,
+    "ast_hash": "5b37597e945f166ed38b178c4d58bdb7",
     "semantic_hash": ""
   },
   "frontend/src/app/dashboard/clientes/page.tsx": {
-    "mtime": 1782417215.829357,
-    "ast_hash": "c664f55e897add677143997754a9428d",
+    "mtime": 1782419616.3383472,
+    "ast_hash": "4ca82b90aef83c17255be58fed1bd746",
     "semantic_hash": ""
   },
   "QUICKSTART.md": {
@@ -592,6 +592,36 @@
   "specs/002-modulos-especializados-sistema/checklists/implementation.md": {
     "mtime": 1782258199.3160293,
     "ast_hash": "09de5147887177777ce26fe6a29e64c3",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/dashboard/eventos/EventsCalendar.tsx": {
+    "mtime": 1782421213.7806203,
+    "ast_hash": "09e44ba144460d59148e5a5888e3295e",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/dashboard/eventos/KanbanBoard.tsx": {
+    "mtime": 1782420892.4902875,
+    "ast_hash": "191dfee66fee8d6e0e73d7aa2dd6df07",
+    "semantic_hash": ""
+  },
+  "frontend/src/components/ui/QuickStartButton.tsx": {
+    "mtime": 1782424871.1473134,
+    "ast_hash": "77c1b609eb1d87552945c474169081a8",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260625000000_fix_public_grants.sql": {
+    "mtime": 1782423251.3523066,
+    "ast_hash": "eb9a502556947ac5ad8221572941011e",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260625000001_ensure_admin_access.sql": {
+    "mtime": 1782428702.593554,
+    "ast_hash": "49522dd407efa45bdec2e62308f28a53",
+    "semantic_hash": ""
+  },
+  "Logo/LOGO ON.png": {
+    "mtime": 1782428274.4690351,
+    "ast_hash": "7865e29050f3b7f5c56f780115b679cc",
     "semantic_hash": ""
   }
 }

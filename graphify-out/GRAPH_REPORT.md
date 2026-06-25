@@ -1,16 +1,16 @@
 # Graph Report - OnProduction  (2026-06-25)
 
 ## Corpus Check
-- 106 files · ~71,712 words
+- 111 files · ~74,246 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 713 nodes · 847 edges · 83 communities (64 shown, 19 thin omitted)
+- 733 nodes · 869 edges · 84 communities (65 shown, 19 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c22e9c76`
+- Built from commit: `02986953`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -86,6 +86,7 @@
 - [[_COMMUNITY_Community 80|Community 80]]
 - [[_COMMUNITY_Community 81|Community 81]]
 - [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `$()` - 30 edges
@@ -108,6 +109,8 @@
   diagramas/diagrama_secuencia.md → base_datos_onP.txt
 - `Adicional` --references--> `TipoAdicional`  [EXTRACTED]
   frontend/src/app/dashboard/eventos/crear/page.tsx → shared/types.ts
+- `EventosPage()` --calls--> `formatCurrency()`  [EXTRACTED]
+  frontend/src/app/dashboard/eventos/page.tsx → frontend/src/app/dashboard/eventos/KanbanBoard.tsx
 
 ## Import Cycles
 - None detected.
@@ -116,11 +119,11 @@
 - **Rental Lifecycle Flow** — db_eventos, db_evento_detalles_equipos, db_evento_adicionales, db_depositos_garantia, db_registro_danos_auditoria [EXTRACTED 1.00]
 - **Deployment Stack** — guia_despliegue_dominios_md, gemini_md, readme_md [INFERRED 0.90]
 
-## Communities (83 total, 19 thin omitted)
+## Communities (84 total, 19 thin omitted)
 
 ### Community 0 - "Dashboard and UI Layouts"
-Cohesion: 0.21
-Nodes (5): styles, styles, UserProfile, styles, supabase
+Cohesion: 0.19
+Nodes (6): styles, styles, supabase, Role, styles, UserProfile
 
 ### Community 1 - "Service Worker Routing"
 Cohesion: 0.13
@@ -131,8 +134,8 @@ Cohesion: 0.29
 Nodes (3): adminClient, serviceKey, supabaseUrl
 
 ### Community 3 - "Project Dependencies"
-Cohesion: 0.08
-Nodes (25): dependencies, @ducanh2912/next-pwa, lucide-react, next, pdfkit, react, react-dom, @supabase/supabase-js (+17 more)
+Cohesion: 0.07
+Nodes (29): dependencies, date-fns, @ducanh2912/next-pwa, @hello-pangea/dnd, lucide-react, next, pdfkit, react (+21 more)
 
 ### Community 4 - "Cache and Request Handling"
 Cohesion: 0.06
@@ -259,8 +262,8 @@ Cohesion: 0.13
 Nodes (14): 10. transacciones_caja, 1. roles, 2. usuarios, 3. empresa_config, 4. categorias, 5. items_inventario, 6. clientes, 7. eventos (+6 more)
 
 ### Community 62 - "Community 62"
-Cohesion: 0.25
-Nodes (6): Adicional, Cliente, DetalleEquipo, EquipoDisponible, Evento, styles
+Cohesion: 0.15
+Nodes (11): Evento, EventsCalendar(), EventsCalendarProps, locales, localizer, Adicional, Cliente, DetalleEquipo (+3 more)
 
 ### Community 63 - "Community 63"
 Cohesion: 0.29
@@ -287,8 +290,8 @@ Cohesion: 0.40
 Nodes (4): 1. Módulo Administrativo: Configuración de Empresa, 2. Módulo de Caja: Registro de Transacciones, 3. Módulo de Inventario: Crear Ítem, API Endpoints Contract (Next.js Routes)
 
 ### Community 69 - "Community 69"
-Cohesion: 0.40
-Nodes (3): Role, styles, UserProfile
+Cohesion: 0.29
+Nodes (3): styles, UserProfile, styles
 
 ### Community 71 - "Community 71"
 Cohesion: 0.11
@@ -326,8 +329,12 @@ Nodes (3): supabase, CategoriaConSubcategorias, CategoriaInventario
 Cohesion: 0.22
 Nodes (8): API Layer (Capa de API), Database Layer (Capa de Base de Datos), Deuda Técnica V2, Implementation Quality Checklist: Módulos Especializados (OnProduction), Security & Constitution Compliance, Summary, TypeScript Types (Tipado Estricto), UI/UX — Wizard de Eventos (US5)
 
+### Community 83 - "Community 83"
+Cohesion: 0.29
+Nodes (5): ESTADOS_KANBAN, Evento, formatCurrency(), KanbanBoardProps, EventosPage()
+
 ## Knowledge Gaps
-- **328 isolated node(s):** `Prerequisitos`, `1. Primer Login como Administrador`, `2. Configurar la Empresa`, `Validar unicidad de documento`, `4a. Crear categorías (si no existen semillas)` (+323 more)
+- **340 isolated node(s):** `name`, `version`, `private`, `dev`, `build` (+335 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -335,16 +342,16 @@ Nodes (8): API Layer (Capa de API), Database Layer (Capa de Base de Datos), Deud
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `$()` connect `Cache and Request Handling` to `Service Worker Routing`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `Transaction Helper` connect `Community 67` to `Community 64`, `Community 41`, `API Route Utilities`, `Community 62`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **What connects `Prerequisitos`, `1. Primer Login como Administrador`, `2. Configurar la Empresa` to the rest of the system?**
-  _328 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `supabase` connect `Dashboard and UI Layouts` to `Community 64`, `Community 66`, `Community 67`, `Community 69`, `Community 70`, `Community 62`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **What connects `name`, `version`, `private` to the rest of the system?**
+  _340 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Service Worker Routing` be split into smaller, more focused modules?**
   _Cohesion score 0.13368983957219252 - nodes in this community are weakly interconnected._
 - **Should `Project Dependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Cache and Request Handling` be split into smaller, more focused modules?**
   _Cohesion score 0.061581920903954805 - nodes in this community are weakly interconnected._
-- **Should `TypeScript Configuration` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._

@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 660 nodes · 790 edges · 82 communities (63 shown, 19 thin omitted)
+- 713 nodes · 847 edges · 83 communities (64 shown, 19 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7457895f`
+- Built from commit: `c22e9c76`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -85,6 +85,7 @@
 - [[_COMMUNITY_Community 79|Community 79]]
 - [[_COMMUNITY_Community 80|Community 80]]
 - [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `$()` - 30 edges
@@ -95,8 +96,8 @@
 6. `v` - 14 edges
 7. `z()` - 14 edges
 8. `Tasks: [FEATURE NAME]` - 13 edges
-9. `Tasks: Módulos Especializados del Sistema (OnProduction)` - 12 edges
-10. `Esquema de Tablas` - 11 edges
+9. `Quickstart — OnProduction` - 12 edges
+10. `Tasks: Módulos Especializados del Sistema (OnProduction)` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Diagrama de Secuencia` --calls--> `Edge Function: generar-contrato`  [EXTRACTED]
@@ -115,15 +116,15 @@
 - **Rental Lifecycle Flow** — db_eventos, db_evento_detalles_equipos, db_evento_adicionales, db_depositos_garantia, db_registro_danos_auditoria [EXTRACTED 1.00]
 - **Deployment Stack** — guia_despliegue_dominios_md, gemini_md, readme_md [INFERRED 0.90]
 
-## Communities (82 total, 19 thin omitted)
+## Communities (83 total, 19 thin omitted)
 
 ### Community 0 - "Dashboard and UI Layouts"
 Cohesion: 0.21
 Nodes (5): styles, styles, UserProfile, styles, supabase
 
 ### Community 1 - "Service Worker Routing"
-Cohesion: 0.11
-Nodes (13): GET(), getClientForToken(), loadFonts(), j(), m(), q(), r, s (+5 more)
+Cohesion: 0.13
+Nodes (12): GET(), getClientForToken(), loadFonts(), et, i, m(), s, st() (+4 more)
 
 ### Community 2 - "API Route Utilities"
 Cohesion: 0.29
@@ -134,8 +135,8 @@ Cohesion: 0.08
 Nodes (25): dependencies, @ducanh2912/next-pwa, lucide-react, next, pdfkit, react, react-dom, @supabase/supabase-js (+17 more)
 
 ### Community 4 - "Cache and Request Handling"
-Cohesion: 0.07
-Nodes (15): $(), a, b(), constructor(), deleteCacheAndMetadata(), et, F, G (+7 more)
+Cohesion: 0.06
+Nodes (16): $(), a, b(), constructor(), deleteCacheAndMetadata(), F, G, get() (+8 more)
 
 ### Community 5 - "TypeScript Configuration"
 Cohesion: 0.10
@@ -146,7 +147,7 @@ Cohesion: 0.07
 Nodes (26): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation Strategy, Incremental Delivery, MVP First (User Story 1 Only) (+18 more)
 
 ### Community 7 - "System Documentation and Triggers"
-Cohesion: 0.16
+Cohesion: 0.17
 Nodes (19): BaseEntity, CarteraCliente, CarteraProveedor, CatalogoEquipo, ConfiguracionEmpresa, DepositoGarantia, EstadoDeposito, EstadoEquipo (+11 more)
 
 ### Community 8 - "Supabase Client Configuration"
@@ -230,8 +231,8 @@ Cohesion: 0.50
 Nodes (3): Behavior, Execution, Update Coding Agent Context
 
 ### Community 52 - "Community 52"
-Cohesion: 0.08
-Nodes (22): Complexity Tracking, Constitution Check, Documentation (this feature), Implementation Plan: Módulos Especializados del Sistema (OnProduction), Project Structure, Source Code Layout, Summary, Technical Context (+14 more)
+Cohesion: 0.05
+Nodes (38): Complexity Tracking, Constitution Check, Documentation (this feature), Implementation Plan: Módulos Especializados del Sistema (OnProduction), Project Structure, Source Code Layout, Summary, Technical Context (+30 more)
 
 ### Community 53 - "Community 53"
 Cohesion: 0.25
@@ -242,8 +243,8 @@ Cohesion: 0.29
 Nodes (6): FS-01: Proceso de Cotización, Validación y Reserva de Inventario, FS-02: Flujo Logístico de Despacho, Alquiler y Operación en Campo, FS-03: Proceso de Retorno de Equipos, Reporte de Daños y Liquidación de Garantías, FS-04: Gestión Administrativa de Compras de Lote e Ingreso Seguro de Seriales, Listado y Modelado de Flujos de Secuencia Críticos, Índice de Flujos Modelados
 
 ### Community 55 - "Community 55"
-Cohesion: 0.29
-Nodes (6): Comandos Principales, Contribuir, Estructura del Proyecto, Instalación y Configuración, OnProduction — Sistema Logístico y Transaccional de Alquiler, Prerrequisitos
+Cohesion: 0.17
+Nodes (11): Arquitectura de Datos — Invariantes Críticas, Comandos principales, Contribuir, Estructura del Proyecto, Flujo de un Evento, Instalación rápida, Módulos disponibles, OnProduction — Sistema de Gestión de Eventos y Alquiler de Equipos (+3 more)
 
 ### Community 56 - "Community 56"
 Cohesion: 0.33
@@ -266,8 +267,8 @@ Cohesion: 0.29
 Nodes (6): 1. Almacenamiento del Logotipo Empresarial, 2. Estructura de Categorías de Inventario (Jerárquica/Árbol), 3. Soporte de Caja y Divisa Local Única, 4. Seguridad de Acceso a Nivel de Fila (RLS), Decisiones Técnicas y Arquitectura, Research: Módulos Especializados del Sistema (OnProduction)
 
 ### Community 64 - "Community 64"
-Cohesion: 0.29
-Nodes (5): BajaItem, CatalogoItem, CompraItem, InstanciaItem, styles
+Cohesion: 0.25
+Nodes (6): BajaItem, CatalogoItem, CategoriaArbol, CompraItem, InstanciaItem, styles
 
 ### Community 65 - "Community 65"
 Cohesion: 0.33
@@ -294,35 +295,39 @@ Cohesion: 0.11
 Nodes (18): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation for User Story 4, Implementation for User Story 5, Parallel Opportunities (+10 more)
 
 ### Community 72 - "Community 72"
-Cohesion: 0.12
-Nodes (16): Assumptions, Clarificaciones, Edge Cases, Feature Specification: Módulos Especializados del Sistema (OnProduction), Functional Requirements, Key Entities, Measurable Outcomes, Requirements *(mandatory)* (+8 more)
+Cohesion: 0.11
+Nodes (18): 1. Primer Login como Administrador, 2. Configurar la Empresa, 3. Crear un Cliente, 4. Agregar Inventario, 4a. Crear categorías (si no existen semillas), 4b. Agregar equipo al catálogo, 4c. Agregar instancia física, 5. Crear un Evento (Wizard) (+10 more)
 
 ### Community 73 - "Community 73"
 Cohesion: 0.18
 Nodes (11): Adicional, calcularDias(), CrearEventoPage(), DatosEvento, formatCOP(), ItemSeleccionado, OperarioAsignado, PASOS (+3 more)
 
 ### Community 74 - "Community 74"
-Cohesion: 0.29
-Nodes (4): supabase, Cliente, ClienteConCartera, CreateEventoDto
+Cohesion: 0.22
+Nodes (3): supabase, supabase, CreateEventoDto
 
 ### Community 75 - "Community 75"
 Cohesion: 0.29
 Nodes (3): supabase, TRANSICIONES_VALIDAS, UpdateEventoEstadoDto
 
 ### Community 76 - "Community 76"
-Cohesion: 0.33
-Nodes (3): supabase, Evento, EventoCompleto
+Cohesion: 0.18
+Nodes (9): ClienteConHistorial, ESTADO_COLOR, ESTADO_LABEL, FORM_VACIO, NuevoClienteForm, tipoLabel, Cliente, ClienteConCartera (+1 more)
 
 ### Community 77 - "Community 77"
-Cohesion: 0.33
-Nodes (3): CreateTransaccionDto, TransaccionCaja, supabase
+Cohesion: 0.13
+Nodes (12): CajaPage(), FORM_VACIO, formatCOP(), FormNuevaTransaccion, TIPO_CONFIG, TIPOS_EGRESO, TIPOS_INGRESO, TransaccionEnriquecida (+4 more)
 
 ### Community 78 - "Community 78"
 Cohesion: 0.40
 Nodes (3): supabase, CategoriaConSubcategorias, CategoriaInventario
 
+### Community 82 - "Community 82"
+Cohesion: 0.22
+Nodes (8): API Layer (Capa de API), Database Layer (Capa de Base de Datos), Deuda Técnica V2, Implementation Quality Checklist: Módulos Especializados (OnProduction), Security & Constitution Compliance, Summary, TypeScript Types (Tipado Estricto), UI/UX — Wizard de Eventos (US5)
+
 ## Knowledge Gaps
-- **292 isolated node(s):** `I. DB-Centric Transactional Logic`, `II. Strict Soft Deletes`, `III. Isolated Row Level Security (RLS)`, `IV. Autonomous Edge Functions`, `V. Strict TypeScript Typing` (+287 more)
+- **328 isolated node(s):** `Prerequisitos`, `1. Primer Login como Administrador`, `2. Configurar la Empresa`, `Validar unicidad de documento`, `4a. Crear categorías (si no existen semillas)` (+323 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -330,16 +335,16 @@ Nodes (3): supabase, CategoriaConSubcategorias, CategoriaInventario
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `$()` connect `Cache and Request Handling` to `Service Worker Routing`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `Transaction Helper` connect `Community 67` to `Community 64`, `Community 41`, `API Route Utilities`, `Community 62`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **What connects `I. DB-Centric Transactional Logic`, `II. Strict Soft Deletes`, `III. Isolated Row Level Security (RLS)` to the rest of the system?**
-  _292 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Prerequisitos`, `1. Primer Login como Administrador`, `2. Configurar la Empresa` to the rest of the system?**
+  _328 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Service Worker Routing` be split into smaller, more focused modules?**
-  _Cohesion score 0.11153846153846154 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13368983957219252 - nodes in this community are weakly interconnected._
 - **Should `Project Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `Cache and Request Handling` be split into smaller, more focused modules?**
-  _Cohesion score 0.06568832983927324 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.061581920903954805 - nodes in this community are weakly interconnected._
 - **Should `TypeScript Configuration` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
