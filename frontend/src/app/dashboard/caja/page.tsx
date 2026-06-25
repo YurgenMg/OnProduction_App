@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   Wallet, Plus, TrendingUp, TrendingDown, RefreshCw,
   X, Search, Filter, ArrowUpRight, ArrowDownLeft, RotateCcw,
@@ -58,6 +59,8 @@ const FORM_VACIO: FormNuevaTransaccion = {
 // ─── componente principal ──────────────────────────────────────────────────
 
 export default function CajaPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [transacciones, setTransacciones] = useState<TransaccionEnriquecida[]>([]);
   const [metodosPago, setMetodosPago] = useState<MetodoPago[]>([]);
   const [cargando, setCargando] = useState(true);
@@ -95,6 +98,13 @@ export default function CajaPage() {
 
   useEffect(() => { cargarTransacciones(); }, [cargarTransacciones]);
   useEffect(() => { cargarMetodosPago(); }, [cargarMetodosPago]);
+
+  useEffect(() => {
+    if (searchParams?.get('nueva') === 'true') {
+      setModalNueva(true);
+      router.replace('/dashboard/caja');
+    }
+  }, [searchParams, router]);
 
   // ── filtrado local ────────────────────────────────────────────────────
   const transaccionesFiltradas = transacciones.filter((t) => {

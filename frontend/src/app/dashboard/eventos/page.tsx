@@ -17,8 +17,12 @@ import {
   TrendingUp,
   Briefcase,
   Package,
-  FileText
+  FileText,
+  LayoutList,
+  Columns
 } from 'lucide-react';
+import KanbanBoard from './KanbanBoard';
+import EventsCalendar from './EventsCalendar';
 
 interface Cliente {
   id: number;
@@ -77,6 +81,9 @@ export default function EventosPage() {
   const [clientes, setClientes] = useState<Cliente[]>([]);
   const [equipos, setEquipos] = useState<EquipoDisponible[]>([]);
   const [selectedEvento, setSelectedEvento] = useState<Evento | null>(null);
+  
+  // Vista actual
+  const [viewMode, setViewMode] = useState<'table' | 'kanban' | 'calendar'>('table');
   
   // Estados para formularios
   const [loading, setLoading] = useState(true);
@@ -435,6 +442,35 @@ export default function EventosPage() {
     }
   };
 
+  const handleCambiarEstadoPorId = async (eventoId: number, nuevoEstado: string) => {
+    if (actionLoading) return;
+    setActionLoading(true);
+    setErrorMsg('');
+    setSuccessMsg('');
+
+    try {
+      const query = supabase
+        .from('eventos')
+        .update({ estado: nuevoEstado })
+        .eq('id', eventoId)
+        .select();
+
+      await runTransactionSafe(query);
+
+      setSuccessMsg(`Estado cambiado con éxito a [${nuevoEstado}].`);
+      if (selectedEvento?.id === eventoId) {
+        await fetchEventoDetalles(eventoId);
+      }
+      await fetchInitialData();
+
+    } catch (err: any) {
+      setErrorMsg(err.message || 'Error al cambiar el estado del evento.');
+      throw err;
+    } finally {
+      setActionLoading(false);
+    }
+  };
+
   const handleDescargarFactura = async (eventoId: number) => {
     const { data: { session } } = await supabase.auth.getSession();
     const token = session?.access_token || '';
@@ -467,16 +503,86 @@ export default function EventosPage() {
           <h1 style={styles.title}>Gestión de Eventos</h1>
           <p style={styles.subtitle}>Crea cotizaciones y controla la disponibilidad en vivo</p>
         </div>
-        <button 
-          onClick={() => {
-            setShowCreateForm(!showCreateForm);
-            setSelectedEvento(null);
-          }} 
-          className="btn btn-primary"
-        >
-          <Plus size={18} />
-          <span>{showCreateForm ? 'Ver Listado' : 'Nueva Cotización'}</span>
-        </button>
+        
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          {/* Toggle View Mode */}
+          <div style={{ 
+            display: 'flex', 
+            background: 'rgba(255, 255, 255, 0.05)', 
+            borderRadius: '8px', 
+            padding: '4px',
+            border: '1px solid var(--border-muted)'
+          }}>
+            <button 
+              onClick={() => setViewMode('table')}
+              style={{
+                padding: '6px 12px',
+                borderRadius: '6px',
+                border: 'none',
+                background: viewMode === 'table' ? 'var(--accent-primary)' : 'transparent',
+                color: viewMode === 'table' ? '#fff' : 'var(--text-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                cursor: 'pointer',
+                fontSize: '13px',
+                fontWeight: 500,
+                transition: 'all 0.2s'
+              }}
+            >
+              <LayoutList size={16} /> Lista
+            </button>
+            <button 
+              onClick={() => setViewMode('kanban')}
+              style={{
+                padding: '6px 12px',
+                borderRadius: '6px',
+                border: 'none',
+                background: viewMode === 'kanban' ? 'var(--accent-primary)' : 'transparent',
+                color: viewMode === 'kanban' ? '#fff' : 'var(--text-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                cursor: 'pointer',
+                fontSize: '13px',
+                fontWeight: 500,
+                transition: 'all 0.2s'
+              }}
+            >
+              <Columns size={16} /> Kanban
+            </button>
+            <button 
+              onClick={() => setViewMode('calendar')}
+              style={{
+                padding: '6px 12px',
+                borderRadius: '6px',
+                border: 'none',
+                background: viewMode === 'calendar' ? 'var(--accent-primary)' : 'transparent',
+                color: viewMode === 'calendar' ? '#fff' : 'var(--text-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                cursor: 'pointer',
+                fontSize: '13px',
+                fontWeight: 500,
+                transition: 'all 0.2s'
+              }}
+            >
+              <Calendar size={16} /> Calendario
+            </button>
+          </div>
+
+          <button 
+            onClick={() => {
+              setShowCreateForm(!showCreateForm);
+              setSelectedEvento(null);
+            }} 
+            className="btn btn-primary"
+          >
+            <Plus size={18} />
+            <span>{showCreateForm ? 'Ver Listado' : 'Nueva Cotización'}</span>
+          </button>
+        </div>
       </div>
 
       {errorMsg && (
@@ -575,54 +681,75 @@ export default function EventosPage() {
         /* Panel Dividido: Lista y Detalles */
         <div style={styles.gridSplit} className="grid-split">
           {/* Listado de Eventos */}
-          <div className="glass-panel" style={styles.listPanel}>
-            <h2 style={styles.panelTitle}>Cronograma</h2>
-            <div style={styles.eventList}>
-              {eventos.length === 0 ? (
-                <p style={styles.emptyText}>No hay eventos creados.</p>
-              ) : (
-                eventos.map((ev) => {
-                  const isSelected = selectedEvento?.id === ev.id;
-                  return (
-                    <div 
-                      key={ev.id}
-                      onClick={() => fetchEventoDetalles(ev.id)}
-                      style={{
-                        ...styles.eventCard,
-                        ...(isSelected ? styles.eventCardActive : {})
-                      }}
-                      className="glass-card"
-                    >
-                      <div style={styles.eventCardHeader}>
-                        <span style={styles.eventClient}>
-                          {ev.cliente?.nombre_razon_social}
-                        </span>
-                        {getBadgeEstado(ev.estado)}
-                      </div>
-                      
-                      <div style={styles.eventCardMeta}>
-                        <div style={styles.metaItem}>
-                          <Calendar size={13} color="var(--text-muted)" />
-                          <span>
-                            {new Date(ev.fecha_inicio_evento).toLocaleDateString()} - {new Date(ev.fecha_fin_evento).toLocaleDateString()}
+          {viewMode === 'table' && (
+            <div className="glass-panel" style={styles.listPanel}>
+              <h2 style={styles.panelTitle}>Cronograma</h2>
+              <div style={styles.eventList}>
+                {eventos.length === 0 ? (
+                  <p style={styles.emptyText}>No hay eventos creados.</p>
+                ) : (
+                  eventos.map((ev) => {
+                    const isSelected = selectedEvento?.id === ev.id;
+                    return (
+                      <div 
+                        key={ev.id}
+                        onClick={() => fetchEventoDetalles(ev.id)}
+                        style={{
+                          ...styles.eventCard,
+                          ...(isSelected ? styles.eventCardActive : {})
+                        }}
+                        className="glass-card"
+                      >
+                        <div style={styles.eventCardHeader}>
+                          <span style={styles.eventClient}>
+                            {ev.cliente?.nombre_razon_social}
                           </span>
+                          {getBadgeEstado(ev.estado)}
                         </div>
-                        <div style={styles.metaItem}>
-                          <MapPin size={13} color="var(--text-muted)" />
-                          <span style={styles.metaText}>{ev.direccion_evento}</span>
+                        
+                        <div style={styles.eventCardMeta}>
+                          <div style={styles.metaItem}>
+                            <Calendar size={13} color="var(--text-muted)" />
+                            <span>
+                              {new Date(ev.fecha_inicio_evento).toLocaleDateString()} - {new Date(ev.fecha_fin_evento).toLocaleDateString()}
+                            </span>
+                          </div>
+                          <div style={styles.metaItem}>
+                            <MapPin size={13} color="var(--text-muted)" />
+                            <span style={styles.metaText}>{ev.direccion_evento}</span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div style={styles.eventCardFooter}>
-                        <span style={styles.eventBudgetTitle}>Presupuesto</span>
-                        <span style={styles.eventBudget}>{formatCurrency(ev.gran_total)}</span>
+                        <div style={styles.eventCardFooter}>
+                          <span style={styles.eventBudgetTitle}>Presupuesto</span>
+                          <span style={styles.eventBudget}>{formatCurrency(ev.gran_total)}</span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })
-              )}
+                    );
+                  })
+                )}
+              </div>
             </div>
-          </div>
+          )}
+
+          {viewMode === 'kanban' && (
+            <div style={{ gridColumn: selectedEvento ? 'span 1' : '1 / -1', minWidth: 0, overflowX: 'auto' }}>
+              <KanbanBoard 
+                eventos={eventos} 
+                onEventClick={fetchEventoDetalles} 
+                onEstadoChange={handleCambiarEstadoPorId}
+              />
+            </div>
+          )}
+
+          {viewMode === 'calendar' && (
+            <div style={{ gridColumn: selectedEvento ? 'span 1' : '1 / -1', minWidth: 0, overflowX: 'auto' }}>
+              <EventsCalendar 
+                eventos={eventos} 
+                onEventClick={fetchEventoDetalles} 
+              />
+            </div>
+          )}
 
           {/* Detalles del Evento Seleccionado */}
           <div className="glass-panel" style={styles.detailsPanel}>

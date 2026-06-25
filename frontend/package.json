@@ -10,18 +10,22 @@
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",
+    "@hello-pangea/dnd": "^18.0.1",
     "@supabase/supabase-js": "^2.106.1",
     "@types/pdfkit": "^0.17.6",
+    "date-fns": "^4.4.0",
     "lucide-react": "^0.503.0",
     "next": "^15.5.18",
     "pdfkit": "^0.18.0",
     "react": "^19.1.0",
+    "react-big-calendar": "^1.20.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
+    "@types/react-big-calendar": "^1.16.3",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^15.5.18",

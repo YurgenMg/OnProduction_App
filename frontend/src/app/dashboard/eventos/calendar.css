@@ -1,0 +1,140 @@
+/* 
+ * Glassmorphism Overrides for react-big-calendar 
+ * Aligned with OnProduction ERP Global Styles
+ */
+
+ .rbc-calendar {
+  font-family: var(--font-outfit);
+  color: var(--text-primary);
+  min-height: 600px;
+}
+
+/* Toolbar (Header) */
+.rbc-toolbar {
+  margin-bottom: 20px;
+}
+
+.rbc-toolbar button {
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-muted);
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: var(--transition-smooth);
+  box-shadow: none;
+}
+
+.rbc-toolbar button:hover,
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: none;
+  background-image: none;
+}
+
+.rbc-toolbar button:focus {
+  outline: none;
+}
+
+/* Main Calendar Views */
+.rbc-month-view, .rbc-time-view, .rbc-agenda-view {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+}
+
+/* Headers */
+.rbc-header {
+  padding: 12px 8px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-muted);
+  border-left: 1px solid var(--border-muted);
+  background: rgba(13, 20, 38, 0.8);
+}
+
+.rbc-header + .rbc-header {
+  border-left: 1px solid var(--border-muted);
+}
+
+/* Day Backgrounds and Grid Lines */
+.rbc-day-bg {
+  border-left: 1px solid var(--border-muted);
+}
+
+.rbc-month-row + .rbc-month-row {
+  border-top: 1px solid var(--border-muted);
+}
+
+/* Today Highlight */
+.rbc-today {
+  background: rgba(99, 102, 241, 0.05); /* Slight Indigo Tint */
+}
+
+/* Off-range days */
+.rbc-off-range-bg {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Day Number */
+.rbc-date-cell {
+  padding: 8px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.rbc-off-range .rbc-date-cell {
+  color: var(--text-muted);
+}
+
+/* Events */
+.rbc-event {
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.rbc-event:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  z-index: 10;
+}
+
+.rbc-event-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Time Grid Specific Overrides */
+.rbc-timeslot-group {
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.rbc-time-content {
+  border-top: 1px solid var(--border-muted);
+}
+
+.rbc-time-header-content {
+  border-left: 1px solid var(--border-muted);
+}
+
+.rbc-time-slot {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Current Time Indicator */
+.rbc-current-time-indicator {
+  background-color: var(--color-danger);
+}

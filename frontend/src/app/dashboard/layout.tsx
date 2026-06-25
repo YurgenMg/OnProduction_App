@@ -17,6 +17,7 @@ import {
   Wallet
 } from 'lucide-react';
 import Link from 'next/link';
+import QuickStartButton from '../../components/ui/QuickStartButton';
 
 interface UserProfile {
   id: number;
@@ -240,6 +241,8 @@ export default function DashboardLayout({
           {children}
         </div>
       </main>
+      {/* Atajos Globales */}
+      <QuickStartButton />
     </div>
   );
 }

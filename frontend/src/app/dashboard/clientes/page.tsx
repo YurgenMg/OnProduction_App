@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   Users, Search, Plus, Phone, Mail, MapPin,
   ChevronRight, X, DollarSign, CalendarRange,
@@ -71,6 +71,7 @@ const ESTADO_LABEL: Record<string, string> = {
 
 export default function ClientesPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const [clientes, setClientes] = useState<ClienteConHistorial[]>([]);
   const [cargando, setCargando] = useState(true);
@@ -82,6 +83,14 @@ export default function ClientesPage() {
   const [guardando, setGuardando] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [exito, setExito] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (searchParams.get('nuevo') === 'true') {
+      setModalNuevo(true);
+      // Limpiar query param para evitar reabrir si recarga
+      router.replace('/dashboard/clientes');
+    }
+  }, [searchParams, router]);
 
   // ── cargar lista ────────────────────────────────────────────────────────
   const cargarClientes = useCallback(async (q?: string) => {
