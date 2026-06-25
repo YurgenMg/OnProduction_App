@@ -228,5 +228,285 @@
     "mtime": 1781295489.8446627,
     "ast_hash": "af62183478d771cde51754720aae7a8a",
     "semantic_hash": "af62183478d771cde51754720aae7a8a"
+  },
+  ".specify/extensions/agent-context/scripts/bash/update-agent-context.sh": {
+    "mtime": 1782253416.6603732,
+    "ast_hash": "895e47512907eb8e2868f06c2304ffc0",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/scripts/powershell/update-agent-context.ps1": {
+    "mtime": 1782253416.6785836,
+    "ast_hash": "14be3eebea65617d99b40ed38ba15dd9",
+    "semantic_hash": ""
+  },
+  ".specify/feature.json": {
+    "mtime": 1782254928.9885306,
+    "ast_hash": "a611bd0e838e542ebc2f1f0e3be2f369",
+    "semantic_hash": ""
+  },
+  ".specify/init-options.json": {
+    "mtime": 1782254061.8730886,
+    "ast_hash": "6833c72503a56ac07a314f027fd06a9d",
+    "semantic_hash": ""
+  },
+  ".specify/integration.json": {
+    "mtime": 1782254061.583,
+    "ast_hash": "2823ef2548697118baea888d163c8155",
+    "semantic_hash": ""
+  },
+  ".specify/integrations/gemini.manifest.json": {
+    "mtime": 1782254061.5752673,
+    "ast_hash": "05ac653c3efd5bda2f24551acea88af9",
+    "semantic_hash": ""
+  },
+  ".specify/integrations/speckit.manifest.json": {
+    "mtime": 1782254061.8239536,
+    "ast_hash": "65c37ee3b10f6a0cb38a755f71ea85b0",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/check-prerequisites.ps1": {
+    "mtime": 1782254061.6100276,
+    "ast_hash": "27729796906276d48c6c07047190ed61",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/common.ps1": {
+    "mtime": 1782254061.6206093,
+    "ast_hash": "c604e11f097dd85cb28ebc76261e4018",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/create-new-feature.ps1": {
+    "mtime": 1782254061.6684167,
+    "ast_hash": "daf103b15370d4db120657d0c6bb039d",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/setup-plan.ps1": {
+    "mtime": 1782254061.7193825,
+    "ast_hash": "b640ae1bd5b44d9a49a9481931cb4ab9",
+    "semantic_hash": ""
+  },
+  ".specify/scripts/powershell/setup-tasks.ps1": {
+    "mtime": 1782254061.7326572,
+    "ast_hash": "c3d27980bea268267881e03e161b9f30",
+    "semantic_hash": ""
+  },
+  ".specify/workflows/workflow-registry.json": {
+    "mtime": 1782254061.8715146,
+    "ast_hash": "a4b358ad5d42ea47a7eb43868c2a9455",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1782253564.790966,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1782253564.7955575,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  ".specify/extensions.yml": {
+    "mtime": 1782254062.005102,
+    "ast_hash": "6fc655d042586d15ec3356b836bfd8ab",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/README.md": {
+    "mtime": 1782253416.5732086,
+    "ast_hash": "4747d48f39e763a46cbc23569e6222c4",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/agent-context-config.yml": {
+    "mtime": 1782254062.011646,
+    "ast_hash": "49a575a522ec08c01f2c6964e02124cb",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/commands/speckit.agent-context.update.md": {
+    "mtime": 1782253416.6445324,
+    "ast_hash": "a466e6bfeb0042c2789d6ae60d43921b",
+    "semantic_hash": ""
+  },
+  ".specify/extensions/agent-context/extension.yml": {
+    "mtime": 1782253416.6230786,
+    "ast_hash": "c09cdcdf8b86381d5955182b5eac0caf",
+    "semantic_hash": ""
+  },
+  ".specify/memory/constitution.md": {
+    "mtime": 1782255996.5715034,
+    "ast_hash": "7ec78ba486d7e060307c52e9c48f4688",
+    "semantic_hash": ""
+  },
+  ".specify/templates/checklist-template.md": {
+    "mtime": 1782254061.7432108,
+    "ast_hash": "87c4b390cebe71d15364bcd4690a102f",
+    "semantic_hash": ""
+  },
+  ".specify/templates/constitution-template.md": {
+    "mtime": 1782254061.7549505,
+    "ast_hash": "dcefb6b60e7cb3db2e966977b6f02f18",
+    "semantic_hash": ""
+  },
+  ".specify/templates/plan-template.md": {
+    "mtime": 1782254061.765915,
+    "ast_hash": "a32b024d46f365191b4fd540f10912c2",
+    "semantic_hash": ""
+  },
+  ".specify/templates/spec-template.md": {
+    "mtime": 1782254061.774187,
+    "ast_hash": "45ac8538bc1220324c9f0d610145b53f",
+    "semantic_hash": ""
+  },
+  ".specify/templates/tasks-template.md": {
+    "mtime": 1782254061.8003156,
+    "ast_hash": "b8ed482dd2103953e4f871e0ed12d4bd",
+    "semantic_hash": ""
+  },
+  ".specify/workflows/speckit/workflow.yml": {
+    "mtime": 1782253417.1862786,
+    "ast_hash": "eba6943b2a2f6407162ae12e0218bdac",
+    "semantic_hash": ""
+  },
+  "GEMINI.md": {
+    "mtime": 1782256346.2091904,
+    "ast_hash": "7d06b2d3deb1d4b5ed99147662d1d913",
+    "semantic_hash": ""
+  },
+  "GUIA_DESPLIEGUE_DOMINIOS.md": {
+    "mtime": 1780009345.0562694,
+    "ast_hash": "f9f01ccdc45f68f290811f213ec9087d",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1779230796.6304085,
+    "ast_hash": "e0f868d12a931d4d5c4c38df1465369f",
+    "semantic_hash": ""
+  },
+  "base_datos_onP.txt": {
+    "mtime": 1779228755.8281474,
+    "ast_hash": "cf497adec3a493a287521b4d94d5c136",
+    "semantic_hash": ""
+  },
+  "diagramas/diagrama_funcional.md": {
+    "mtime": 1781219332.714604,
+    "ast_hash": "9782781e2ab8f708f36b184b40e18e73",
+    "semantic_hash": ""
+  },
+  "diagramas/diagrama_secuencia.md": {
+    "mtime": 1781219338.983284,
+    "ast_hash": "f53b20c3f107eb642156b94fccd2da4c",
+    "semantic_hash": ""
+  },
+  "diagramas/flujos_secuencia_criticos.md": {
+    "mtime": 1781219504.956184,
+    "ast_hash": "e1a6971ff92b526e525803665a8567d3",
+    "semantic_hash": ""
+  },
+  "documento_requerimiento/requerimientos_leidos.txt": {
+    "mtime": 1781219005.7324076,
+    "ast_hash": "2851c9707319126606cbf07393a153ed",
+    "semantic_hash": ""
+  },
+  "frontend/AGENTS.md": {
+    "mtime": 1779311676.8382602,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": ""
+  },
+  "frontend/CLAUDE.md": {
+    "mtime": 1779311676.8388076,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": ""
+  },
+  "frontend/README.md": {
+    "mtime": 1779311579.4019797,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": ""
+  },
+  "specs/001-gestion-eventos-inventario/checklists/requirements.md": {
+    "mtime": 1782254505.5222957,
+    "ast_hash": "79a88de1c7c69944ff3d1893bc9974a0",
+    "semantic_hash": ""
+  },
+  "specs/001-gestion-eventos-inventario/spec.md": {
+    "mtime": 1782254490.1587944,
+    "ast_hash": "9ddd96285deae2c0e79a7b75ef205e6b",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/checklists/requirements.md": {
+    "mtime": 1782255181.5808532,
+    "ast_hash": "ddb2ef4fb278b4345a3c86a28133b724",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/spec.md": {
+    "mtime": 1782256838.1945684,
+    "ast_hash": "e7ae505db774645286a424d17a5cb88e",
+    "semantic_hash": ""
+  },
+  "frontend/public/file.svg": {
+    "mtime": 1779311579.50551,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "frontend/public/globe.svg": {
+    "mtime": 1779311579.53766,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "frontend/public/icon-maskable.svg": {
+    "mtime": 1780009302.2065058,
+    "ast_hash": "75e51156ddc3daf3d73453ce416e8575",
+    "semantic_hash": ""
+  },
+  "frontend/public/icon.svg": {
+    "mtime": 1780009297.3753614,
+    "ast_hash": "c3cac5ae33b5fac891ed50a71565a7da",
+    "semantic_hash": ""
+  },
+  "frontend/public/next.svg": {
+    "mtime": 1779311579.575237,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "frontend/public/vercel.svg": {
+    "mtime": 1779311579.6009383,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": ""
+  },
+  "frontend/public/window.svg": {
+    "mtime": 1779311579.6204548,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/contracts/api.md": {
+    "mtime": 1782256200.5000837,
+    "ast_hash": "0cfda3a73967415c5b104bd6ddf63c21",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/data-model.md": {
+    "mtime": 1782256187.1294067,
+    "ast_hash": "a500528c9db58c7cc30ddc70f1fb3e8e",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/plan.md": {
+    "mtime": 1782256207.3953004,
+    "ast_hash": "156d36e955e8db7ea81ab654f874f932",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/quickstart.md": {
+    "mtime": 1782256194.1392508,
+    "ast_hash": "d006e32ca22d483c2efe5c701620c978",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/research.md": {
+    "mtime": 1782256178.819669,
+    "ast_hash": "845d3f721985d83a77b2654e9e71d292",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/tasks.md": {
+    "mtime": 1782256847.9396377,
+    "ast_hash": "606c45688f5463a4e058b95530c0bd5b",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/checklists/architecture.md": {
+    "mtime": 1782256671.2275755,
+    "ast_hash": "c19ca99daebdf20468c4af5b556bcda5",
+    "semantic_hash": ""
   }
 }

@@ -180,9 +180,9 @@
     "semantic_hash": "1edcc8ed151d68cdc66d086982799993"
   },
   "shared/types.ts": {
-    "mtime": 1780008702.4612346,
-    "ast_hash": "82ef5fdd648545834a38bf57d0f400c4",
-    "semantic_hash": "82ef5fdd648545834a38bf57d0f400c4"
+    "mtime": 1782257288.192528,
+    "ast_hash": "18aa1bfa8a510231b8ff2e4bc5145386",
+    "semantic_hash": ""
   },
   "supabase/functions/generar-contrato/index.ts": {
     "mtime": 1779230809.3595328,
@@ -330,8 +330,8 @@
     "semantic_hash": ""
   },
   ".specify/memory/constitution.md": {
-    "mtime": 1782254550.5422654,
-    "ast_hash": "3f09ca80875e4162dcf937c728965a36",
+    "mtime": 1782255996.5715034,
+    "ast_hash": "7ec78ba486d7e060307c52e9c48f4688",
     "semantic_hash": ""
   },
   ".specify/templates/checklist-template.md": {
@@ -365,7 +365,7 @@
     "semantic_hash": ""
   },
   "GEMINI.md": {
-    "mtime": 1782254061.5719986,
+    "mtime": 1782256346.2091904,
     "ast_hash": "7d06b2d3deb1d4b5ed99147662d1d913",
     "semantic_hash": ""
   },
@@ -430,13 +430,13 @@
     "semantic_hash": ""
   },
   "specs/002-modulos-especializados-sistema/checklists/requirements.md": {
-    "mtime": 1782254939.6253319,
-    "ast_hash": "0f0b4cb74f2574c5045006e7954eb9af",
+    "mtime": 1782255181.5808532,
+    "ast_hash": "ddb2ef4fb278b4345a3c86a28133b724",
     "semantic_hash": ""
   },
   "specs/002-modulos-especializados-sistema/spec.md": {
-    "mtime": 1782254924.091485,
-    "ast_hash": "3ecff174558d72739fc0dc0c291c5095",
+    "mtime": 1782256838.1945684,
+    "ast_hash": "e7ae505db774645286a424d17a5cb88e",
     "semantic_hash": ""
   },
   "frontend/public/file.svg": {
@@ -472,6 +472,106 @@
   "frontend/public/window.svg": {
     "mtime": 1779311579.6204548,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/contracts/api.md": {
+    "mtime": 1782256200.5000837,
+    "ast_hash": "0cfda3a73967415c5b104bd6ddf63c21",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/data-model.md": {
+    "mtime": 1782256187.1294067,
+    "ast_hash": "a500528c9db58c7cc30ddc70f1fb3e8e",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/plan.md": {
+    "mtime": 1782256207.3953004,
+    "ast_hash": "156d36e955e8db7ea81ab654f874f932",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/quickstart.md": {
+    "mtime": 1782256194.1392508,
+    "ast_hash": "d006e32ca22d483c2efe5c701620c978",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/research.md": {
+    "mtime": 1782256178.819669,
+    "ast_hash": "845d3f721985d83a77b2654e9e71d292",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/tasks.md": {
+    "mtime": 1782256847.9396377,
+    "ast_hash": "606c45688f5463a4e058b95530c0bd5b",
+    "semantic_hash": ""
+  },
+  "specs/002-modulos-especializados-sistema/checklists/architecture.md": {
+    "mtime": 1782257077.3316216,
+    "ast_hash": "14ba18467d24b150f38b23830648c412",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/caja/metodos-pago/route.ts": {
+    "mtime": 1782257329.6068423,
+    "ast_hash": "8306119997b9e1a3d45df878450db452",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/caja/transacciones/route.ts": {
+    "mtime": 1782257321.1725793,
+    "ast_hash": "2de6fb895b387d2d949cfc3cd1e21919",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/clientes/route.ts": {
+    "mtime": 1782257345.3207903,
+    "ast_hash": "e264f3dc0b65e85cd76da716002ebd81",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/eventos/[id]/route.ts": {
+    "mtime": 1782257412.014842,
+    "ast_hash": "245b215f00560aa5eec91498bc91b7a5",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/eventos/route.ts": {
+    "mtime": 1782257386.7061813,
+    "ast_hash": "0a76130695df53337ba9faad8b40d760",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/inventario/categorias/route.ts": {
+    "mtime": 1782257423.6556563,
+    "ast_hash": "f60aee58e05fa27542e9b9a2c90d17cd",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/inventario/disponibilidad/route.ts": {
+    "mtime": 1782257357.835054,
+    "ast_hash": "703f5b137630fba7bb44f5e2e6c6ad12",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/inventario/items/route.ts": {
+    "mtime": 1782257448.4974933,
+    "ast_hash": "fc0fd9bef697890c3893af500770b698",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/api/operarios/route.ts": {
+    "mtime": 1782257635.935868,
+    "ast_hash": "8751b30ff9d028b62a32bac9e24e8b24",
+    "semantic_hash": ""
+  },
+  "frontend/src/app/dashboard/eventos/crear/page.tsx": {
+    "mtime": 1782257625.9151132,
+    "ast_hash": "4925200ed2fc1b0c4ada8278d96d3e4c",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260623000000_categorias_inventario.sql": {
+    "mtime": 1782257169.40561,
+    "ast_hash": "771942e4bf54f346dfebae938fc14803",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260623000001_caja_y_carteras.sql": {
+    "mtime": 1782257201.9002752,
+    "ast_hash": "88a74ebaad1bf88b7cf744e3bd0f999e",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20260623000002_operarios_y_disponibilidad_rpc.sql": {
+    "mtime": 1782257233.9184213,
+    "ast_hash": "b10d515a371742089c8541bd838c27ab",
     "semantic_hash": ""
   }
 }

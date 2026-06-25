@@ -1,16 +1,16 @@
 # Graph Report - OnProduction  (2026-06-23)
 
 ## Corpus Check
-- 82 files · ~49,995 words
+- 102 files · ~64,487 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 465 nodes · 580 edges · 52 communities (39 shown, 13 thin omitted)
+- 599 nodes · 701 edges · 73 communities (57 shown, 16 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5889a512`
+- Built from commit: `b94bef73`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,18 +56,38 @@
 - [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `a` - 18 edges
-2. `compilerOptions` - 16 edges
-3. `get()` - 15 edges
-4. `v` - 14 edges
-5. `z()` - 14 edges
-6. `Tasks: [FEATURE NAME]` - 13 edges
-7. `BaseEntity` - 11 edges
-8. `supabase` - 10 edges
-9. `T()` - 8 edges
-10. `Table: eventos` - 8 edges
+1. `$()` - 30 edges
+2. `a` - 18 edges
+3. `compilerOptions` - 16 edges
+4. `get()` - 15 edges
+5. `v` - 14 edges
+6. `z()` - 14 edges
+7. `Tasks: [FEATURE NAME]` - 13 edges
+8. `Tasks: Módulos Especializados del Sistema (OnProduction)` - 12 edges
+9. `BaseEntity` - 11 edges
+10. `Esquema de Tablas` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Diagrama de Secuencia` --calls--> `Edge Function: generar-contrato`  [EXTRACTED]
@@ -84,11 +104,11 @@
 - **Rental Lifecycle Flow** — db_eventos, db_evento_detalles_equipos, db_evento_adicionales, db_depositos_garantia, db_registro_danos_auditoria [EXTRACTED 1.00]
 - **Deployment Stack** — guia_despliegue_dominios_md, gemini_md, readme_md [INFERRED 0.90]
 
-## Communities (52 total, 13 thin omitted)
+## Communities (73 total, 16 thin omitted)
 
 ### Community 0 - "Dashboard and UI Layouts"
-Cohesion: 0.05
-Nodes (29): styles, EmpresaConfig, styles, styles, UserProfile, DanoReciente, EventoReciente, Stats (+21 more)
+Cohesion: 0.21
+Nodes (5): styles, styles, UserProfile, styles, supabase
 
 ### Community 1 - "Service Worker Routing"
 Cohesion: 0.16
@@ -104,7 +124,7 @@ Nodes (25): dependencies, @ducanh2912/next-pwa, lucide-react, next, pdfkit, reac
 
 ### Community 4 - "Cache and Request Handling"
 Cohesion: 0.06
-Nodes (17): a, b(), constructor(), deleteCacheAndMetadata(), et, F, G, get() (+9 more)
+Nodes (18): $(), a, b(), constructor(), deleteCacheAndMetadata(), et, F, G (+10 more)
 
 ### Community 5 - "TypeScript Configuration"
 Cohesion: 0.10
@@ -167,8 +187,8 @@ Cohesion: 0.15
 Nodes (12): Assumptions, Edge Cases, Feature Specification: [FEATURE NAME], Functional Requirements, Key Entities *(include if feature involves data)*, Measurable Outcomes, Requirements *(mandatory)*, Success Criteria *(mandatory)* (+4 more)
 
 ### Community 36 - "Community 36"
-Cohesion: 0.18
-Nodes (10): Core Principles, Development & Migration Workflow, Governance, I. DB-Centric Transactional Logic, II. Strict Soft Deletes, III. Isolated Row Level Security (RLS), IV. Autonomous Edge Functions, OnProduction Project Constitution (+2 more)
+Cohesion: 0.14
+Nodes (13): Core Principles, Development & Migration Workflow, Governance, I. DB-Centric Transactional Logic, II. Strict Soft Deletes, III. Isolated Row Level Security (RLS), IV. Autonomous Edge Functions, OnProduction Project Constitution (+5 more)
 
 ### Community 37 - "Community 37"
 Cohesion: 0.18
@@ -198,20 +218,88 @@ Nodes (4): [Category 1], [Category 2], [CHECKLIST TYPE] Checklist: [FEATURE NAME
 Cohesion: 0.50
 Nodes (3): Behavior, Execution, Update Coding Agent Context
 
+### Community 52 - "Community 52"
+Cohesion: 0.08
+Nodes (21): Complexity Tracking, Constitution Check, Documentation (this feature), Implementation Plan: Módulos Especializados del Sistema (OnProduction), Project Structure, Source Code Layout, Summary, Technical Context (+13 more)
+
+### Community 53 - "Community 53"
+Cohesion: 0.25
+Nodes (7): Componentes del Stack de Despliegue, Guía de Despliegue, Dominios Gratuitos y Seguridad (Costo 0), Paso 1: Configurar el Hosting del Frontend en Vercel, Paso 2: Registrar tu Subdominio Gratis (`.is-a.dev`), Paso 3: Configurar Cloudflare (DNS, SSL y DDoS), Paso 4: Vincular el Dominio en Vercel, Paso 5: Probar la Aplicación en el Celular (PWA)
+
+### Community 54 - "Community 54"
+Cohesion: 0.29
+Nodes (6): FS-01: Proceso de Cotización, Validación y Reserva de Inventario, FS-02: Flujo Logístico de Despacho, Alquiler y Operación en Campo, FS-03: Proceso de Retorno de Equipos, Reporte de Daños y Liquidación de Garantías, FS-04: Gestión Administrativa de Compras de Lote e Ingreso Seguro de Seriales, Listado y Modelado de Flujos de Secuencia Críticos, Índice de Flujos Modelados
+
+### Community 55 - "Community 55"
+Cohesion: 0.29
+Nodes (6): Comandos Principales, Contribuir, Estructura del Proyecto, Instalación y Configuración, OnProduction — Sistema Logístico y Transaccional de Alquiler, Prerrequisitos
+
+### Community 56 - "Community 56"
+Cohesion: 0.33
+Nodes (5): 1. Actores Involucrados, 2. Decisiones Clave en el Proceso, 3. Interacciones entre Áreas, Detalle del Flujo de Decisiones y Procesos Alternativos, Diagrama Funcional del Proceso de Alquiler y Logística
+
+### Community 57 - "Community 57"
+Cohesion: 0.50
+Nodes (3): Deploy on Vercel, Getting Started, Learn More
+
+### Community 61 - "Community 61"
+Cohesion: 0.13
+Nodes (14): 10. transacciones_caja, 1. roles, 2. usuarios, 3. empresa_config, 4. categorias, 5. items_inventario, 6. clientes, 7. eventos (+6 more)
+
+### Community 62 - "Community 62"
+Cohesion: 0.25
+Nodes (6): Adicional, Cliente, DetalleEquipo, EquipoDisponible, Evento, styles
+
+### Community 63 - "Community 63"
+Cohesion: 0.29
+Nodes (6): 1. Almacenamiento del Logotipo Empresarial, 2. Estructura de Categorías de Inventario (Jerárquica/Árbol), 3. Soporte de Caja y Divisa Local Única, 4. Seguridad de Acceso a Nivel de Fila (RLS), Decisiones Técnicas y Arquitectura, Research: Módulos Especializados del Sistema (OnProduction)
+
+### Community 64 - "Community 64"
+Cohesion: 0.29
+Nodes (5): BajaItem, CatalogoItem, CompraItem, InstanciaItem, styles
+
+### Community 65 - "Community 65"
+Cohesion: 0.33
+Nodes (5): 1. Validación de Bloqueo de Stock Coincidente, 2. Validación de Inmutabilidad en Caja, Escenarios de Validación, Preparación y Semilla, Quickstart: Validación de Módulos Especializados (OnProduction)
+
+### Community 66 - "Community 66"
+Cohesion: 0.33
+Nodes (4): DanoReciente, EventoReciente, Stats, styles
+
+### Community 67 - "Community 67"
+Cohesion: 0.33
+Nodes (4): DepositoGarantia, EventoActivoConEquipos, styles, Transaction Helper
+
+### Community 68 - "Community 68"
+Cohesion: 0.40
+Nodes (4): 1. Módulo Administrativo: Configuración de Empresa, 2. Módulo de Caja: Registro de Transacciones, 3. Módulo de Inventario: Crear Ítem, API Endpoints Contract (Next.js Routes)
+
+### Community 69 - "Community 69"
+Cohesion: 0.40
+Nodes (3): Role, styles, UserProfile
+
+### Community 71 - "Community 71"
+Cohesion: 0.11
+Nodes (18): Dependencies & Execution Order, Format: `[ID] [P?] [Story] Description`, Implementation for User Story 1, Implementation for User Story 2, Implementation for User Story 3, Implementation for User Story 4, Implementation for User Story 5, Parallel Opportunities (+10 more)
+
+### Community 72 - "Community 72"
+Cohesion: 0.12
+Nodes (16): Assumptions, Clarificaciones, Edge Cases, Feature Specification: Módulos Especializados del Sistema (OnProduction), Functional Requirements, Key Entities, Measurable Outcomes, Requirements *(mandatory)* (+8 more)
+
 ## Knowledge Gaps
-- **189 isolated node(s):** `graphify`, `Workflow: graphify`, `Why an extension?`, `Commands`, `Configuration` (+184 more)
+- **276 isolated node(s):** `Content Quality`, `Requirement Completeness`, `Feature Readiness`, `Notes`, `Session 2026-06-23` (+271 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Transaction Helper` connect `Dashboard and UI Layouts` to `Community 41`, `API Route Utilities`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **What connects `graphify`, `Workflow: graphify`, `Why an extension?` to the rest of the system?**
-  _189 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Dashboard and UI Layouts` be split into smaller, more focused modules?**
-  _Cohesion score 0.051418439716312055 - nodes in this community are weakly interconnected._
+- **Why does `$()` connect `Cache and Request Handling` to `Service Worker Routing`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `Transaction Helper` connect `Community 67` to `Community 64`, `Community 41`, `API Route Utilities`, `Community 62`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **What connects `Content Quality`, `Requirement Completeness`, `Feature Readiness` to the rest of the system?**
+  _276 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Project Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `Cache and Request Handling` be split into smaller, more focused modules?**

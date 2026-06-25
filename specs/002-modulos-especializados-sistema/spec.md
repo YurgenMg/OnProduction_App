@@ -8,6 +8,13 @@
 
 **Input**: User description: "Crear módulos especializados: 1. Administrativo (configuración empresarial, logotipo, NIT, razón social, correo, teléfono, creación/edición de usuarios y roles). 2. Caja y flujo de caja (pagos, abonos, cartera de proveedores y clientes, formas de pago). 3. Inventario de ítems. 4. Clientes. 5. Registro de eventos."
 
+## Clarificaciones
+
+### Session 2026-06-23
+- Q: ¿El logotipo de la empresa se almacenará en Supabase Storage o como string Base64 directamente en la tabla de configuración? → A: Supabase Storage (Opción A). Se almacena el archivo en un bucket público de Supabase Storage y se guarda su URL pública en la tabla de configuración global.
+- Q: ¿El sistema operará únicamente en la divisa local o se requiere soporte multi-moneda para clientes internacionales? → A: Moneda Local Única (Opción A). El sistema operará en una única moneda predeterminada configurada por la empresa.
+- Q: ¿Las categorías de inventario tendrán una estructura jerárquica de árbol (categorías y subcategorías) o será una lista plana simple? → A: Jerárquica/Árbol (Opción B). Soporte para subcategorías anidadas.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Módulo Administrativo (Priority: P1)
@@ -17,9 +24,20 @@ Como Administrador, quiero configurar la información de la empresa (logo, NIT, 
 
 **Independent Test**: Modificar los datos de la empresa, subir un logo y verificar que se reflejen en la base de datos. Crear un nuevo usuario y verificar que pueda iniciar sesión con el rol asignado.
 
+**Workflows / Secuencia de Pasos:**
+1. **Flujo de Configuración de Empresa:**
+   - El Administrador inicia sesión e ingresa a "Configuración".
+   - Modifica el nombre, razón social, NIT, teléfono y correo electrónico.
+   - Sube un archivo de logotipo. El frontend valida que sea menor a 2MB y lo sube al bucket de Supabase Storage.
+   - Al guardar, el backend realiza un insert/update atómico de la tabla `EmpresaConfig` en la fila con `ID = 1`.
+2. **Flujo de Creación de Usuarios:**
+   - El Administrador ingresa a "Usuarios".
+   - Hace clic en "Nuevo Usuario", ingresa nombre completo, correo electrónico y selecciona el Rol (Administrador, Bodeguero, Asistente Comercial).
+   - Se crea el usuario en Supabase Auth y se dispara un trigger PL/pgSQL que mapea el perfil en la tabla pública de usuarios con el rol correspondiente.
+
 **Acceptance Scenarios**:
-1. **Given** que estoy autenticado como Administrador, **When** actualizo los datos empresariales y subo un logotipo, **Then** la información se guarda y el logo se almacena de forma persistente. [NEEDS CLARIFICATION: ¿El logotipo de la empresa se almacenará en Supabase Storage o como string Base64 directamente en la tabla de configuración?]
-2. **Given** que estoy en el panel de usuarios, **When** creo un usuario con rol "Bodeguero", **Then** el usuario es guardado y se le restringe el acceso a módulos administrativos y de caja.
+1. **Given** que estoy autenticado como Administrador, **When** actualizo los datos empresariales y subo un logotipo, **Then** la información se guarda de manera atómica y el logo se almacena de forma persistente en Supabase Storage guardando la referencia de URL en la configuración de la base de datos.
+2. **Given** que estoy en el panel de usuarios, **When** creo un usuario con rol "Bodeguero", **Then** el usuario es guardado y se le restringe el acceso a módulos administrativos y de caja mediante políticas RLS.
 
 ---
 
@@ -30,9 +48,19 @@ Como Administrador o Cajero, quiero registrar ingresos, abonos y egresos de caja
 
 **Independent Test**: Registrar un abono a la cartera de un cliente por un evento y un egreso a un proveedor por mantenimiento de equipos, verificando el saldo resultante del flujo de caja.
 
+**Workflows / Secuencia de Pasos:**
+1. **Flujo de Pago/Abono de Cliente:**
+   - El Cajero ingresa al Evento o a la Cartera del Cliente.
+   - Registra una transacción seleccionando "Abono Cliente", el monto y el Método de Pago (ej. Transferencia).
+   - La base de datos inserta en `TransaccionCaja`, recalcula el saldo restante del evento, disminuye el balance de la entidad cliente, e incrementa el total diario de caja.
+2. **Flujo de Egreso/Cartera Proveedores:**
+   - Se registra una factura de compra/gasto (ej. alquiler de equipos de terceros).
+   - Se añade a la cartera del proveedor como cuenta por pagar.
+   - Al realizar el pago, se registra un egreso en `TransaccionCaja`, disminuyendo la cartera del proveedor y el flujo de caja.
+
 **Acceptance Scenarios**:
 1. **Given** un evento con saldo pendiente, **When** el cliente realiza un abono parcial, **Then** la cartera del cliente disminuye por ese valor y el flujo de caja diario registra el ingreso.
-2. **Given** un servicio de mantenimiento subcontratado, **When** registro la cuenta por pagar al proveedor, **Then** se incrementa la cartera de proveedores hasta que se registre el egreso correspondiente. [NEEDS CLARIFICATION: ¿El sistema operará únicamente en la divisa local o se requiere soporte multi-moneda para clientes internacionales?]
+2. **Given** un servicio de mantenimiento subcontratado, **When** registro la cuenta por pagar al proveedor, **Then** se incrementa la cartera de proveedores en la moneda local única hasta que se registre el egreso correspondiente.
 
 ---
 
@@ -43,8 +71,18 @@ Como Bodeguero o Administrador, quiero registrar y clasificar los equipos musica
 
 **Independent Test**: Registrar un amplificador, asignarle una categoría y un SKU único, y verificar que aparezca disponible para asignación en eventos.
 
+**Workflows / Secuencia de Pasos:**
+1. **Flujo de Ingreso al Inventario:**
+   - El Bodeguero va al módulo "Inventario" -> "Crear Ítem".
+   - Rellena el nombre, SKU, precio base de alquiler y asocia la categoría y subcategoría correspondiente (ej. Sonido -> Consolas).
+   - El sistema almacena el ítem con el estado inicial "Excelente".
+2. **Flujo de Mantenimiento / Cambio de Estado:**
+   - Un equipo regresa dañado de un evento.
+   - El Bodeguero edita el ítem y cambia su estado a "Mantenimiento".
+   - El sistema actualiza el estado y bloquea su asignación para eventos futuros hasta que se complete el mantenimiento y vuelva a estado "Excelente" o "Regular".
+
 **Acceptance Scenarios**:
-1. **Given** un nuevo equipo físico de sonido, **When** lo registro en el inventario, **Then** se le asigna un SKU único estructurado y el estado inicial es "Excelente". [NEEDS CLARIFICATION: ¿Las categorías de inventario tendrán una estructura jerárquica de árbol (categorías y subcategorías) o será una lista plana simple?]
+1. **Given** un nuevo equipo físico de sonido, **When** lo registro en el inventario, **Then** se le asigna un SKU único estructurado, el estado inicial es "Excelente", y se asocia a la jerarquía de categorías/subcategorías configurada.
 
 ---
 
@@ -54,6 +92,14 @@ Como Administrador o Asistente Comercial, quiero llevar una base de datos unific
 **Why this priority**: Facilita la retención de clientes y agiliza el proceso de cotización y facturación al reutilizar sus datos de contacto.
 
 **Independent Test**: Buscar un cliente por NIT o Nombre y verificar que muestre su información de contacto junto con el listado de sus eventos anteriores.
+
+**Workflows / Secuencia de Pasos:**
+1. **Flujo de Registro de Cliente:**
+   - El usuario ingresa a "Clientes" -> "Nuevo Cliente".
+   - Introduce nombre/razón social, NIT/cédula, correo, teléfono y dirección.
+   - El sistema valida la no duplicidad del documento y guarda el perfil.
+2. **Historial de Cliente:**
+   - Al seleccionar un cliente de la lista, el sistema carga en una sola pantalla: su información de contacto, saldo actual en cartera, y el historial detallado de eventos cotizados y realizados.
 
 **Acceptance Scenarios**:
 1. **Given** la creación de una cotización, **When** busco un cliente por su NIT o identificación, **Then** el sistema auto-completa los datos del cliente en el registro de evento.
@@ -67,8 +113,24 @@ Como Coordinador de Eventos o Administrador, quiero crear eventos especificando 
 
 **Independent Test**: Crear un evento en rango de fechas con 3 equipos de sonido y verificar el cálculo automático del costo y la reserva temporal de los ítems.
 
+**Workflows / Secuencia de Pasos:**
+1. **Flujo de Reserva y Cotización (Estado: Cotización) - Formulario Minimalista Navegable:**
+   - El formulario de registro de eventos se presenta como un asistente multipaso (Paso 1: Datos de Evento/Fechas, Paso 2: Selección de Ítems/Disponibilidad, Paso 3: Resumen y Operarios).
+   - **Navegación Libre Bidireccional**: El usuario puede moverse libremente entre las pestañas (avanzar y retroceder) sin perder el estado temporal de los campos.
+   - **Preservación de Estado**: Si el usuario selecciona 3 ítems en el Paso 2 y retrocede al Paso 1 para ajustar el rango de fechas, los ítems seleccionados se conservan y el sistema comprueba dinámicamente si siguen disponibles en las nuevas fechas, alertando si hay algún conflicto específico pero manteniendo el resto de la selección intacta.
+   - **Cambio de Cliente en Caliente**: En cualquier momento del flujo, el usuario puede cambiar de cliente desde un selector interactivo sin resetear la selección de equipos ni las fechas cargadas.
+   - Se asocian los ítems y operarios, y se genera la cotización PDF.
+2. **Flujo de Ejecución (Estado: Cotización -> En Proceso):**
+   - El cliente aprueba el presupuesto y realiza el abono inicial (mínimo el porcentaje acordado en la cotización).
+   - El usuario cambia el estado a "En Proceso", confirmando formalmente el bloqueo físico de stock de los ítems seleccionados.
+3. **Flujo de Finalización (Estado: En Proceso -> Finalizado):**
+   - Concluido el evento, los equipos regresan a bodega y se verifica su estado físico.
+   - El usuario transiciona el evento a "Finalizado". Los ítems vuelven a estar "Disponibles" y se genera el PDF de la Cuenta de Cobro con los saldos restantes.
+
 **Acceptance Scenarios**:
 1. **Given** la creación de un nuevo evento, **When** selecciono las fechas de montaje y desmontaje, **Then** el sistema filtra los ítems de inventario mostrando únicamente aquellos sin conflictos de reserva en ese período.
+2. **Given** que he seleccionado equipos en el paso de inventario, **When** retrocedo al paso de fechas para modificar el rango y luego avanzo, **Then** el sistema conserva los equipos seleccionados previamente y valida su disponibilidad contra el nuevo rango de fechas, alertando solo sobre ítems conflictivos.
+3. **Given** que estoy en cualquier paso del formulario de eventos, **When** modifico el cliente asignado, **Then** se actualiza la información del cliente de forma inmediata sin alterar las fechas ni la lista de equipos seleccionados.
 
 ---
 

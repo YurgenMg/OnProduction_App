@@ -1,12 +1,15 @@
 <!--
 Sync Impact Report:
-- Version change: N/A -> 1.0.0 (Initial ratification)
+- Version change: 1.2.0 -> 1.3.0 (Addition of User-Centric PDF Generation Principle)
 - Principles defined:
   - I. DB-Centric Transactional Logic
   - II. Strict Soft Deletes
   - III. Isolated Row Level Security (RLS)
   - IV. Autonomous Edge Functions
   - V. Strict TypeScript Typing
+  - VI. Graphify-First Code Navigation
+  - VII. Data Engineering & Architecture Best Practices
+  - VIII. User-Centric PDF Generation
 - Added sections: Technology Stack, Development & Migration Workflow
 - Templates requiring updates:
   - .specify/templates/plan-template.md (✅ updated)
@@ -33,6 +36,22 @@ Cada Edge Function en `supabase/functions/<nombre-funcion>` DEBE ser autónoma, 
 ### V. Strict TypeScript Typing
 Tanto el cliente frontend en Next.js como los scripts de soporte DEBEN mantener tipado estricto en TypeScript 5.x (`noImplicitAny = true`). El uso del tipo genérico `any` está prohibido, priorizando interfaces explícitas auto-generadas desde el esquema de base de datos de Supabase.
 
+### VI. Graphify-First Code Navigation
+Para cualquier pregunta sobre arquitectura, base de código, dependencias o flujos de trabajo, el agente de IA DEBE utilizar en primer lugar el grafo de conocimiento de Graphify (`graphify-out/graph.json`) mediante consultas de grafo (`graphify query`, `query_graph`). Esto minimiza el consumo de tokens y garantiza respuestas rápidas, precisas y contextualizadas a la estructura real del proyecto.
+
+### VII. Data Engineering & Architecture Best Practices
+El diseño de datos del proyecto DEBE apegarse a los siguientes estándares de ingeniería y arquitectura:
+- **Inmutabilidad Financiera**: Los registros en las tablas de caja (`TransaccionCaja`) son de solo inserción (insert-only). Queda prohibido modificar (`UPDATE`) o eliminar físicamente (`DELETE`) registros de caja o abonos ya ratificados. Cualquier corrección debe realizarse a través de una transacción de ajuste o reversión.
+- **Normalización**: El esquema relacional DEBE seguir la Tercera Forma Normal (3NF) para evitar redundancias, garantizando llaves foráneas e integridad referencial en todo momento.
+- **Indexación Selectiva**: Se DEBEN definir índices parciales explícitos (ej. `CREATE INDEX ... WHERE deleted_at IS NULL`) en columnas utilizadas frecuentemente en filtros de búsqueda o uniones (como `deleted_at`, `email`, `sku`) para optimizar el rendimiento de la base de datos.
+
+### VIII. User-Centric PDF Generation
+Todos los documentos PDF generados por la aplicación (como cotizaciones, cuentas de cobro y reportes de caja) DEBEN ser limpios, profesionales y fáciles de leer y entender por clientes finales y proveedores. Esto incluye:
+- **Diseño Estructurado**: Alineación en cuadrícula, márgenes amplios y uso consistente de tipografías legibles (sans-serif).
+- **Tablas Claras**: Desgloses detallados de ítems y precios con bordes sutiles y contraste de color óptimo.
+- **Información Visual**: Secciones claramente delimitadas (encabezados, datos de emisor/receptor, totales y métodos de pago destacados).
+- **Consistencia de Estilo**: El diseño gráfico debe alinearse con la identidad corporativa y logotipo cargados en la configuración.
+
 ## Technology Stack & Constraints
 
 El proyecto se construye sobre la siguiente arquitectura y conjunto de herramientas:
@@ -57,4 +76,4 @@ La constitución de OnProduction define las directrices arquitectónicas que rig
   - **MINOR**: Adición de nuevas restricciones, stack tecnológico o guías de estilo.
   - **PATCH**: Correcciones de formato, typos y clarificaciones de redacción.
 
-**Version**: 1.0.0 | **Ratified**: 2026-06-23 | **Last Amended**: 2026-06-23
+**Version**: 1.3.0 | **Ratified**: 2026-06-23 | **Last Amended**: 2026-06-23
