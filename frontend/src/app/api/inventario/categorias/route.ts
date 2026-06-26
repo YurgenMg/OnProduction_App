@@ -31,5 +31,9 @@ export async function GET() {
     subcategorias: (todas ?? []).filter((c) => c.parent_id === raiz.id),
   }));
 
-  return NextResponse.json(arbol, { status: 200 });
+  // Árbol de categorías — cambia rarísimo, cachear 2 minutos
+  return NextResponse.json(arbol, {
+    status: 200,
+    headers: { 'Cache-Control': 'private, max-age=120, stale-while-revalidate=300' },
+  });
 }

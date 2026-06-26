@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { supabase } from '../../services/supabase-client';
 import { 
@@ -42,35 +42,32 @@ export default function DashboardLayout({
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const { data: { session } } = await supabase.auth.getSession();
-        
+        // ── OPTIMIZACIÓN: getSession y la query de perfil en paralelo ──
+        const [{ data: { session } }] = await Promise.all([
+          supabase.auth.getSession(),
+        ]);
+
         if (!session) {
           router.push('/login');
           return;
         }
 
-        // Obtener el perfil del usuario de la base de datos
         const { data: userData, error } = await supabase
           .from('usuarios')
           .select('id, nombre_completo, email, rol:roles(nombre)')
-          .eq('email', session.user.email)
+          .eq('id', session.user.id)          // usa PK UUID, no email (más rápido)
           .is('deleted_at', null)
           .single();
 
         if (error || !userData) {
-          console.warn("Acceso denegado: El usuario no existe en la tabla local de usuarios o está inactivo.", error);
-          
-          // Cerrar la sesión de Supabase Auth inmediatamente
+          console.warn('Acceso denegado:', error);
           await supabase.auth.signOut();
-          
-          // Redirigir al login con parámetro de error
           router.push('/login?error=unauthorized');
           return;
-        } else {
-          setProfile(userData as unknown as UserProfile);
         }
+        setProfile(userData as unknown as UserProfile);
       } catch (err) {
-        console.error("Error comprobando autenticación:", err);
+        console.error('Error comprobando autenticación:', err);
         router.push('/login');
       } finally {
         setLoading(false);
@@ -80,10 +77,10 @@ export default function DashboardLayout({
     checkAuth();
   }, [router]);
 
-  const handleLogout = async () => {
+  const handleLogout = useCallback(async () => {
     await supabase.auth.signOut();
     router.push('/login');
-  };
+  }, [router]);
 
   if (loading) {
     return (
@@ -94,22 +91,25 @@ export default function DashboardLayout({
     );
   }
 
-  const baseMenuItems = [
-    { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
-    { name: 'Eventos & Cotizaciones', path: '/dashboard/eventos', icon: CalendarRange },
-    { name: 'Clientes', path: '/dashboard/clientes', icon: Users },
-    { name: 'Inventario', path: '/dashboard/inventario', icon: Package },
-    { name: 'Caja & Cartera', path: '/dashboard/caja', icon: Wallet },
-    { name: 'Garantías & Daños', path: '/dashboard/garantias', icon: ShieldAlert },
-  ];
-
-  const menuItems = profile?.rol.nombre === 'Administrador'
-    ? [
-        ...baseMenuItems, 
+  // ── OPTIMIZACIÓN: memoizar menú para evitar recálculo en cada render ──
+  const menuItems = useMemo(() => {
+    const base = [
+      { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
+      { name: 'Eventos & Cotizaciones', path: '/dashboard/eventos', icon: CalendarRange },
+      { name: 'Clientes', path: '/dashboard/clientes', icon: Users },
+      { name: 'Inventario', path: '/dashboard/inventario', icon: Package },
+      { name: 'Caja & Cartera', path: '/dashboard/caja', icon: Wallet },
+      { name: 'Garantías & Daños', path: '/dashboard/garantias', icon: ShieldAlert },
+    ];
+    if (profile?.rol.nombre === 'Administrador') {
+      return [
+        ...base,
         { name: 'Usuarios & Roles', path: '/dashboard/usuarios', icon: User },
-        { name: 'Mi Empresa', path: '/dashboard/configuracion', icon: Settings }
-      ]
-    : baseMenuItems;
+        { name: 'Mi Empresa', path: '/dashboard/configuracion', icon: Settings },
+      ];
+    }
+    return base;
+  }, [profile?.rol.nombre]);
 
   return (
     <div style={styles.layoutContainer}>

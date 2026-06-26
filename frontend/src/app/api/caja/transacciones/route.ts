@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import type { CreateTransaccionDto, TransaccionCaja } from '@/../../shared/types';
 
+// ── Singleton: evitar crear un cliente nuevo en cada request ──
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!
@@ -10,6 +11,7 @@ const supabase = createClient(
 /**
  * GET /api/caja/transacciones
  * Lista transacciones con filtros opcionales por fecha, tipo o cliente.
+ * Paginado a 200 registros por defecto para evitar payloads gigantes.
  */
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -17,6 +19,7 @@ export async function GET(req: NextRequest) {
   const fechaHasta = searchParams.get('fecha_hasta');
   const clienteId = searchParams.get('cliente_id');
   const eventoId = searchParams.get('evento_id');
+  const limit = Math.min(Number(searchParams.get('limit') ?? 200), 500);
 
   let query = supabase
     .from('transacciones_caja')
@@ -27,7 +30,8 @@ export async function GET(req: NextRequest) {
       evento:eventos(id, direccion_evento, estado)
     `)
     .order('fecha', { ascending: false })
-    .order('created_at', { ascending: false });
+    .order('created_at', { ascending: false })
+    .limit(limit);
 
   if (fechaDesde) query = query.gte('fecha', fechaDesde);
   if (fechaHasta) query = query.lte('fecha', fechaHasta);
@@ -41,7 +45,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json(data, { status: 200 });
+  return NextResponse.json(data, {
+    status: 200,
+    headers: { 'Cache-Control': 'no-store' }, // datos financieros — nunca cachear
+  });
 }
 
 /**
@@ -58,7 +65,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Cuerpo de solicitud inválido.' }, { status: 400 });
   }
 
-  // Validación básica
   if (!body.tipo || !body.monto || !body.metodo_pago_id || !body.descripcion) {
     return NextResponse.json(
       { error: 'Campos requeridos: tipo, monto, metodo_pago_id, descripcion.' },
@@ -73,23 +79,28 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Obtener usuario registrador desde el header de autorización
   const authHeader = req.headers.get('authorization');
   if (!authHeader) {
     return NextResponse.json({ error: 'No autorizado.' }, { status: 401 });
   }
 
-  const userClient = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { global: { headers: { Authorization: authHeader } } }
+  // ── OPTIMIZACIÓN: verificar usuario con service_role usando el JWT directamente ──
+  // Evita crear un segundo cliente Supabase por request
+  const { data: { user }, error: authError } = await supabase.auth.getUser(
+    authHeader.replace('Bearer ', '')
   );
 
-  const { data: userProfile } = await userClient
+  if (authError || !user) {
+    return NextResponse.json({ error: 'Token inválido.' }, { status: 401 });
+  }
+
+  // Verificar que el usuario existe en la tabla local (query directa con UUID)
+  const { data: userProfile } = await supabase
     .from('usuarios')
     .select('id')
+    .eq('id', user.id)
     .is('deleted_at', null)
-    .single();
+    .maybeSingle();
 
   if (!userProfile) {
     return NextResponse.json({ error: 'Usuario no encontrado.' }, { status: 401 });
@@ -121,3 +132,4 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json(data, { status: 201 });
 }
+

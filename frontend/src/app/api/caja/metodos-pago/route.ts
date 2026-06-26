@@ -24,5 +24,9 @@ export async function GET() {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json(data as MetodoPago[], { status: 200 });
+  // Catálogo estático — cachear 5 minutos en el cliente, revalidar en background
+  return NextResponse.json(data as MetodoPago[], {
+    status: 200,
+    headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' },
+  });
 }

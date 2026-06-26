@@ -17,6 +17,8 @@ export async function GET(req: NextRequest) {
   const estado = searchParams.get('estado');
   const q = searchParams.get('q')?.trim();
 
+  // ── OPTIMIZACIÓN: filtrar instancias activas directamente en la query ──
+  // Evita traer todos los registros de instancias para filtrarlos en JS
   let catalogoQuery = supabase
     .from('catalogo_equipos')
     .select(`
@@ -25,13 +27,15 @@ export async function GET(req: NextRequest) {
         id, nombre, parent_id, nivel, prefijo_sku,
         padre:categorias_inventario!categorias_inventario_parent_id_fkey(id, nombre)
       ),
-      instancias:inventario_instancias(id, serial_tag, estado_operativo, notas_condicion, deleted_at)
+      instancias:inventario_instancias!inner(id, serial_tag, estado_operativo, notas_condicion)
     `)
     .is('deleted_at', null)
+    .is('instancias.deleted_at', null)
     .order('nombre_equipo');
 
   if (categoriaId) catalogoQuery = catalogoQuery.eq('categoria_id', Number(categoriaId));
   if (q) catalogoQuery = catalogoQuery.ilike('nombre_equipo', `%${q}%`);
+  if (estado) catalogoQuery = catalogoQuery.eq('instancias.estado_operativo', estado);
 
   const { data, error } = await catalogoQuery;
 
@@ -40,17 +44,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  // Filtrar instancias activas (sin soft delete) y por estado si se solicita
-  const resultado = (data ?? []).map((item) => ({
-    ...item,
-    instancias: (item.instancias ?? []).filter(
-      (inst: { deleted_at: string | null; estado_operativo: string }) =>
-        inst.deleted_at === null &&
-        (estado ? inst.estado_operativo === estado : true)
-    ),
-  }));
-
-  return NextResponse.json(resultado, { status: 200 });
+  return NextResponse.json(data ?? [], {
+    status: 200,
+    headers: { 'Cache-Control': 'private, max-age=30, stale-while-revalidate=60' },
+  });
 }
 
 /**
@@ -80,13 +77,21 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Verificar unicidad del SKU
-  const { data: existente } = await supabase
-    .from('catalogo_equipos')
-    .select('id')
-    .eq('sku', body.sku.toUpperCase().trim())
-    .is('deleted_at', null)
-    .maybeSingle();
+  // ── OPTIMIZACIÓN: verificar SKU y obtener categoría en paralelo ──
+  const skuNorm = body.sku.toUpperCase().trim();
+  const [{ data: existente }, { data: categoria }] = await Promise.all([
+    supabase
+      .from('catalogo_equipos')
+      .select('id')
+      .eq('sku', skuNorm)
+      .is('deleted_at', null)
+      .maybeSingle(),
+    supabase
+      .from('categorias_inventario')
+      .select('nombre, parent_id, nivel')
+      .eq('id', body.categoria_id)
+      .single(),
+  ]);
 
   if (existente) {
     return NextResponse.json(
@@ -95,17 +100,10 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Obtener nombre de categoría para la columna legacy
-  const { data: categoria } = await supabase
-    .from('categorias_inventario')
-    .select('nombre, parent_id, nivel')
-    .eq('id', body.categoria_id)
-    .single();
-
   const { data: catalogo, error: catalogoError } = await supabase
     .from('catalogo_equipos')
     .insert({
-      sku: body.sku.toUpperCase().trim(),
+      sku: skuNorm,
       nombre_equipo: body.nombre_equipo.trim(),
       categoria: categoria?.nombre ?? 'Sin categoría',
       categoria_id: body.categoria_id,
